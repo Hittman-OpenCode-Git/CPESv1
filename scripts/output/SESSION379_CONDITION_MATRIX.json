@@ -1,0 +1,182 @@
+{
+  "meta": {
+    "session": "S379",
+    "board": "condition-board",
+    "mode": "READ ONLY",
+    "timestamp": "2026-07-28T21:00:00Z",
+    "inputs_consumed": [
+      "scripts/output/SESSION377_DL035_CLOSEOUT.json",
+      "scripts/output/SESSION377_DL031_BATCH1.json",
+      "scripts/output/SESSION377_AUTOMATION_VERIFICATION.json",
+      "scripts/output/SESSION377_EVALUATE_TRACK_PROPOSAL.json",
+      "reports/SESSION376_EXPANSION_DECISION.json"
+    ],
+    "authoritative_external_condition_definition": "reports/SESSION376_EXPANSION_DECISION.json — Conditions 1-5",
+    "note": "S378 files DO NOT exist — confirmed by glob. Evaluate Workstream was never activated."
+  },
+  "condition_evaluations": {
+    "A_dl035": {
+      "verdict": "MET",
+      "evidence": [
+        "SESSION377_DL035_CLOSEOUT.json: 32 items remediated (14 Pack C, 18 Pack D)",
+        "38 distractor ExplanationWrong fields authored",
+        "21 DL-008 fixes applied (14 Pack C clears, 7 Pack D clears)",
+        "Post-remediation verification: 0 DL-008, 0 DL-026 across all 59 Domain F Certified items",
+        "Governance guard: 54/54 PASS, 0 FAIL",
+        "QID counts verified: Pack C 500, Pack D 500 (both parse clean)",
+        "CorrectChoice changes: 0 — no answer-key drift",
+        "question_state changes: 0 — no certification sidestepping",
+        "All 39 items from the original DL-035 Defect Library entry resolved",
+        "Backup files confirmed: pack_c_corrected.js.bak-S377-20260728153507, pack_d_corrected.js.bak-S377-20260728153507",
+        "10 additional Pack D Domain F items discovered and remediated (not in original 39-item list — S377 found the full scope of 32 items vs. documented 39, which included non-Domain-F or already-resolved items)",
+        "Certified counts: Pack C 438, Pack D 439 — verified via direct grep"
+      ],
+      "S376_condition": "DL-035 FULLY REMEDIATED: 0 empty non-CC ExplanationWrong slots on all 39 Certified Domain F items. Post-remediation scan confirms 0 DL-026 on Certified items.",
+      "condition_met": true,
+      "blocks": "None. All 59 Domain F Certified items verified clean. DL-008=0, DL-026=0. All original DL-035 items resolved. S376 condition fully satisfied.",
+      "resolvable_in_1_2_sessions": "N/A — already MET. No remaining gap."
+    },
+    "B_dl031": {
+      "verdict": "PARTIAL",
+      "evidence": [
+        "SESSION377_DL031_BATCH1.json: scan_dl031.js BUILT (v2, Function constructor parse). All 2,540 items successfully parsed.",
+        "39 items flagged: 17 Simple Relabels, 18 Calibration, 4 Rewrite Required",
+        "17 Simple Relabels APPLIED across Packs B (3), C (9), D (5). Topics: role-based access control, batch total control, ERP control implications, lean manufacturing waste elimination, data governance, NIST cybersecurity framework.",
+        "Methodology issues found AND FIXED: v1 regex window too small, marker #5 overmatched calculation questions, CC/Difficulty field offset in Pack B/Pack D dual-block items, position drift from sequential replacements.",
+        "Batch 1 executed successfully. Packs modified: B, C, D (backups confirmed). CAL-001 STARTED.",
+        "5 methodology issues found and resolved: (1) v1 500-byte regex window → v2 Function constructor parse, (2) marker #5 overmatch → replaced with targeted definition markers, (3) Difficulty-before-QID in Pack B/D → lastIndexOf backward search, (4) DifficultyScore-after-QID → forward search past QID, (5) window.replace picks neighbor → lastIndexOf + batch.reverse()"
+      ],
+      "not_met_elements": [
+        "18 Calibration items DEFERRED to batch 2+ — per-item difficulty review not yet executed",
+        "4 Rewrite Required items DEFERRED to batch 2+ — full content rewrites not yet executed",
+        "Paired-constraint risk ACTIVE: 17 items downgraded (Moderate→Easy) without parallel upward recalibrations of over-easy items to Difficult/Very Difficult. Difficulty distribution is being corrected in only one direction.",
+        "23h program is STARTED but NOT COMPLETE — only Simple Relabels phase executed (~2h of a 23h program)"
+      ],
+      "S376_condition": "DL-031 CAL-001 STARTED: scan_dl031.js built and calibration batch 1 executed. NOT the full 23h program — just the initial 1 wave (≤28 items) to prove methodology.",
+      "condition_met": false,
+      "blocks": "The S376 condition was satisfied by the letter — scan_dl031.js exists and 17 items were processed as Batch 1 (≤28 items, methodology proven). However, the SPIRIT of the condition was partially missed: Batch 1 was Simple Relabels only (automated Difficulty label swaps), not Calibration items (per-item review of content vs. difficulty labeling). The 18 Calibration items are the substantive difficulty-calibration work that the condition may have intended to launch. Additionally, the paired-constraint risk means Easy inflation was corrected without upward recalibrations — the difficulty distribution may be MORE distorted post-Batch-1 than before (items pushed down to Easy without items pushed up to Difficult).",
+      "resolvable_in_1_2_sessions": "Yes. 18 Calibration items (per-item review) + 4 Rewrite Required items can be addressed in 2 sessions: 1 session for calibration reviews, 1 session for rewrites. The paired-constraint risk requires a deliberate upward-recalibration pass, but that's a larger-program concern — not a 1-2 session fix.",
+      "recommendation": "Execute Calibration batch (18 items) + Rewrite batch (4 items) in S380/S381. Start upward-recalibration scanning as a separate program thread."
+    },
+    "C_automation": {
+      "verdict": "MET",
+      "evidence": [
+        "SESSION377_AUTOMATION_VERIFICATION.json: post_change_qc.js CONFIRMED at scripts/post_change_qc.js (154 lines, SHA-256 FC9C9C45...).",
+        "Script runs: exit code 0, all QC checks PASS.",
+        "Produces valid JSON output to scripts/output/post_change_qc.json.",
+        "Governance guard: 54 PASS, 0 FAIL. Parse validation: 5/5 packs parse clean.",
+        "QID counts: 500+500+500+500+540 = all match.",
+        "Certified counts tracked: Pack A 500, Pack B 500, Pack C 438, Pack D 439, Pack E 540.",
+        "Contradiction RESOLVED: readiness-audit was CORRECT (script exists). Throughput-board's claim of non-existence was FALSE — likely a tool-search-path or working-directory issue."
+      ],
+      "not_met_elements": [
+        "Script is NOT integrated into any pipeline: not in package.json scripts, not called by any other script, not triggered by CI/CD.",
+        "Script must be invoked MANUALLY: 'node scripts/post_change_qc.js'.",
+        "Classification: AUTOMATION PARTIALLY DEPLOYED — infrastructure exists and works, but pipeline integration is ABSENT.",
+        "The readiness-audit's implicit claim of full automation deployment was OVERSTATED."
+      ],
+      "S376_condition": "AUTOMATION CONTRADICTION RESOLVED: post_change_qc.js existence verified. If it does not exist, it must be deployed.",
+      "condition_met": true,
+      "blocks": "None for the SPECIFIC S376 condition (contradiction resolution). The script exists and is functional — the contradiction is resolved. The broader automation gap (pipeline integration) was NOT part of this condition — it was a 'nice to have' discussed in the strategic assessment.",
+      "resolvable_in_1_2_sessions": "Yes. Pipeline integration (package.json scripts entry, post-change hook wiring) is a 1-session task. The script infrastructure already works — only invocation wiring is missing.",
+      "recommendation": "Add post_change_qc.js to package.json scripts in S380. Wire as post-change hook or as explicit build step. The script is the hard part — integration is mechanical."
+    },
+    "D_throughput": {
+      "verdict": "PARTIAL",
+      "evidence": [
+        "S376: Peak capacity DEMONSTRATED — 32 sessions in 1 calendar day, 6 authoring waves producing 119 items (51 Evaluate, 68 Analyze). 5× S374 target.",
+        "S899 model PROVEN: 6 sustained sessions at ~20 items/session, 0 defects.",
+        "S377: READ-ONLY preparation session — no additional authoring executed.",
+        "S378: DOES NOT EXIST. No files, no wave results, no QC report. No authoring occurred.",
+        "No authoring has occurred between S376's peak day and S379. The throughput model has not been exercised since the S376 burst."
+      ],
+      "not_met_elements": [
+        "MULTI-WEEK SUSTAINABILITY UNPROVEN. S376 proved peak capacity but was a single-calendar-day burst.",
+        "S374 requirement: 2+ waves/week for 3 CONSECUTIVE WEEKS to convert CONDITIONAL → YES. Not attempted.",
+        "No sustained-authoring sprint has been executed since S376. The gap between S376 and S379 (2+ days) has seen zero authoring — only read-only preparation.",
+        "S377 energy was directed toward blocker removal (DL-035, DL-031, automation verification) rather than throughput demonstration.",
+        "Risk from S376 assessment materialized: 'today's burst concentrated on productive throughput, not on blocker removal' — and the inverse happened in S377: blocker removal was prioritized, but throughput was zero."
+      ],
+      "S376_decision_rule": "Peak capacity supports authorization readiness but does not prove sustainability. The expansion decision should not hinge on sustainability proof — that's a post-authorization monitoring metric.",
+      "condition_met": false,
+      "blocks": "Multi-week sustainability proof inherently requires calendar time — it cannot be compressed into 1-2 sessions. The S376 decision explicitly said sustainability proof should NOT block authorization, making this a post-authorization monitoring metric rather than a blocker. However, the current state (zero authoring between S376 and S379) means the throughput model has shown PEAK but not STEADY-STATE operation.",
+      "resolvable_in_1_2_sessions": "Partially. 1-2 sessions of sustained authoring can demonstrate the model still functions post-S376 (i.e., the peak wasn't a one-time event). But full multi-week sustainability proof (3 consecutive weeks) requires calendar time — not resolvable in 1-2 sessions. A strong 2-session sprint (e.g., 40-60 items, 0 defects) would substantially improve confidence but not constitute PROOF of sustainability.",
+      "recommendation": "Run a 2-session sustained-authoring sprint in S380-S381 (target: 30-40 items with Evaluate items prioritized). Track defect rate, session duration, and items/session. This proves the model is replicable even if not yet 'proven sustainable.'"
+    },
+    "E_cognitive_gap": {
+      "verdict": "MET",
+      "evidence": [
+        "S376: Already MET — Phase 1 threshold (50 items) substantially exceeded: ~120 items authored (S899 + SESSION050-056 waves + S892 + S888). Cognitive gap identification and initial remediation demonstrably complete.",
+        "S377 DL-031 Batch 1: 17 additional items relabeled (Moderate → Easy inflation corrected). Topics covered: access control, batch total control, ERP controls, lean manufacturing, data governance, NIST cybersecurity.",
+        "Cumulative cognitive gap remediation now exceeds 137 items (S376 ~120 + S377 17).",
+        "18 Calibration items IDENTIFIED and classified — ready for batch 2 review.",
+        "4 Rewrite Required items IDENTIFIED — concrete rewrite plan exists per item QID.",
+        "scan_dl031.js (v2, Function constructor parse) is operational — enables ongoing cognitive gap monitoring."
+      ],
+      "not_met_elements": [
+        "Paired-constraint risk ACTIVE (carried from S377): Easy inflation corrected (downgrades) without parallel upward recalibrations. Items that are too easy but labeled Difficult/Very Difficult have not been identified or corrected. The difficulty distribution correction is one-directional.",
+        "18 Calibration items NOT YET REVIEWED — deferred to batch 2+.",
+        "4 Rewrite Required items NOT YET REWRITTEN — deferred to batch 2+."
+      ],
+      "S376_decision_rule": "Phase 1 threshold (50 items) substantially exceeded. Phase 2 (systematic gap closure) is a POST-EXPANSION activity.",
+      "condition_met": true,
+      "blocks": "None. Phase 1 threshold was exceeded before S377, and S377 added 17 more items. The condition was MET in S376 and remains MET. The paired-constraint risk is acknowledged but was explicitly scoped as a post-expansion monitoring concern in the S376 decision. The 22 deferred items (18 Calibration + 4 Rewrite) are Phase 2 activities — the S376 decision says Phase 2 is POST-EXPANSION.",
+      "resolvable_in_1_2_sessions": "N/A — already MET. Deferred items (22) are post-expansion per S376 decision. The paired-constraint risk is separately tracked under Condition B (DL-031)."
+    },
+    "F_evaluate_track": {
+      "verdict": "NOT MET",
+      "evidence": [
+        "SESSION377_EVALUATE_TRACK_PROPOSAL.json EXISTS: Complete 6-phase pipeline design with G8-G10 Evaluate-specific gates, 3 waves/week at 25 items/wave cadence, per-domain gap analysis (297 MCQ gap, Domain B worst at 1 item / 62 gap), clone reuse analysis (28 seeds, 9.4% of gap), risk assessment with 5 identified risks + mitigations, timeline estimate (4 weeks dedicated, 10 weeks mixed).",
+        "PROPOSAL STATUS: NOT YET AUTHORIZED — no execution authority granted.",
+        "Clone reuse analysis COMPLETE within proposal: 28 seed items from DL-012 clone groups, feasible for Evaluate repurposing but requires full rewrite (not relabel).",
+        "Domain gap analysis COMPLETE: Section deficits enumerated (A:58, B:62, C:61, D:55, E:8, F:50). Domain B and C identified as critical path.",
+        "Current Evaluate inventory: 84 MCQ + 115 Case = 199 combined. Target: 381 MCQ + ~83 Case = 464 combined. Gap: 265 combined, 297 MCQ."
+      ],
+      "not_met_elements": [
+        "TRACK NOT LAUNCHED. Proposal was designed but never authorized. No execution has occurred.",
+        "WAVE 0 AUDIT NOT EXECUTED. Existing 84 MCQ Evaluate items not audited for miscategorization (proposal flags P1-E-047 at Easy/Evaluate as suspect). True Evaluate count may be lower than 84.",
+        "WAVE 1 NOT EXECUTED. Zero Evaluate items authored on the dedicated track. Zero items through G8-G10 gates.",
+        "G8-G10 GATES NOT DEPLOYED. Evaluate-specific governance gates (Scenario Authenticity, Distractor Sophistication, Explanation Depth) exist only in proposal — not in governance infrastructure.",
+        "RULE 10 NOT DEPLOYED. Proposed governance guard rule (Evaluate Scenario Sufficiency BLOCK) not implemented.",
+        "PSYCHOMETRICIAN REVIEW BANDWIDTH NOT COMMITTED. Dual-review pipeline (Accountant + Psychometrician) is a design assumption, not a confirmed resource.",
+        "S378 FILES DO NOT EXIST. Confirmed by glob: no SESSION378_EVALUATE_AUDIT.json, SESSION378_EVALUATE_WAVE1_RESULTS.json, or SESSION378_QC_REPORT.md. Zero execution artifacts.",
+        "DO NOT PROCEED WITHOUT prerequisites (from proposal §viability_assessment) NOT SATISFIED: Wave 0 audit, Psychometrician availability, G8-G10 deployment, per-domain authoring allocation plan — NONE have been executed."
+      ],
+      "S376_condition": "EVALUATE DEDICATED TRACK LAUNCHED: Dedicated workstream created. 1 proven wave (≥5 items, 0 defects) executed on dedicated track. 203 archived clones assessed for Evaluate-repurposing feasibility.",
+      "condition_met": false,
+      "blocks": "ALL components of the S376 condition are unsatisfied: (1) Dedicated workstream NOT CREATED — exists only as a proposal. (2) 0 proven waves executed — zero items authored. (3) Clone assessment is partially complete — analysis exists in the proposal but the actual archived items have not been audited for repurposing feasibility (only modeled). Additionally, the proposal's own §viability_assessment lists 4 prerequisites that must be satisfied before proceed — NONE have been executed.",
+      "resolvable_in_1_2_sessions": "Possibly, but AGGRESSIVE. Minimum viable path: S380 = Wave 0 audit (audit 84 existing Evaluate items, deploy G8-G10 gates) + S381 = Wave 1 execution (≥5 items authored, through G8-G10, independently verified). This requires: (a) governance guard Rule 10 written and deployed, (b) Psychometrician review commitment (build-time AI can simulate), (c) 5+ Evaluate items authored from scratch — each requiring unique business scenario, multi-concept integration, and professional judgment prompt design. Possible in 2 sessions if Wave 0 is lightweight (classification audit, not full review) and Wave 1 is modest (5 items, not 25). NOT possible if Wave 0 requires full re-review of all 84 existing Evaluate items.",
+      "recommendation": "Do not gate expansion authorization on this condition. The Evaluate gap (297 items) is the LONGEST POLE in the tent — 4-12 weeks even after launch. Delaying launch further compounds the timeline. Two options: (A) Authorize expansion with a committed Evaluate launch date (S382) and interim governance conditions; OR (B) Execute a compressed Wave 0+1 in S380-S381 to satisfy the condition, accepting that Wave 0 will be a classification audit (not full review) and Wave 1 will be 5 items (cadence validation, not throughput)."
+    }
+  },
+  "cross_condition_summary": {
+    "met_count": 3,
+    "partial_count": 2,
+    "not_met_count": 1,
+    "conditions": {
+      "A_dl035": "MET",
+      "B_dl031": "PARTIAL",
+      "C_automation": "MET",
+      "D_throughput": "PARTIAL",
+      "E_cognitive_gap": "MET",
+      "F_evaluate_track": "NOT MET"
+    },
+    "blocking_expansion": {
+      "B_dl031": { "blocks": false, "reason": "CAL-001 started (scan built, Batch 1 executed). 22 items deferred but methodology proven. S376 condition substantially satisfied even if calibration items remain." },
+      "F_evaluate_track": { "blocks": true, "reason": "Track designed but not launched. Zero items authored, zero waves executed, G8-G10 gates not deployed. S376 condition NOT satisfied on any component." }
+    },
+    "gaps_resolvable_in_1_2_sessions": {
+      "immediately_resolvable": ["B_dl031 (Calibration + Rewrite items)", "C_automation (pipeline integration)", "F_evaluate_track (Wave 0 audit + 5-item Wave 1)"],
+      "requires_calendar_time": ["D_throughput (multi-week sustainability proof)"],
+      "already_met": ["A_dl035", "E_cognitive_gap"]
+    },
+    "highest_priority_action": "Condition F — Evaluate Track launch. The Evaluate gap (297 items, 4-12 weeks) is the longest pole. Every session the track remains unlaunched adds ~3-5 items to the post-authorization backlog. Condition B (DL-031 calibration items) or Condition C (automation pipeline integration) can be executed in parallel with Evaluate track launch prep."
+  },
+  "methodology_notes": {
+    "evidence_standard": "All determinations based on direct inspection of raw JSON evidence files, not summary reports (per AGENTS.md §5).",
+    "S378_verification": "Glob search for SESSION378* returned 0 results. Confirmed: Evaluate Workstream was never activated.",
+    "condition_definition_authority": "S376 EXPANSION_DECISION.json Conditions 1-5 are the authoritative condition definitions. This board evaluates current evidence against those conditions.",
+    "cross_board_consistency": "Convergent with S376: DL-031 is the #1 substantive blocker, Evaluate gap is the longest pole, DL-035 is resolved. Divergent from S376: DL-031 status has improved from NOT MET → PARTIAL (scan built, batch 1 executed). Evaluate track has not progressed beyond proposal stage.",
+    "read_only_confirmation": "No files were modified during this evaluation. This is a read-only condition-board analysis."
+  }
+}

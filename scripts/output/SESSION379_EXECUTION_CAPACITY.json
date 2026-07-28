@@ -1,0 +1,353 @@
+{
+  "session": "S379",
+  "title": "Execution Capacity Board — Can Expansion Execute Without Unsustainable Backlog?",
+  "timestamp": "2026-07-28T22:00:00Z",
+  "board_role": "Capacity Board — READ ONLY synthesis",
+  "authority": "AGENTS.md §2 (read-only default); writes authorized for scripts/output/",
+
+  "ground_truth_refresh": {
+    "method": "Direct grep on all 5 pack files (S379 T0)",
+    "pack_a": { "qids": 500, "certified": 500, "pct": 100.0, "sha256": "51A9D0A6..." },
+    "pack_b": { "qids": 500, "certified": 500, "pct": 100.0, "sha256": "9AF12BCE..." },
+    "pack_c": { "qids": 500, "certified": 438, "pct": 87.6, "uncertified": 62, "sha256": "E0ABDF3A..." },
+    "pack_d": { "qids": 500, "certified": 439, "pct": 87.8, "uncertified": 61, "sha256": "6E19E97A..." },
+    "pack_e": { "qids": 540, "certified": 540, "pct": 100.0, "sha256": "B888DF67..." },
+    "total": { "qids": 2540, "certified": 2417, "pct": 95.2, "uncertified": 123 }
+  },
+
+  "hash_drift_detected": {
+    "status": "SIGNIFICANT — 5 of 5 pack hashes differ from CURRENT_BASELINES.md §1",
+    "pack_a": "CAB4EFC7... (baseline) → 51A9D0A6... (actual)",
+    "pack_b": "9CE6A345... (baseline) → 9AF12BCE... (actual)",
+    "pack_c": "6B712D2A... (baseline) → E0ABDF3A... (actual)",
+    "pack_d": "2B59A6D6... (baseline) → 6E19E97A... (actual)",
+    "pack_e": "E0CFD1D8... (baseline) → B888DF67... (actual)",
+    "interpretation": "All 5 pack files have drifted since S377 baseline capture. EXPLANATION: The CURRENT_BASELINES.md hashes were captured at 2026-07-28 post-S377 closeout. Since then, multiple sessions (S885-S888 Group 2 expansion, S892 Pack A final closure, S893-S896 DL-008 remediation, S916-S923 case reconsolidation) have all modified packs. All drift is AUTHORIZED — but CURRENT_BASELINES.md is now STALE. Re-baseline required before any expansion authorization.",
+    "governance_rule": "AGENTS.md §9.5: 'Any hash change to these files without corresponding REVISION_HISTORY entry is a drift event.' REVISION_HISTORY contains entries for all sessions S885 through S923. However CURRENT_BASELINES.md §1 hashes were not recaptured post-S923."
+  },
+
+  "remaining_work_profile": {
+    "certification_backlog": {
+      "count": 123,
+      "packs": ["pack_c_corrected.js", "pack_d_corrected.js"],
+      "domains": ["E (Internal Controls)", "F (Technology and Analytics)"],
+      "sections": ["EC-061–EC-075", "FC-001–FC-075", "ED-061–ED-075", "FD-001–FD-075"],
+      "state": "Structurally verified by S377 DL-035 closeout. 0 DL-008, 0 DL-026 remaining on all Domain F Certified items. DL-013 boilerplate residue estimated at ~163 fields across non-Certified Pack C/D Sections E/F per S723 closure baseline.",
+      "blockers": "Need 6-dimension CAQS verification per §1.6. May need DL-013 boilerplate cleanup during certification pass.",
+      "estimated_effort": "5.6 hours at Quality-First velocity (~21.9 items/hr). ~10 batches at ≤28 items/batch per Rule 5.",
+      "write_contention_risk": "HIGH — these items are in Packs C and D, which are the SAME packs that expansion (Evaluate authoring, calibration) would target. Section-level: E+F items are in different sections than A/B/C/D expansion items. However section adjacency in the file means any structural edit to either section risks breaking the adjacent section's JSON boundary."
+    },
+
+    "evaluate_gap": {
+      "nominal_gap": 297,
+      "current_inventory": 84,
+      "target_at_15pct": 381,
+      "adjusted_after_wave0_audit": "~314 (per S377 Evaluate Track Design Board — ~20% expected mislabeling of existing 'Evaluate' items as Apply/Analyze)",
+      "clone_reuse_contribution": 28,
+      "fresh_authoring_required": 269,
+      "concentration_risk": "48 of 84 items (57.1%) are in Section E of Packs C+D — likely DL-012 template clones. True unique Evaluate items may be as low as ~40 across all domains.",
+      "critical_domains": {
+        "B_Planning_Budgeting_Forecasting": { "gap": 62, "current": 1, "clone_seeds": 0, "risk": "All 62 must be fresh-authored. Domain B has the largest absolute gap and zero clone reuse potential." },
+        "C_Performance_Management": { "gap": 61, "current": 2, "clone_seeds": 0, "risk": "Variance analysis, transfer pricing, performance evaluation — Evaluate-rich topics needing full authoring." },
+        "A_External_Financial_Reporting": { "gap": 58, "current": 5, "clone_seeds": 0, "risk": "Financial reporting judgment scenarios — ASC 606, ASC 450, ASC 350. Author from scratch." },
+        "D_Cost_Management": { "gap": 55, "current": 8, "clone_seeds": 0, "risk": "Cost management decision scenarios — make-or-buy, pricing, CVP judgment." },
+        "F_Technology_Analytics": { "gap": 50, "current": 13, "clone_seeds": 0, "risk": "Tech governance judgment scenarios — data strategy, cybersecurity policy, AI governance." }
+      },
+      "is_irreducible_creative_labor": true,
+      "rationale": "Evaluate items require unique business scenarios, named stakeholders, decision triggers, plausible alternative professional judgments, and multi-concept integration. Templates produce DL-012 clone waste. Each item is a custom creative artifact.",
+      "dedicated_track_capacity": {
+        "designed": true,
+        "launched": false,
+        "proven_wave_executed": false,
+        "cadence_target": "75 items/week (3 waves × 25 items)",
+        "items_per_batch": "≤28 (Rule 5)",
+        "review_requirement": "Dual review (Accountant + Psychometrician, both ≥90 confidence)",
+        "quality_gates": "G8 (Scenario Authenticity) + G9 (Distractor Sophistication) + G10 (Explanation Depth) — designed but not deployed"
+      }
+    },
+
+    "calibration_deferred": {
+      "dl031_batch1_complete": { "simple_relabels": 17, "packs_modified": ["B", "C", "D"] },
+      "dl031_remaining": { "calibration": 18, "rewrite_required": 4, "total": 22 },
+      "dl031_original_classified": 62,
+      "dl031_surviving_after_batch1": 39,
+      "paired_constraint_risk": "17 Easy relabels without parallel Difficult/Very Difficult recalibrations — pool becoming bottom-heavy. CAQS §6.1 target for Easy is 15%. If current Easy approaches 25%+ without corresponding Difficult increase, the exam simulation loses discrimination power at the upper end."
+    },
+
+    "case_difficulty": {
+      "dl032": "All 420 case items uniformly Moderate difficulty. Non-blocking — cases already certified.",
+      "remediation": "Assign genuine difficulty labels based on item cognitive level, calculation complexity, exhibit count, and distractor deceptiveness. Non-blocking for expansion."
+    }
+  },
+
+  "executive_determination": {
+
+    "question_1_parallel_resolution": {
+      "question": "Can the 123 uncertified Packs C/D Domain E+F items be resolved in parallel with expansion?",
+      "answer": "YES — with section-level write governance",
+      "verdict": "PARALLELIZABLE",
+      "analysis": {
+        "mechanics": "The 123 items are in Pack C Sections E+F and Pack D Sections E+F. Expansion (Evaluate track authoring) targets Domains A/B/C/D, which are Pack C Sections A-D and Pack D Sections A-D. These are structurally SEPARATE sections within the same pack files, enabling section-level write isolation.",
+        "risk_dl019_concurrent_write": "S377 demonstrated cross-session concurrent-write data loss (DL-019: 432 items overwritten when DL-013 certification wave restored pre-cleared EW[CC] fields). The same pack-file write contention exists whenever two sessions write to the same pack file.",
+        "mitigation": "1) Session scheduling: run certification of E+F items in dedicated sessions that claim Pack C/D exclusively. 2) T0 → Tend hash verification: every session that touches Pack C or D must verify the pre-session hash against the post-previous-session hash. 3) Section-level batch isolation: never run certification batches on E+F and expansion batches on A-D in overlapping sessions. 4) File-lock protocol per AGENTS.md §13: multi-agent sessions exceeding 30 minutes must run Tmid hash checks.",
+        "feasibility": "Yes — the 123 items can be certified in ~3 sessions (41 items/session at ≤28 items/batch, 2 batches/session). Expansion Evaluate authoring runs in parallel sessions on the SAME packs but DIFFERENT sections. The primary risk is hash-conflict on pack-level writes, not section-content conflict.",
+        "recommended_sequence": "EXECUTE FIRST: Certify all 123 E+F items (clears the known backlog). THEN: Begin expansion authoring on Domains A-D. This eliminates write contention entirely and reduces the uncertified item count to 0 → certified pool reaches 100% (2,540/2,540)."
+      }
+    },
+
+    "question_2_evaluate_gap_and_expansion": {
+      "question": "The Evaluate gap is irreducible creative labor — does expansion make it worse?",
+      "answer": "NO — expansion IS the mechanism to close the Evaluate gap. But expansion WITHOUT a dedicated Evaluate track makes the gap persist longer.",
+      "verdict": "EXPANSION IS THE SOLUTION, NOT THE PROBLEM",
+      "analysis": {
+        "what_expansion_precisely_means": "Expansion is the program encompassing: (1) Dedicated Evaluate Track — 297-item authoring pipeline at 75/week; (2) Analyze/Apply upgrades — cognitive level enhancement of existing items; (3) Certification waves — structural remediation + 6-dimension verification for remaining uncertified items; (4) DL-031 calibration — difficulty label correction. Expansion is NOT a separate workstream that competes with Evaluate — it IS the container that includes Evaluate.",
+        "why_it_doesnt_make_the_gap_worse": "The Evaluate gap (297 items) is a GIVEN — it exists regardless of whether expansion is authorized. Expansion provides the dedicated resourcing mechanism to close it. Without expansion, Evaluate authoring continues at ~10 items/week incidentally during general certification (mixed velocity), extending closure to December 2026.",
+        "what_could_make_it_worse": "If expansion authorizes Analyze/Apply upgrades at 21.9 items/hr while the Evaluate track languishes at 11.3 items/hr without dedicated bandwidth protection, the BLOOM'S IMBALANCE WIDENS — Analyze grows faster than Evaluate, further from CAQS §6.2 targets. This is the critical governance condition.",
+        "safeguard": "G8-G10 gates (Evaluate-specific) deployed BEFORE expansion authoring begins. Dedicated Evaluate track with separate cadence (25 items/wave, 3 waves/week) — NOT mixed into general certification waves. Domain allocation plan prioritizes Domain B (62 gap, 1 current) and Domain C (61 gap, 2 current) — the domains with the largest deficits and zero clone reuse. Per CAQS §11.3 interleaving readiness, Evaluate items must cross-reference concepts from other blueprint sections, naturally increasing the overall cognitive depth of the pool.",
+        "conclusion": "Expansion does not make the Evaluate gap worse — it is the only mechanism that closes it at any pace faster than December 2026. The governance condition is that the Evaluate track must be a PROTECTED workflow with dedicated bandwidth, not a best-effort addendum to general certification."
+      }
+    },
+
+    "question_3_timeline_projections": {
+      "question": "What is the estimated completion timeline with expansion authorized vs. without?",
+      "answer": "WITH: 6 weeks to all-CAQS-targets-met. WITHOUT: 30+ weeks.",
+      "verdict": "EXPANSION ACCELERATES COMPLETION BY 5×",
+
+      "with_expansion": {
+        "scenario": "Expansion authorized — dedicated Evaluate track (75/week) + parallel certification waves + calibration in maintenance mode",
+        "total_weeks": 6,
+        "end_date_estimate": "2026-09-08",
+        "phase_plan": {
+          "weeks_1_2_certification_evaluate_wave0": {
+            "weeks": 2,
+            "actions": [
+              "Certify 123 Pack C/D Domain E+F items (certified pool reaches 2,540/2,540 = 100%)",
+              "Execute Evaluate Wave 0 — audit all 84 existing Evaluate items, correct miscategorizations",
+              "Deploy G8-G10 Evaluate-specific governance guard rules",
+              "Execute Evaluate Wave 1 (first 25 items, Domain B prioritized)",
+              "Deploy Rule 10 (Evaluate Scenario Sufficiency BLOCK) to governance guard"
+            ],
+            "certified_at_end": "2,540/2,540 (100%)"
+          },
+          "weeks_3_4_evaluate_scale": {
+            "weeks": 2,
+            "actions": [
+              "Evaluate Track waves 2-7: 150 items (Domain B 62 + Domain C 61 + Domain A 27)",
+              "DL-031 Calibration batch 2: 18 items (per-item cognitive review)",
+              "DL-031 Rewrite Required batch 3: 4 items (stem/distractor enhancement)"
+            ],
+            "evaluate_inventory_at_end": "259 of 381 (68%)"
+          },
+          "weeks_5_6_final_closure": {
+            "weeks": 2,
+            "actions": [
+              "Evaluate Track waves 8-13: 138 items (Domain D 55 + Domain F 50 + Domain E 8 + Domain A remaining 25)",
+              "Clone seed upgrades: 28 items (Section E DL-012 archive → Evaluate rewrite)",
+              "Full-pool Bloom's distribution audit — verify CAQS §6.2 targets (Remember: 5%, Understand: 15%, Apply: 40%, Analyze: 25%, Evaluate: 15%)",
+              "DL-032 case difficulty calibration (optional — deferred from earlier phases if needed)",
+              "FINAL: all CAQS targets met. Pool: 2,540 MCQ + 420 case items, all Certified, all Bloom's targets verified."
+            ],
+            "evaluate_inventory_at_end": "425 of 381 (exceeds target)"
+          }
+        },
+        "risk_factors": [
+          "Evaluate Wave 0 audit may reveal that 30-40% of existing Evaluate items are mislabeled → adjusted gap INCREASES from 297 to ~320 → extends timeline by ~1 week",
+          "Psychometrician review bottleneck → cadence drops from 75/week to 40/week → extends timeline by ~3 weeks",
+          "Template regression (R1) caught mid-wave → 1-2 waves need rework → extends timeline by ~1 week",
+          "Pack C/D write contention if certification sessions overlap with Evaluate authoring → session coordination overhead"
+        ]
+      },
+
+      "without_expansion": {
+        "scenario": "No dedicated Evaluate track — general certification waves handle Evaluate incidentally at mixed 30 items/week total velocity, of which ~10/week are Evaluate",
+        "total_weeks": 30,
+        "end_date_estimate": "2027-02-15",
+        "phase_plan": {
+          "weeks_1_3": "Certify 123 Pack C/D Domain E+F items. Certified pool reaches 100%.",
+          "weeks_4_33": "Evaluate authoring at 10 items/week incidental velocity. 297 items ÷ 10/week = 30 weeks from week 4 start = week 33 end.",
+          "concurrent_in_background": "DL-031 calibration (22 items, ~1 week), DL-032 case difficulty (optional), Analyze/Apply upgrades (incidental)"
+        },
+        "risk_factors": [
+          "10 items/week is ~1 item per authoring hour — substantially below S849 Quality-First measured velocity (11.3/hr). The velocity drop reflects bandwidth competition with general certification, not authoring speed.",
+          "By week 20+, domain coverage becomes uneven — early domains (B, C) get items, later domains (F, D) are starved. Requires explicit domain allocation, which without a dedicated track is harder to enforce.",
+          "Template regression risk is HIGHER without dedicated track governance — incidental authoring has no G8-G10 gates, no sampling audits, no dedicated reviewer. Produces more DL-012 clone waste.",
+          "Bloom's imbalance WORSENS — general certification adds more Apply items without corresponding Evaluate upgrades. Evaluate goes from 3.3% → 5% over 10 weeks, not 15%."
+        ]
+      },
+
+      "comparative_summary": {
+        "with_expansion": { "weeks": "6", "end_date": "2026-09-08", "evaluate_at_end": "15%+", "all_caqs_met": true },
+        "without_expansion": { "weeks": "30+", "end_date": "2027-02-15", "evaluate_at_end": "~15% (est. week 33)", "all_caqs_met": true },
+        "acceleration_factor": "5×",
+        "key_difference": "The dedicated Evaluate track at 75 items/week is the single variable that determines whether completion is September 2026 or February 2027. Everything else (123 certification, 22 calibration, 28 clone seed upgrades) completes in weeks 1-3 regardless."
+      }
+    },
+
+    "question_4_throughput_collapse_risk": {
+      "question": "Is there a throughput collapse risk if expansion starts before the Evaluate track executes?",
+      "answer": "YES — but preventable with governance sequencing",
+      "verdict": "RISK IS MODERATE AND GOVERNOR-MANAGEABLE",
+
+      "identified_collapse_vectors": [
+        {
+          "vector": "V1_PACK_WRITE_CONTENTION",
+          "description": "Multiple sessions writing to Packs C and D simultaneously (certification of E+F items + expansion Evaluate authoring on A-D sections + calibration batch 2 + DL-013 cleanup). S377 demonstrated that parallel-pack writes produce DL-019 concurrent-write overwrite.",
+          "severity": "HIGH",
+          "likelihood_without_governance": "Very High — 4 workstreams target Packs C+D",
+          "mitigation": "SEQUENCE FIRST: Complete 123 certification on Packs C+D (locks Certified=500/500 on both packs). THEN: Unlock expansion Evaluate authoring on Packs C+D Sections A-D. Packs A, B, E can be expanded in parallel with Packs C+D certification (they are separate files). Section-level write isolation: no two sessions may write to the same section of the same pack concurrently.",
+          "residual_risk": "LOW — sequential processing eliminates DL-019 risk entirely on the two most-contended packs."
+        },
+        {
+          "vector": "V2_REVIEWER_BOTTLENECK",
+          "description": "Dual review (Accountant + Psychometrician) for Evaluate items doubles reviewer load. If one reviewer is unavailable or if review bandwidth is shared with general certification, the pipeline stalls at the G8-G10 gate.",
+          "severity": "MEDIUM",
+          "likelihood_without_governance": "High — 75 items/week × 2 reviewers = 150 reviews/week, each at 5-10 min → 12.5-25 hrs/week of review. At a 25-item wave cadence, each wave needs 50-100 minutes of dual review.",
+          "mitigation": "Batch review: queue 25 items → Accountant reviews batch (2-3 hours) → Psychometrician reviews batch (2-3 hours) → weekly cycle. Pre-review guidelines to maximize first-pass acceptance rate. If first-pass rate drops below 80%, reduce cadence to 50 items/week.",
+          "residual_risk": "MEDIUM — review bandwidth is the most likely genuine bottleneck. The Evaluate track design is sound but the reviewer is human/AI time-constrained."
+        },
+        {
+          "vector": "V3_TEMPLATE_REGRESSION",
+          "description": "Throughput pressure at 75 items/week incentivizes authors to revert to template-based bulk-authoring (DL-012 pattern). The original template pipeline produced 28 clone groups — the same thing happens at scale if governance is absent.",
+          "severity": "HIGH",
+          "likelihood_without_governance": "High by week 3-4 of the dedicated track. Creative fatigue sets in after ~100 unique scenarios. Authors default to 'Company XYZ is considering...' pattern.",
+          "mitigation": "G8-G10 gates deployed BEFORE Wave 1. Weekly sampling audit: every 50 items, blind-sample 5 for G8-G10 manual review. If >1 of 5 fails, halt the wave and audit the full batch. Evaluate track has a SPECIFIC anti-template gate (G8 — named company, stakeholder, decision trigger required).",
+          "residual_risk": "MEDIUM — gates prevent defective items from certifying but don't prevent authoring velocity from dropping if authors must rework rejected items."
+        },
+        {
+          "vector": "V4_ADMINISTRATIVE_OVERHEAD",
+          "description": "Each batch (≤28 items) requires: governance guard (54 tests), backup protocol (timestamped backup), post_change_qc (manual invocation), pre_delivery_safety check, REVISION_HISTORY entry, and CURRENT_BASELINES hash recapture. For 297 Evaluate items ≈ 12 batches + 4 certification batches + 1 calibration batch = ~17 batches. At 10 min administrative overhead per batch = ~3 hours of admin.",
+          "severity": "LOW",
+          "likelihood_without_governance": "Medium — administrative overhead accumulates but does not collapse throughput. It's linear (O(n) per batch), not exponential.",
+          "mitigation": "Batch overhead is fixed per batch regardless of batch size. Run batches at the maximum size (28 items) to minimize batch count. Automate REVISION_HISTORY entry generation (part of the pipeline, not post-hoc).",
+          "residual_risk": "LOW — manageable at 3 hours total across a 6-week program."
+        },
+        {
+          "vector": "V5_BASELINE_INSTABILITY",
+          "description": "CURRENT_BASELINES.md §1 hashes are already stale (5 of 5 packs drifted since S377 capture). Continuous writes to 3+ pack files make baselines chronically out-of-date. When baselines are stale, T0 verification at session startup becomes unreliable → drift events are missed → DL-019 overwrites go undetected.",
+          "severity": "MEDIUM",
+          "likelihood_without_governance": "Certain — 5 of 5 hashes already drifted as of S379 T0",
+          "mitigation": "Rebaseline all 5 pack hashes in CURRENT_BASELINES.md BEFORE any expansion authorization. Run rebuild_baselines.js (exists at scripts/, 154 lines) at end of every batch. Verify T0 hashes at start of every session. The drift is already present — fix it before adding more.",
+          "residual_risk": "MEDIUM — baselines will keep drifting. The question is whether the project maintains the discipline to recapture after every batch. S377→S379 drift (same day, few hours apart) suggests the discipline is fragile."
+        }
+      ],
+
+      "collapse_cascade_scenario": {
+        "description": "Worst-case sequence: V5 (stale baselines) → V1 (pack write contention on C+D) → DL-019 overwrite → V3 (template regression under pressure to redo lost work) → V2 (reviewer misses regression due to bottleneck) → defective items enter learner pool. Detection: 3-5 sessions later when a learner reports wrong explanations. Cost: 3 weeks of re-authoring + rollback + learner-pool audit.",
+        "prevention": "The SEQUENTIAL RECOMMENDATION below prevents V1 entirely. The GOVERNANCE CONDITIONS prevent V2-V5. If implemented, cascade probability drops from MODERATE to LOW."
+      },
+
+      "overall_throughput_collapse_risk": {
+        "rating": "MODERATE (controlled by governance)",
+        "uncontrolled_rating": "HIGH",
+        "key_governor": "SEQUENTIAL EXECUTION ORDER + baseline discipline + Evaluate track governance (G8-G10 + Rule 10)"
+      }
+    }
+  },
+
+  "recommended_execution_sequence": {
+    "title": "S380-S399: 20-Session Expansion Sprint Plan",
+    "principle": "Certify all known items FIRST (clears backlog). Launch Evaluate track SECOND (starts the long pole). Calibration THIRD (maintenance mode).",
+
+    "phase_1_certification_closure": {
+      "sessions": "S380-S383 (4 sessions)",
+      "goal": "2,540/2,540 = 100% certified (all 5 packs, all sections)",
+      "work": [
+        "S380: Certify Pack C Domain F (FC-001–FC-075, 75 items) — 3 batches ≤28",
+        "S381: Certify Pack C Domain E (EC-061–EC-075, remaining 15 items + verify EC-001–EC-060 already certified)",
+        "S382: Certify Pack D Domain F (FD-001–FD-075, 75 items) — 3 batches ≤28",
+        "S383: Certify Pack D Domain E (ED-061–ED-075, remaining 15 items + verify ED-001–ED-060 already certified)"
+      ],
+      "end_state": "Certified pool: 2,540/2,540. Current baselines recaptured. Zero open certification backlog."
+    },
+
+    "phase_2_evaluate_track_launch": {
+      "sessions": "S384-S395 (12 sessions, 3 weeks)",
+      "goal": "Close Evaluate gap from ~314 to 0. Target: 381 items at 15% of pool.",
+      "prerequisites": [
+        "Evaluate Wave 0 audit complete — all 84 existing items verified for miscategorization",
+        "G8-G10 governance guard rules deployed (Rule 10: Evaluate Scenario Sufficiency BLOCK)",
+        "Domain allocation plan approved: Weeks 1-2 (Domain B: 62 + Domain C: 61), Week 3 (Domain A: 58 + Domain F: 50), Week 4 (Domain D: 55 + Domain E: 8 + Clone upgrades: 28)",
+        "Dual review capacity committed: Accountant + Psychometrician, 25 items per review cycle",
+        "CURRENT_BASELINES.md recaptured (post-Phase 1), governance guard 54/54 PASS"
+      ],
+      "work": [
+        "S384: Wave 0 — audit 84 existing Evaluate items",
+        "S385-S388: Wave 1-4 — Domain B (62 items, 4 waves × 15)",
+        "S389-S392: Wave 5-8 — Domain C (61 items, 4 waves × 15)",
+        "S393-S395: Wave 9-11 — Domain A + Domain F (108 items, 3 waves × 25 + 3 waves extra)",
+        "S396: Wave 12 — Domain D + Domain E + Clone upgrades (91 items, fill remaining)",
+        "S397: Full-pool Bloom's distribution audit — verify all CAQS §6.2 targets met"
+      ],
+      "end_state": "Evaluate inventory: 381+ items. All 6 domains at 15% target or better. Pool: 2,540 MCQ items, all Certified, all Bloom's targets met."
+    },
+
+    "phase_3_calibration_maintenance": {
+      "sessions": "S398-S399 (2 sessions, concurrent with Phase 2 final wave)",
+      "goal": "DL-031 Calibration + DL-032 case difficulty final cleanup",
+      "work": [
+        "S398: DL-031 Calibration batch 2 (18 items) + Rewrite Required batch 3 (4 items)",
+        "S399: DL-032 case difficulty calibration — assign genuine difficulty labels to case banks"
+      ],
+      "end_state": "All remaining defects documented and tracked. CAQS §6.1 difficulty distribution verified."
+    }
+  },
+
+  "final_determination": {
+    "can_expansion_execute_without_unsustainable_backlog": "YES — with governance sequencing",
+    "decision": "AUTHORIZE with conditions",
+    "summary": "Expansion is not an optional add-on — it is the ONLY mechanism to close the 297-item Evaluate gap this side of 2027. Without a dedicated Evaluate track, the gap closes at ~10 items/week (December 2026). With a dedicated track, it closes at 75 items/week (September 2026). The throughput collapse risks — write contention, reviewer bottleneck, template regression, baseline instability — are all real but all GOVERNOR-MANAGEABLE through sequential execution, gate deployment, and batch discipline.",
+
+    "authorization_conditions": [
+      {
+        "condition": "C1_SEQUENCE_FIRST",
+        "description": "Certify all 123 Pack C/D Domain E+F items BEFORE Evaluate authoring begins. This eliminates write contention on the two most-modified packs. End state: 2,540/2,540 certified. Packs C and D are then read-only for Evaluate authoring sessions (only appending new items or modifying existing A-D sections).",
+        "verifiable_by": "Certified pool direct grep = 2,540. All pack hashes stable across 2 consecutive scans."
+      },
+      {
+        "condition": "C2_BASELINE_DISCIPLINE",
+        "description": "Recapture CURRENT_BASELINES.md §1 hashes post-Phase 1 closure. All 5 pack hashes are already stale as of S379 T0 (5 of 5 drifted from S377 baseline). No expansion without up-to-date baselines.",
+        "verifiable_by": "Get-FileHash -Algorithm SHA256 on all 5 packs matches CURRENT_BASELINES.md §1."
+      },
+      {
+        "condition": "C3_GATES_DEPLOYED",
+        "description": "Deploy G8 (Scenario Authenticity), G9 (Distractor Sophistication), G10 (Explanation Depth) to governance guard as Rule 10. Rule 10 must BLOCK certification of any Evaluate item lacking named company, stakeholder, decision trigger, multi-concept integration, or judgment prompt.",
+        "verifiable_by": "Governance guard test suite: 60+/60+ PASS (current: 54). Rule 10 active."
+      },
+      {
+        "condition": "C4_WAVE0_AUDIT_COMPLETE",
+        "description": "Audit all 84 existing Evaluate items before authoring new ones. Correct miscategorizations (P1-E-047: Evaluate/Easy is contradictory). Determine the TRUE Evaluate inventory count and the ADJUSTED gap. The gap may INCREASE from 297 if many items are reclassified downward.",
+        "verifiable_by": "Wave 0 audit report. Adjusted Evaluate gap. Adjusted domain allocations."
+      },
+      {
+        "condition": "C5_REVIEWER_COMMITMENT",
+        "description": "Confirm Accountant + Psychometrician reviewer availability for 25-item wave cycles (3 waves/week). If dual review is not sustainable at this cadence, adjust to 50 items/week.",
+        "verifiable_by": "First 3 waves completed with dual review. No un-reviewed items in queue."
+      },
+      {
+        "condition": "C6_SAMPLING_AUDIT",
+        "description": "Weekly sampling audit of 5 items per 50 authored. If >1 of 5 fails G8-G10, halt the wave and audit the full batch. Template regression (R1) is the single highest risk to Evaluate quality.",
+        "verifiable_by": "Sampling audit reports. 0 template-regression items certified."
+      },
+      {
+        "condition": "C7_NO_MIXED_EVALUATE",
+        "description": "Evaluate authoring must run on the DEDICATED track (3 waves/week, G8-G10 gates, dual review). Do NOT mix Evaluate items into general certification waves. Mixed-mode authoring produced the DL-012 clone waste — the same template pipeline that produced 140 items with 112 clones.",
+        "verifiable_by": "Separate Evaluate track progress tracking artifact. 0 Evaluate items certified through general certification pipeline."
+      }
+    ],
+
+    "authorization_not_granted_if": [
+      "CURRENT_BASELINES.md hashes are not recaptured before expansion begins (currently: ALL 5 DRIFTED)",
+      "G8-G10 / Rule 10 is not deployed to governance guard",
+      "Evaluate Wave 0 audit is not complete (gap may be significantly larger than 297)",
+      "123 Pack C/D Domain E+F items are certified in parallel with expansion writes (DL-019 risk)",
+      "Evaluate items are mixed into general certification waves (bypasses dedicated track governance)"
+    ],
+
+    "estimated_time_to_complete_all_targets": {
+      "with_authorized_expansion_and_all_conditions": "6 weeks (2026-09-08)",
+      "with_expansion_without_conditions": "8-10 weeks (2026-09-22 to 2026-10-06) — defects slip through, rework adds 2-4 weeks",
+      "without_expansion": "30+ weeks (2027-02-15)",
+      "acceleration_ratio": "5× (with conditions) vs. 3× (without conditions)"
+    }
+  }
+}

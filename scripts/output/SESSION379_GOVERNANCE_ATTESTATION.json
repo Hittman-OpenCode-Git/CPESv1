@@ -1,0 +1,156 @@
+{
+  "session": "S379",
+  "board": "Governance Board",
+  "mode": "READ-ONLY",
+  "timestamp": "2026-07-28T17:00:00Z",
+  "governance_stable": "NO",
+
+  "verdict_summary": "Governance Stable: NO — 21 DL-008 violations + 64 DL-026 violations detected via within-object (string-aware brace-matched) scan. Baseline hashes are stale for all packs + 2 governance-critical files. DL-008 certification claims (0 remaining) are refuted by evidence.",
+
+  "checks": {
+    "governance_guard_stability": {
+      "status": "PASS",
+      "details": "54 PASS, 0 FAIL (Rule 10 added 3 tests since S377 baseline of 51). Guard loads and runs correctly. Rules 1-10 active. However, guard only blocks writes — it does not prevent pre-existing violations in live files.",
+      "test_suite_hash": "213829DDB7BE3AB6250DB6C7DB46696AF24BD2787BE822563AC4FF279DF0AB69",
+      "baseline_hash": "F0FD4198C719CAA909CDCDF237F54BC8D58D8CC826342B478278C3B2BDDC9FC8",
+      "hash_drift": "AUTHORIZED — Rule 10 deployment added 3 tests (51→54)"
+    },
+    "governance_guard_plugin_hash": {
+      "current": "7E5185E3F1FB73FA81A1E2F20116620FA39ABED2D90962A090DCFD60C3F13066",
+      "baseline": "F5CFBF616CF5527B24692D5EADDECB3B4806D42A5A309A7A15C504E348144CC5",
+      "hash_drift": "AUTHORIZED — Rule 10 logic added to guard plugin"
+    },
+    "certification_integrity": {
+      "status": "FAIL",
+      "details": "Prior claims of 0 DL-008 and 0 DL-026 on Certified are refuted by within-object evidence.",
+      "certified_pool_count": {
+        "claimed": 2417,
+        "verified_by_grep": 2417,
+        "verified_by_object_parse": 2416,
+        "discrepancy": "Pack B parse failure merges 1 object — 499 objects extracted vs 500 QuestionIDs"
+      },
+      "per_pack_certified": {
+        "pack_a": { "total": 500, "certified": 500, "dl008": 0, "dl026_certified": 0 },
+        "pack_b": { "total": 500, "certified": 500, "dl008": 1, "dl026_certified": 0 },
+        "pack_c": { "total": 500, "certified": 438, "dl008": 11, "dl026_certified": 29 },
+        "pack_d": { "total": 500, "certified": 439, "dl008": 9, "dl026_certified": 35 },
+        "pack_e": { "total": 540, "certified": 540, "dl008": 0, "dl026_certified": 0 }
+      }
+    },
+    "registry_integrity": {
+      "status": "PARTIAL",
+      "details": "QID counts stable (500/500/500/500/540). Certified count essentially correct (2,416 vs claimed 2,417 — 1-item discrepancy from Pack B parse failure). Defect status claims are incorrect.",
+      "qid_counts_verified": true,
+      "node_check": {
+        "pack_a": "PASS",
+        "pack_b": "FAIL — line 19375 SyntaxError: missing }, separator between P1B-F-091 and P1B-F-092 objects",
+        "pack_c": "PASS",
+        "pack_d": "PASS",
+        "pack_e": "PASS"
+      },
+      "governance_critical_hashes": {
+        "ExplanationValidator.js": "STABLE (hash matches baseline)",
+        "build_master_registry.js": "STABLE (hash matches baseline)"
+      }
+    },
+    "baseline_integrity": {
+      "status": "FAIL — STALE",
+      "details": "All 5 pack hashes AND 2 governance-critical file hashes have drifted from S377 CURRENT_BASELINES.md. Drift is explainable by documented authorized sessions (S885-S888 content expansions, S892 Pack A closure, S893-S896 DL-008 remediation, S913 Rule 9, S377 Phase 2 DL-035 remediation). However, CURRENT_BASELINES.md §1 has not been refreshed — the document is stale.",
+      "pack_hash_drift": {
+        "pack_a": { "baseline": "CAB4EFC7...", "current": "51A9D0A6...", "explanation": "S892 Pack A Final Closure (19 archived items replaced) + S886 cognitive-level upgrades" },
+        "pack_b": { "baseline": "9CE6A345...", "current": "9AF12BCE...", "explanation": "S886 cognitive-level upgrades (P1B-D-102 Analyze upgrade)" },
+        "pack_c": { "baseline": "6B712D2A...", "current": "E0ABDF3A...", "explanation": "S895 DL-008 remediation + S377 DL-035 remediation + post-S377 changes" },
+        "pack_d": { "baseline": "2B59A6D6...", "current": "6E19E97A...", "explanation": "S895 DL-008 remediation + S377 DL-035 remediation + post-S377 changes" },
+        "pack_e": { "baseline": "E0CFD1D8...", "current": "B888DF67...", "explanation": "S886 cognitive-level upgrades (P1E-C-044, P1E-C-059 Analyze upgrades)" }
+      }
+    },
+    "learner_safety_assessment": {
+      "status": "COMPROMISED",
+      "critical_defects": 0,
+      "high_defects": [
+        {
+          "defect": "DL-008 (non-empty ExplanationWrong[CorrectChoice])",
+          "scope": "5 Certified items in learner pool: P1B-F-091 (Pack B), P1-CC-015 (Pack C), P1-EC-031 (Pack C), P1-ED-016 (Pack D), P1-ED-051 (Pack D)",
+          "risk": "Learner sees wrong/distractor text where correct-answer explanation should appear. Educational quality degraded. Semantic correctness risk.",
+          "severity": "HIGH",
+          "prior_claim": "Claimed 0 remaining, RESOLVED S896",
+          "board_finding": "REFUTED — 5 Certified learner-pool items carry DL-008"
+        },
+        {
+          "defect": "DL-026 (empty non-CorrectChoice ExplanationWrong slots on Certified items)",
+          "scope": "64 Certified items in learner pool (Pack C: 29, Pack D: 35). All have at least 1 distractor EW slot empty.",
+          "risk": "Learner selecting wrong answer receives no educational feedback. Educational quality degraded. Not a correctness risk (no wrong answers displayed).",
+          "severity": "MEDIUM",
+          "prior_claim": "Claimed 0 on Certified, DL-035 RESOLVED with 32 items S377",
+          "board_finding": "REFUTED — 64 Certified items carry DL-026 (29 Pack C + 35 Pack D). Prior 32-item claim undercounts by 32 items."
+        },
+        {
+          "defect": "Pack B structural integrity",
+          "scope": "1 object lost (line 19375 missing }, separator). node --check fails. 499 objects extracted vs 500 expected.",
+          "risk": "Application may fail to parse Pack B. Rendering engine uses eval/Function() which may handle this differently than strict JSON.",
+          "severity": "HIGH",
+          "prior_claim": "Not explicitly tracked as a defect",
+          "board_finding": "Pack B has known parse failure. Separator gap between P1B-F-091 and P1B-F-092 objects."
+        }
+      ],
+      "confirmed_clean": [
+        "DL-030 (wrong answer keys): 0 — 5/5 items fixed and verified S377",
+        "DL-021 (absent EW fields Pack E Section C): 0 — RESOLVED S828",
+        "DL-037 (choice binary lead-in polarity): 0 — 1 item fixed S911, pool scan clean S912",
+        "Pack A: 0 DL-008, 0 DL-026 on Certified",
+        "Pack E: 0 DL-008, 0 DL-026, 540/540 Certified"
+      ]
+    },
+    "dl035_status": {
+      "defect_library_status": "RESOLVED (32 items remediated S377, 0 remaining)",
+      "current_baselines_status": "S377 IN PROGRESS (line 97 — stale text)",
+      "board_verified_status": "NOT RESOLVED — 64 Certified items carry DL-026 (superset of original 39 Domain F items). The 32-item remediation undercounted by 32 items. Additional 25 items across non-Domain-F sections in Packs C+D carry DL-026 on Certified."
+    },
+    "pack_b_structural_issue": {
+      "location": "line 19374-19375",
+      "cause": "Missing }, object separator between P1B-F-091 and P1B-F-092. 'CognitiveLevel': 'Evaluate' ends one object, next object opens with 'MicroTopic': 'SaaS PaaS IaaS' without }, separator.",
+      "impact": "node --check fails. Object-boundary parser extracts 499 objects (1 merged). Rendering via Function() or eval may still work."
+    }
+  },
+
+  "evidence_sources": {
+    "certified_count": "Select-String -Path pack_*_corrected.js -Pattern '\"question_state\": \"Certified\"' | Measure-Object",
+    "qid_count": "Select-String -Path pack_*_corrected.js -Pattern '\"QuestionID\"' | Measure-Object",
+    "dl008_scan": "Within-object string-aware brace-matched extraction via scripts/output scan_dl008_v2.js (temp)",
+    "dl026_scan": "Within-object string-aware brace-matched extraction via scripts/output scan_dl026_v2.js (temp)",
+    "governance_guard": "node scripts/test_governance_guard.js → 54 PASS, 0 FAIL",
+    "hashes": "Get-FileHash -Algorithm SHA256 on all 5 packs + 4 governance-critical files",
+    "node_check": "node --check on all 5 packs",
+    "pack_b_inspection": "Direct read of pack_b_corrected.js lines 19365-19389"
+  },
+
+  "reconciliation_with_s377_claims": {
+    "certified_pool_2417": "CONFIRMED — grep count matches",
+    "governance_guard_54_pass": "CONFIRMED — test suite passes (was 51, +3 Rule 10 tests authorized)",
+    "dl008_0_remaining": "REFUTED — 21 items found (5 Certified in learner pool)",
+    "dl026_0_on_certified": "REFUTED — 64 Certified items found (29 Pack C + 35 Pack D)",
+    "dl035_resolved": "REFUTED — 64 Certified items carry DL-026 (vs claimed 32 remediated → 0 remaining)",
+    "baselines_stable": "REFUTED — all pack hashes drifted, CURRENT_BASELINES.md is stale",
+    "registry_stable": "PARTIAL — QID counts correct, Certified count essentially correct, defect status claims incorrect"
+  },
+
+  "board_recommendations": [
+    "1. IMMEDIATE: Remediate 5 Certified DL-008 items (P1B-F-091, P1-CC-015, P1-EC-031, P1-ED-016, P1-ED-051) — learner sees wrong text in correct-answer slot.",
+    "2. PRIORITY: Fill empty distractor EW slots on 64 Certified DL-026 items in Packs C+D.",
+    "3. PRIORITY: Fix Pack B line 19375 structural corruption (missing }, separator).",
+    "4. HOUSEKEEPING: Regenerate CURRENT_BASELINES.md — all 5 pack hashes + 2 governance-critical file hashes are stale.",
+    "5. HOUSEKEEPING: Update CURRENT_BASELINES.md §3 DL-035 status from 'S377 IN PROGRESS' to the accurate status.",
+    "6. PROCESS: Investigate why governance guard Rule 2 did not prevent the 5 Certified DL-008 items in Packs C+D — were they certified before Rule 2 was deployed?",
+    "7. PROCESS: The within-object (brace-matched, string-aware) scan methodology is the ONLY reliable approach. All prior regex-window scans (QuestionID→next QuestionID) suffer from DL-029 false positives/negatives due to field ordering within objects. Deprecate forward-scan methodology."
+  ],
+
+  "authoritative_sources_used": [
+    "pack_a_corrected.js through pack_e_corrected.js (raw files — direct inspection)",
+    ".opencode/plugins/governance-guard.js (guard plugin)",
+    "scripts/test_governance_guard.js (test suite)",
+    "knowledge/CURRENT_BASELINES.md (baseline document)",
+    "knowledge/DEFECT_LIBRARY.md (defect library)"
+  ],
+
+  "scan_methodology": "Within-object string-aware brace-matched extraction. Tracks { depth, string/quotes, escape sequences. Extracts each complete JSON object, then searches CorrectChoice and ExplanationWrong fields within the same object boundary. This avoids the DL-029 class of false positives (forward-scan pairing CorrectChoice from object N+1 with ExplanationWrong from object N)."
+}

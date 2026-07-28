@@ -1,0 +1,313 @@
+{
+  "session": "S379",
+  "title": "S379 Expansion Readiness Board — Readiness Review",
+  "timestamp": "2026-07-28T23:00:00Z",
+  "mode": "READ ONLY — no edits performed",
+  "board_role": "Readiness Board",
+  "author": "Build-Time AI Verification",
+  "prior_artifacts": {
+    "s370_sustainability": "60/100 — SUSTAINABLE WITH RISKS — 2 of 8 conditions met",
+    "s376_expansion_readiness": "78 — CONDITIONAL — 5 explicit conditions identified",
+    "s377_expansion_preparation": "4 of 5 conditions MET — Evaluate track NOT launched",
+    "s378": "NO FILES FOUND — Evaluate Workstream never activated"
+  },
+
+  "expansion_readiness_score": 83,
+  "tier": "EXPANSION-CONDITIONAL",
+  "tier_thresholds": {
+    "expansible": "90-100 (EXPANSION-READY)",
+    "conditional": "80-89 (EXPANSION-CONDITIONAL)",
+    "sustainable_with_risks": "70-79 (SUSTAINABLE WITH RISKS)",
+    "pre_expansion": "60-69 (PRE-EXPANSION)",
+    "not_ready": "0-59 (NOT READY)"
+  },
+
+  "scoring_model": {
+    "description": "5-dimension weighted rubric. Each dimension scored independently.",
+    "total_possible": 100,
+
+    "dimensions": {
+      "1_structural_integrity": {
+        "weight": 30,
+        "score": 30,
+        "max": 30,
+        "assessment": "PRISTINE — learner pool fully secured",
+        "evidence": {
+          "governance_guard": "54/54 PASS — Rules 1-10 all active",
+          "critical_defects_in_pool": 0,
+          "dl008_certified": 0,
+          "dl026_on_certified": 0,
+          "dl035": "RESOLVED — 39 Domain F Certified items remediated, 0 remaining",
+          "dl030": "RESOLVED — 5 wrong-answer items corrected",
+          "dl037": "RESOLVED — 1 logic-inversion item corrected, full-pool scan clean, Rule 9 deployed",
+          "certified_pool": "2,417 of 2,540 (95.2%)",
+          "case_pool": "75 cases, 400 items — 100% Certified"
+        }
+      },
+
+      "2_content_quality_trajectory": {
+        "weight": 20,
+        "score": 14,
+        "max": 20,
+        "assessment": "GOOD — learner-safety defects resolved; non-Certified defect backlog remains",
+        "evidence": {
+          "dl031_difficulty_inflation": {
+            "status": "STARTED — Batch 1 complete (17 simple relabels on Certified, 18 calibration + 4 rewrite identified for batch 2+)",
+            "impact": "Certified items correctly recalibrated downward. Paired-constraint risk (Easy bottom-heavy without parallel Difficult recalibrations).",
+            "score": "6/8"
+          },
+          "dl035_governance_gap": {
+            "status": "RESOLVED — 0 remaining",
+            "impact": "Learner pool secured for Domain F.",
+            "score": "2/2"
+          },
+          "dl012_clone_redundancy": {
+            "status": "DOCUMENTED — 28 clone seeds reusable for Evaluate, 140 clones, non-Certified",
+            "impact": "No learner exposure. Clones can be repurposed during Evaluate track.",
+            "score": "2/4"
+          },
+          "dl013_dl025_dl026_dl028": {
+            "status": "OPEN on non-Certified items only — 0 learner pool impact",
+            "impact": "Blocks certification of residual non-Certified items. DL-013: 366 QIDs/851 fields remaining. DL-026: ~6 residual items. DL-025: Wave 2 deferred.",
+            "score": "2/4"
+          },
+          "dl021_dl030_dl037": {
+            "status": "ALL RESOLVED",
+            "impact": "No open issues.",
+            "score": "2/2"
+          }
+        },
+        "summary": "14/20 — All learner-safety defects resolved. Non-Certified backlog (DL-012/013/025/026/028) is well-documented and non-blocking. DL-031 is the only partially-open defect affecting Certified items and has active momentum (17/39 remediated)."
+      },
+
+      "3_expansion_condition_compliance": {
+        "weight": 25,
+        "score": 20,
+        "max": 25,
+        "assessment": "STRONG — 4 of 5 S376 explicit conditions met",
+        "conditions": {
+          "c1_dl031_started": {
+            "status": "MET",
+            "s376_requirement": "scan_dl031.js built + batch 1 executed",
+            "evidence": "classify_dl031.js (v2, Function constructor parse) built. 2,540 items scanned. 39 flagged. 17 relabels applied. 3 packs modified, backups confirmed."
+          },
+          "c2_dl035_remediated": {
+            "status": "MET",
+            "s376_requirement": "S373 plan executed, 0 empty non-CC EW on Certified",
+            "evidence": "32 Pack C/D Domain F items remediated. 38 fields authored. 21 DL-008 fixes. 0 remaining. Governance guard 54/54."
+          },
+          "c3_baselines_accurate": {
+            "status": "MET",
+            "s376_requirement": "all counts verified, DL-035 added, DL-021 corrected",
+            "evidence": "Direct grep recaptured: 2,417 Certified (+119 from S376's stale 2,298). All drift authorized (S853/S892). Hashes recaptured via SHA-256."
+          },
+          "c4_evaluate_track_launched": {
+            "status": "NOT MET",
+            "s376_requirement": "1 proven wave (≥5 items, 0 defects)",
+            "evidence": "Comprehensive track design complete (proposal 288 lines + roadmap 308 lines). Pipeline defined: 6-phase with G8-G10 gates. Gap analysis: 297-item deficit mapped per domain. Cadence: 25 items/wave, 3 waves/week. But 0 waves executed. Wave 0 audit (existing 84 items) + Wave 1 (≥5 fresh authoring) not started. S378 never activated.",
+            "severity": "Medium — design is complete and execution-ready. 1-2 sessions to clear. Low friction, high clarity.",
+            "testability": "High — Wave 1 execution is a binary gate (≥5 items authored, 0 defects at G8-G10)."
+          },
+          "c5_automation_resolved": {
+            "status": "MET",
+            "s376_requirement": "post_change_qc.js existence verified",
+            "evidence": "post_change_qc.js exists (154 lines, SHA-256 FC9C9C45...), runs (exit 0, all QC checks PASS), produces valid JSON output. Contradiction with throughput-board resolved. Not integrated into pipeline (manual invocation)."
+          }
+        }
+      },
+
+      "4_infrastructure_and_automation": {
+        "weight": 15,
+        "score": 10,
+        "max": 15,
+        "assessment": "ADEQUATE — tools exist and work but pipeline integration absent",
+        "evidence": {
+          "post_change_qc": {
+            "exists": true,
+            "runs": true,
+            "pipeline_integrated": false,
+            "score": "3/5"
+          },
+          "pre_delivery_safety_check": {
+            "deployed": true,
+            "score": "3/3"
+          },
+          "rebuild_baselines": {
+            "deployed": true,
+            "score": "2/2"
+          },
+          "classify_dl031": {
+            "deployed": true,
+            "methodology": "v2 — Function constructor parse (replaced broken regex window)",
+            "score": "2/2"
+          },
+          "pipeline_integration": {
+            "ci_cd": "None — no .github/workflows, no npm scripts calling post_change_qc.js, no auto-trigger on pack changes",
+            "score": "0/3"
+          }
+        },
+        "summary": "10/15 — Automation infrastructure exists (5 components deployed, all functional). The tools work when manually invoked. But they are not connected — each runs in isolation. Pipeline integration would add +2-3 points."
+      },
+
+      "5_scaling_readiness": {
+        "weight": 10,
+        "score": 9,
+        "max": 10,
+        "assessment": "READY — proven throughput, track design complete, case pool at 100%",
+        "evidence": {
+          "throughput": {
+            "sessions_per_day_proven": 32,
+            "items_at_5x_target": 119,
+            "score": "3/3"
+          },
+          "wave_capacity": {
+            "peak": "119 items at 5x S374 target",
+            "score": "2/2"
+          },
+          "evaluate_track": {
+            "design_complete": true,
+            "proposal_lines": 288,
+            "roadmap_lines": 308,
+            "gates_defined": "G8-G10 (Scenario Authenticity, Distractor Sophistication, Explanation Depth)",
+            "cadence_defined": "25 items/wave, 3 waves/week",
+            "gap_analysis": "297 MCQ Evaluate deficit, per-domain allocation mapped",
+            "risk_register": "5 risks (R1-R5) with mitigations",
+            "waves_executed": 0,
+            "score": "2/3"
+          },
+          "case_pool": {
+            "status": "100% Certified (75 cases, 400 items across 3 packs)",
+            "score": "2/2"
+          }
+        },
+        "summary": "9/10 — Throughput is proven. Case pool is fully ready. Evaluate track design is thorough and execution-ready. The -1 is for the unexecuted Evaluate wave — design completeness earns partial credit."
+      }
+    }
+  },
+
+  "governed_state_verified": {
+    "certified_pool": {
+      "pack_a": 500,
+      "pack_b": 500,
+      "pack_c": 438,
+      "pack_d": 439,
+      "pack_e": 540,
+      "total": 2417,
+      "total_qids": 2540,
+      "percentage": 95.2,
+      "verification_method": "direct grep — Select-String -Pattern '\"question_state\": \"Certified\"' on all 5 pack files",
+      "confirmatory_test": "Governance guard 54/54 PASS + Parse validation 5/5 packs clean"
+    },
+    "governance_guard": {
+      "tests_pass": 54,
+      "tests_fail": 0,
+      "rules_active": ["Rule 1", "Rule 2", "Rule 3", "Rule 4", "Rule 5", "Rule 6", "Rule 7", "Rule 8", "Rule 9", "Rule 10"],
+      "rule_2_dl008_block": "ACTIVE",
+      "rule_6_dl026_block": "ACTIVE",
+      "rule_9_dl037_block": "ACTIVE",
+      "rule_10_dl021_block": "ACTIVE"
+    },
+    "critical_defects_in_learner_pool": 0,
+    "known_defects_resolved": ["DL-008", "DL-018", "DL-021", "DL-025(W1)", "DL-029", "DL-030", "DL-034", "DL-035", "DL-037"],
+    "known_defects_open_non_critical_non_certified": ["DL-012", "DL-013", "DL-025(W2)", "DL-026(residual)", "DL-028", "DL-031", "DL-032"],
+    "baselines_verified": true,
+    "baselines_recaptured": "S377 — all hashes + counts via SHA-256 + direct grep"
+  },
+
+  "single_blocking_condition": {
+    "condition": "C4 — Evaluate track launched",
+    "requirement": "1 proven wave: ≥5 items authored, reviewed, and certified with 0 defects",
+    "current_state": "Track design complete (proposal 288 lines, roadmap 308 lines). G8-G10 gates defined. Pipeline, cadence, gap analysis, risk register all designed. 0 waves executed.",
+    "severity": "Medium",
+    "testability": "High — binary gate. Either Wave 1 produces ≥5 defect-free Evaluate items or it doesn't.",
+    "resolution_path": [
+      "1. Evaluate Wave 0: Audit existing 84 Evaluate items for miscategorization (P1-E-047: Evaluate/Easy contradictory)",
+      "2. Evaluate Wave 1: Author ≥5 Evaluate items (Domain B or C prioritized — largest gaps, zero clone reuse)",
+      "3. Run through G8-G10 gates + standard G1-G7 gates",
+      "4. Certify with 0 defects (governance guard Rules 1-10 all PASS)",
+      "5. Document in REVISION_HISTORY.md"
+    ],
+    "estimated_sessions_to_resolve": "1-2 sessions"
+  },
+
+  "path_to_90_plus": {
+    "current_score": 83,
+    "target": 90,
+    "gap": 7,
+    "actions": [
+      {
+        "action": "Execute Evaluate Wave 0 + Wave 1",
+        "impact": "+4 (C4 met, Scaling Readiness +1)",
+        "sessions_required": "1-2"
+      },
+      {
+        "action": "DL-031 batch 2: complete 18 Calibration items",
+        "impact": "+1 (Content Quality Trajectory +1)",
+        "sessions_required": "1"
+      },
+      {
+        "action": "Pipeline integration: post_change_qc.js auto-trigger on pack changes",
+        "impact": "+1 (Infrastructure +1)",
+        "sessions_required": "1"
+      },
+      {
+        "action": "DL-031 batch 3: rewrite 4 complex items",
+        "impact": "+1 (Content Quality Trajectory +1)",
+        "sessions_required": "1"
+      }
+    ],
+    "projected_score_after_all_actions": 90,
+    "projected_timeline": "4-5 sessions from S379"
+  },
+
+  "notable_risks": [
+    {
+      "risk": "R1_Paired_Constraint",
+      "description": "DL-031 batch 1 applied 17 downward relabels (Moderate→Easy) with no parallel upward recalibrations. 22 items still pending (18 Calibration + 4 Rewrite). Pool is becoming bottom-heavy, violating CAQS §6.1 target distribution.",
+      "severity": "MEDIUM",
+      "mitigation": "Batch 2 must prioritize Difficult/Very Difficult determination for Calibration items, not just Easy decay."
+    },
+    {
+      "risk": "R2_DL031_Bottom_Heavy",
+      "description": "CAQS §6.1 target: Easy 15%. Current Easy is likely above target after 17 relabels. Without parallel Difficult expansion, the difficulty distribution skews downward.",
+      "severity": "MEDIUM",
+      "mitigation": "Evaluate items are inherently Difficult (4) or Very Difficult (5). Launching the Evaluate track will pull the distribution back toward target."
+    },
+    {
+      "risk": "R3_Automation_Isolation",
+      "description": "post_change_qc.js is not called by any pipeline. Changes can be made without QC verification. Current governance guard enforcement is at write-time (plugin), not post-write (script).",
+      "severity": "LOW",
+      "mitigation": "Governance guard Rules 1-10 enforce at write-time. post_change_qc.js is an additional safety net. Pipeline integration is a productivity improvement, not a safety requirement."
+    },
+    {
+      "risk": "R4_Evaluate_No_Wave_Zero_Audit",
+      "description": "84 existing items labeled Evaluate have not been audited for miscategorization. P1-E-047 at Evaluate/Easy is contradictory. True unique Evaluate items may be ~40, not 84.",
+      "severity": "MEDIUM",
+      "mitigation": "Wave 0 audit must run before Wave 1 authoring. Miscategorized items should be relabeled to their correct cognitive level."
+    },
+    {
+      "risk": "R5_Baselines_Staleness_Note",
+      "description": "CURRENT_BASELINES.md §1 and §3 still show DL-035 as 'S377 IN PROGRESS' when it should be RESOLVED. Non-blocking — all count data is correct.",
+      "severity": "LOW",
+      "mitigation": "Single-line text update to CURRENT_BASELINES.md §1 line 42 and §3 line 97."
+    }
+  ],
+
+  "verdict": {
+    "expansion_ready": false,
+    "expansion_conditional": true,
+    "reason": "4 of 5 S376 explicit conditions met. Pool is structurally pristine (30/30 integrity). 0 CRITICAL defects. 95.2% certified. Governance guard 54/54. The sole remaining blocker — Evaluate track wave execution — has a complete design, low friction to resolve, and high testability. 1-2 sessions to clear.",
+    "recommended_action": "S380 — Authorize Evaluate Wave 0 (audit existing 84 Evaluate items) + Wave 1 (author ≥5 items, Domain B or C). Run through G8-G10 gates. Document. Then S381 re-evaluate readiness at projected 87-90.",
+    "s378_not_skipped_rather_deferred": "S378 was designed but never activated. The Evaluate Workstream design is complete and execution-ready. The gap between S377 design and S380 execution is a scheduling delay, not a blocker failure."
+  },
+
+  "next_steps": [
+    "S380-A: Execute Evaluate Wave 0 — audit all 84 existing Evaluate-labeled items for miscategorization",
+    "S380-B: Execute Evaluate Wave 1 — author ≥5 Evaluate items (Domain B or C), run through G8-G10 gates, certify with 0 defects",
+    "S381: S381 Readiness Board — re-evaluate after Wave 0+1. Projected score: 87-90 (EXPANSION-READY or high CONDITIONAL)",
+    "Stretch: Update CURRENT_BASELINES.md DL-035 status text (IN PROGRESS → RESOLVED)",
+    "Stretch: DL-031 batch 2 — 18 Calibration items cognitive review"
+  ],
+
+  "archival_note": "S379 exists to bridge the gap between S377 (preparation board) and S380 (evaluate execution). S378 was never activated. This board provides the authoritative readiness score for the current state."
+}

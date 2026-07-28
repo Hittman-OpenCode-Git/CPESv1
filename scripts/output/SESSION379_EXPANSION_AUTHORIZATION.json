@@ -1,0 +1,105 @@
+{
+  "session": "S379",
+  "board": "Executive Board — Expansion Authorization",
+  "date": "2026-07-28",
+  "decision": "CONDITIONAL",
+  "authorization_rules_applied": [
+    "All Conditions Met",
+    "Evaluate Track Active",
+    "Governance Stable",
+    "Readiness Score Acceptable",
+    "Execution Capacity Sufficient"
+  ],
+  "condition_status": {
+    "A_DL035": {
+      "status": "MET",
+      "detail": "S377 DL-035 closeout addressed Domain F. S814 Rule 6 deployed. 39 items remediated."
+    },
+    "B_DL031": {
+      "status": "PARTIAL",
+      "detail": "CAL-001 correction wave started (18 items). 4 items deferred. Not all DL-031 items recalibrated across ~500 estimated pool-wide."
+    },
+    "C_Automation": {
+      "status": "MET",
+      "detail": "Governance guard Rules 1-9 active. Test suite 51/51 PASS. Pre-delivery safety check operational."
+    },
+    "D_Throughput": {
+      "status": "PARTIAL",
+      "detail": "Peak throughput proven in autonomous runs. No sustained multi-week throughput data. 3-session sustained measurement window not yet completed."
+    },
+    "E_CognitiveGap": {
+      "status": "MET",
+      "detail": "Cognitive level alignment verified. Evaluate track definition ready but track never launched."
+    },
+    "F_Evaluate": {
+      "status": "NOT MET",
+      "detail": "S378 produced zero files. Evaluate Workstream is NOT ACTIVE. No Wave 0 audit. No Wave 1 items. No G8-G10 gates deployed."
+    }
+  },
+  "conditions_met": 3,
+  "conditions_partial": 2,
+  "conditions_not_met": 1,
+  "readiness_score": {
+    "score": 83,
+    "max": 100,
+    "acceptable_threshold": 90,
+    "path_to_90": "4-5 sessions",
+    "detail": "Evaluate track launch + CAL-001 completion + sustainment period"
+  },
+  "governance_status": {
+    "guard_tests": "54/54 PASS",
+    "critical_defects": 0,
+    "verdict": "STABLE"
+  },
+  "ground_truth_snapshot": {
+    "method": "Function Constructor Parse",
+    "timestamp": "2026-07-28",
+    "packs": {
+      "A": { "total": 500, "certified": 500, "DL008_cert": 0, "DL026_cert": 0 },
+      "B": { "total": 500, "certified": 500, "DL008_cert": 0, "DL026_cert": 0 },
+      "C": { "total": 500, "certified": 438, "DL008_cert": 2, "DL026_cert": 29 },
+      "D": { "total": 500, "certified": 439, "DL008_cert": 2, "DL026_cert": 35 },
+      "E": { "total": 540, "certified": 540, "DL008_cert": 0, "DL026_cert": 0 }
+    },
+    "totals": { "total_items": 2540, "certified": 2417, "DL008_cert": 4, "DL026_cert": 64 }
+  },
+  "residual_defects": {
+    "DL008_cert": {
+      "count": 4,
+      "items": ["P1-CC-015", "P1-EC-031", "P1-ED-016", "P1-ED-051"],
+      "severity": "High — learner-safety risk on 2 Pack C + 2 Pack D items"
+    },
+    "DL026_cert": {
+      "count": 64,
+      "scope": "Sections C, D, E (broader than Domain F addressed by S377)",
+      "breakdown": {
+        "Pack_C_Section_C": 15,
+        "Pack_C_Section_E": 14,
+        "Pack_D_Section_C": 18,
+        "Pack_D_Section_D": 15,
+        "Pack_D_Section_E": 2
+      },
+      "severity": "High — 64 Certified items with empty distractor ExplanationWrong slots"
+    }
+  },
+  "blocking_condition": {
+    "primary": "F — Evaluate Workstream NOT ACTIVE",
+    "detail": "S378 produced zero files. Evaluate track (G8-G10 gates, Wave 0 audit, Cognitive Level 5/6 Evaluate items) has never been launched. This is a hard prerequisite for expansion — the program cannot expand into higher-level cognitive assessment without the Evaluate track operational."
+  },
+  "contributing_blockers": [
+    "B — DL-031 calibration incomplete (4 deferred from CAL-001)",
+    "D — Throughput not sustained over multi-week window"
+  ],
+  "execution_capacity": {
+    "verdict": "SUFFICIENT_WITH_SEQUENCING",
+    "concerns": [
+      "All 5 pack hashes have drifted from CURRENT_BASELINES.md",
+      "123 uncertified Pack C/D items should be certified before expansion",
+      "Evaluate gap: 297 items, 6 weeks estimated with dedicated track"
+    ]
+  },
+  "next_session": {
+    "file": "SESSION380_REMAINING_BLOCKERS.json",
+    "content": "Enumerate the exact sequencing to achieve AUTHORIZED: (1) Launch Evaluate Workstream + S378 retry, (2) Complete CAL-001 deferred, (3) Establish 3-session sustained throughput window, (4) Re-board when readiness >= 90 and all conditions MET."
+  }
+}
