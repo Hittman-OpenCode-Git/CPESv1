@@ -8415,18 +8415,18 @@ const MCQ_BANK_D = [
         "MicroTopic": "cash collection pattern budgeting",
         "UniqueConceptKey": "B-D090-cash-collection-pattern-budgeting",
         "LOSTag": "B Planning and budgeting",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Palisade historically collects 60% of credit sales in the month of sale and 40% in the following month. If June credit sales are 200,000 and May credit sales were 150,000, what are budgeted cash collections in June?",
+        "Stem": "Palisade Industries must maintain a minimum month-end cash balance of $50,000 under its credit agreement. The treasurer projects the following: May credit sales of $150,000 (collected 40% in May, 60% in June), June credit sales of $200,000 (collected 60% in June, 40% in July), and June cash disbursements of $205,000. The June 1 cash balance is $45,000. The treasurer can draw on a $100,000 line of credit in $10,000 increments at 8% annual interest, with interest paid when the principal is repaid. Should Palisade draw on the line of credit in June, and if so, for how much?",
         "Choices": {
-            "A": "150,000",
-            "B": "180,000",
-            "C": "120,000",
-            "D": "200,000"
+            "A": "No draw needed — projected June 30 cash balance exceeds the $50,000 minimum",
+            "B": "Draw $10,000 — the projected June 30 cash balance of $50,000 meets the minimum exactly, but a draw provides a prudent working capital buffer above the covenant threshold",
+            "C": "Draw $20,000 — interest on the line of credit must also be covered in the same month, requiring a larger draw to maintain the minimum balance",
+            "D": "Draw $30,000 — the collection lag combined with high June disbursements requires additional buffer beyond the bare minimum to absorb timing variances"
         },
         "CorrectChoice": "B",
-        "ExplanationCorrect": "June cash collections consist of 60% of June sales (collected in the month of sale) plus 40% of May sales (collected in the following month). June collections = (0.60 × $200,000) + (0.40 × $150,000) = $120,000 + $60,000 = $180,000. The 60/40 pattern determines how each month's sales are split between the current and subsequent month's cash receipts.",
+        "ExplanationCorrect": "Step 1: Calculate June cash collections. From May sales collected in June: 60% × $150,000 = $90,000. From June sales collected in June: 60% × $200,000 = $120,000. Total June collections = $210,000. Step 2: Project June 30 cash balance before borrowing. Beginning balance ($45,000) + Collections ($210,000) - Disbursements ($205,000) = $50,000. The projected balance equals the $50,000 minimum exactly. While this technically meets the stated minimum, operating precisely at the covenant threshold with zero buffer is imprudent treasury practice — any unplanned disbursement or minor collection delay triggers a breach. Additionally, many credit agreements define the minimum as a balance that must be maintained, not merely reached. Step 3: Drawing $10,000 (the minimum increment) produces a $60,000 ending balance, establishing a $10,000 buffer above the covenant floor. Interest is paid upon principal repayment, not accrued against the available balance, so the full $10,000 is available for the minimum balance requirement. The key judgment is recognizing that a draw is warranted despite meeting the stated minimum, because operating without a buffer is not commercially reasonable treasury management.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -8449,13 +8449,13 @@ const MCQ_BANK_D = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "This figure likely results from a unit conversion error or from using contributed capital instead of determining the required production or sales quantity. Recalculate using the appropriate budget formula for the component being tested.",
+        "ExplanationWrongA": "Without borrowing, the June 30 cash balance equals exactly $50,000 ($45,000 + $210,000 - $205,000). While this calculation is mathematically correct, operating precisely at the covenant threshold with no margin for error is not prudent treasury management. Any unplanned disbursement — a vendor demanding earlier payment, a utility bill arriving ahead of schedule — would trigger a covenant breach and potential default. Treasury professionals maintain a working capital buffer above stated minimums. The correct decision is to draw the $10,000 minimum increment to establish this buffer.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "This figure likely results from omitting a key adjustment such as beginning inventory, ending inventory, or a specific budget component. Trace through the budget sequence carefully and verify each step.",
-        "ExplanationWrongD": "This choice equals June sales only ($200,000), assuming all June sales are collected in June. At the given 60% collection rate in the month of sale, only $120,000 (60% × $200,000) is collected from June sales in June, plus 40% of May sales ($60,000).",
+        "ExplanationWrongC": "Interest is paid when the principal is repaid per the credit agreement terms, not accrued monthly against the available cash balance. The $10,000 draw at 8% annual interest would generate approximately $67 per month in interest, which is negligible for the cash balance calculation. More importantly, the interest expense accrues but is not paid until principal repayment, meaning the full $10,000 principal draw is available to meet the minimum balance requirement. Drawing $20,000 provides double the necessary buffer at unnecessary interest cost.",
+        "ExplanationWrongD": "The June 30 cash balance before borrowing is $50,000, exactly at the minimum. A $10,000 draw provides a $10,000 working capital buffer (20% above the covenant floor), which is a proportionate and reasonable cushion for a business of this size. Drawing $30,000 would leave $75,000 in cash — a $25,000 excess above the minimum. While treasury professionals value buffers, they should be proportionate to risk. The $20,000 of unnecessary borrowing would incur approximately $1,600 in annual interest cost with no offsetting benefit to the business.",
         "question_state": "Certified",
-        "DifficultyScore": 3,
-        "CognitiveLevel": "Apply"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "Part": 1,

@@ -9667,18 +9667,18 @@ const MCQ_BANK_C = [
         "MicroTopic": "return on investment dupont",
         "UniqueConceptKey": "C-C015-return-on-investment-dupont",
         "LOSTag": "C Performance management",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Oakhurst has operating income of 450,000, average operating assets of 3,000,000, and a required rate of return of 10%. What is residual income?",
+        "Stem": "Meridian Corporation evaluates its two divisions using ROI and residual income. The required rate of return is 10%. North Division reports operating income of $450,000 on average operating assets of $3,000,000. South Division reports operating income of $200,000 on average operating assets of $1,000,000. The CFO must decide where to place a $500,000 expansion project expected to generate a 12% return ($60,000 annual operating income). The North Division manager's bonus is based on ROI; South's manager is evaluated on residual income. Which recommendation best serves Meridian's shareholders?",
         "Choices": {
-            "A": "135,000",
-            "B": "450,000",
-            "C": "150,000",
-            "D": "300,000"
+            "A": "Place the expansion in South Division — its 20% ROI exceeds North's 15%, proving it allocates capital more efficiently, and the project's 12% return would harm either division's ROI less at South",
+            "B": "Place the expansion in North Division because its higher residual income ($150,000 vs. $100,000) indicates it creates more absolute shareholder value, and the project earning 12% exceeds the required return regardless of which division hosts it",
+            "C": "Reject the project — a 12% return is below both divisions' current ROI, so investing would dilute the company's overall return on invested capital",
+            "D": "Let South Division host it because its manager, evaluated on residual income, will accept the project; North's manager would likely reject it since the expansion would lower North's ROI from 15.0% to 14.6%"
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Residual income (RI) = Operating income - (Required rate of return × Average operating assets). RI = $450,000 - (10% × $3,000,000) = $450,000 - $300,000 = $150,000. RI measures whether a division earned more than its cost of capital, expressed as a dollar amount rather than a percentage like ROI.",
+        "CorrectChoice": "B",
+        "ExplanationCorrect": "North Division: ROI = $450,000 / $3,000,000 = 15.0%. Residual income = $450,000 - (10% × $3,000,000) = $150,000. South Division: ROI = $200,000 / $1,000,000 = 20.0%. Residual income = $200,000 - (10% × $1,000,000) = $100,000. The key analytical insight is that residual income measures absolute economic value creation. North Division generates $50,000 more residual income annually than South, meaning it contributes more total value to shareholders. The expansion project earning 12% exceeds the 10% required return, so it adds positive net present value wherever it is placed. If hosted by North, the project adds $60,000 - (10% × $500,000) = $10,000 to residual income. The underinvestment bias problem with ROI is that North's manager would see ROI decline from 15.0% to ($510,000 / $3,500,000 = 14.6%) and might reject a value-creating project. South's manager, evaluated on residual income, would accept it because it adds $10,000 to RI. However, prioritizing North Division is the better shareholder recommendation because North already creates more absolute value, and the company should use residual income — not ROI — as its primary performance metric to avoid the underinvestment bias. A division's higher ROI does not make it a better host for value-creating investment.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
@@ -9701,13 +9701,13 @@ const MCQ_BANK_C = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "$135,000 is incorrect. This may result from applying the required return rate to the operating income ($450,000 x 10% = $45,000) and subtracting from an incorrect base, or miscalculating the capital charge. Residual income = $450,000 - (10% x $3,000,000) = $150,000.",
+        "ExplanationWrongA": "South Division's higher ROI (20.0%) reflects its smaller asset base, not necessarily superior capital allocation. ROI is subject to the underinvestment bias: a division manager may reject value-creating investments that exceed the cost of capital if they lower the division's average ROI. The project earning 12% exceeds the 10% required return, so it creates value regardless of which division hosts it. The critical consideration is absolute economic value, where North Division contributes $50,000 more in residual income. The assertion that the project harms either division's ROI less at South ignores that declining ROI from a value-creating investment is not a genuine harm to shareholders.",
         "ExplanationWrongB": "$300,000 is only the capital charge (10% x $3,000,000), not the residual income. RI = operating income minus the capital charge.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "$300,000 is only the capital charge (10% x $3,000,000), not the residual income. RI = operating income minus the capital charge: $450,000 - $300,000 = $150,000.",
+        "ExplanationWrongC": "A 12% return exceeds the company's 10% required rate of return, making this a positive net present value project. Rejecting it because it is below existing division ROIs is the classic underinvestment bias — it confuses average historical returns with marginal returns. As long as the marginal return (12%) exceeds the cost of capital (10%), the project adds shareholder value. Companies that reject all projects below their average ROI eventually shrink, as they accept no new investment. The correct framework is to accept all projects with returns above the cost of capital.",
+        "ExplanationWrongD": "While it is true that South's manager, evaluated on residual income, would accept the project (it adds $10,000 to RI), and North's ROI-evaluated manager might reject it (ROI declines from 15.0% to 14.6%), this choice confuses near-term incentive alignment with the best shareholder outcome. The CFO should not simply let the evaluation metric determine the investment location. North Division creates more absolute value and the company should move toward residual income-based evaluation for all divisions. Placing the investment in North and fixing the incentive metric is superior to routing investment decisions around a broken incentive design.",
         "question_state": "Certified",
-        "DifficultyScore": 2,
-        "CognitiveLevel": "Apply"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Evaluate"
     },
     {
         "Part": 1,

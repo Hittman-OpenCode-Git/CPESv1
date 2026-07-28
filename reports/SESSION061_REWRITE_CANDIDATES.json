@@ -1,0 +1,300 @@
+{
+  "session": "61",
+  "phase": "candidate-selection",
+  "total_candidates": 20,
+  "selection_criteria": {
+    "avoid": [
+      "S899-S60 recently authored items (all in Packs C+D Sections E+F)",
+      "Already Analyze or Evaluate cognitive level",
+      "Difficult or Very Difficult difficulty",
+      "Items from Packs C or D Sections E+F (recently authored)"
+    ],
+    "prioritize": [
+      "Understand-level definition-driven items (DL-031 pattern)",
+      "Easy/Moderate-Easy/Moderate difficulty",
+      "Items with existing business context for natural scenario extension",
+      "Items where topic naturally supports judgment/recommendation/prioritization"
+    ],
+    "evaluate_target": 8,
+    "actual_evaluate_count": 10,
+    "evaluate_qids": [
+      "P1-A-002",
+      "P1-B-086",
+      "P1E-B-012",
+      "P1B-C-153",
+      "P1-D-070",
+      "P1E-D-029",
+      "P1E-D-030",
+      "P1-E-084",
+      "P1B-F-091",
+      "P1B-F-116"
+    ],
+    "domain_distribution": {
+      "A-B": ">=5 (actual 6)",
+      "C-D": ">=5 (actual 7)",
+      "E-F": ">=3 (actual 7)",
+      "flexible": 7
+    }
+  },
+  "candidates": [
+    {
+      "qid": "P1-A-002",
+      "pack": "A",
+      "section": "A",
+      "topic": "Income statement discontinued operation presentation",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Existing business scenario (Riverview disposal) can be extended to require evaluating the appropriateness of held-for-sale classification and recommending financial statement presentation under ASC 205-20.",
+      "stem_preview": "Riverview will sell a component that represents a strategic shift and has met held-for-sale criteria. Which response is most appropriate?"
+    },
+    {
+      "qid": "P1B-A-145",
+      "pack": "B",
+      "section": "A",
+      "topic": "Income statement - restructuring charges recognition timing",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Scenario with Brookfield Corp can be expanded to analyze multiple restructuring events occurring at different dates and determine proper recognition timing under ASC 420.",
+      "stem_preview": "Brookfield Corp announces a restructuring plan involving employee severance and facility closure costs. Under GAAP, when are restructuring costs recognized?"
+    },
+    {
+      "qid": "P1-B-086",
+      "pack": "A",
+      "section": "B",
+      "topic": "Forecast bias detection and correction",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Rich existing scenario (Overland six-quarter forecast bias) naturally extends to evaluating the root causes of systematic bias and recommending corrective actions to the forecasting methodology.",
+      "stem_preview": "Overland's sales forecasts have been consistently lower than actual results for six straight quarters. What does this pattern most likely indicate?"
+    },
+    {
+      "qid": "P1-B-015",
+      "pack": "A",
+      "section": "B",
+      "topic": "Pro forma financial statements - master budget integration",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Granite scenario can be expanded to analyze which specific pro forma statements are needed for different stakeholder decisions (lender vs. board vs. operations) and why.",
+      "stem_preview": "Granite wants projected income statement and balance sheet effects of the annual plan. Which response is most appropriate?"
+    },
+    {
+      "qid": "P1B-B-138",
+      "pack": "B",
+      "section": "B",
+      "topic": "Strategic planning vs. budgeting relationship",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Conceptual comparison can be elevated to analyze how misalignment between strategic plans and operating budgets creates organizational dysfunction, requiring identification of disconnects.",
+      "stem_preview": "Which statement best describes the relationship between strategic planning and budgeting?"
+    },
+    {
+      "qid": "P1E-B-012",
+      "pack": "E",
+      "section": "B",
+      "topic": "Zero-based budgeting methodology",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Pure definition recall can be replaced with a business scenario requiring evaluation of whether ZBB or incremental budgeting is appropriate given organizational context and constraints.",
+      "stem_preview": "Zero-based budgeting requires:"
+    },
+    {
+      "qid": "P1-C-072",
+      "pack": "A",
+      "section": "C",
+      "topic": "Balanced scorecard - customer perspective metrics",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Metric classification can be upgraded to analyzing which customer-perspective metrics best align with a given company strategy and distinguishing leading vs. lagging indicators.",
+      "stem_preview": "Which of the following metrics would be classified under the customer perspective of a balanced scorecard?"
+    },
+    {
+      "qid": "P1B-C-153",
+      "pack": "B",
+      "section": "C",
+      "topic": "Transfer pricing - profit center evaluation conflicts",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Transfer pricing conflict question can be elevated to a full scenario requiring evaluation of which transfer pricing method (market-based, cost-based, negotiated) best serves goal congruence and division autonomy.",
+      "stem_preview": "When a manager of a profit center is evaluated based on divisional profit, which transfer pricing conflict is most likely to arise?"
+    },
+    {
+      "qid": "P1E-C-014",
+      "pack": "E",
+      "section": "C",
+      "topic": "Return on investment (ROI) formula and components",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Definition recall can be replaced with analyzing why a division manager might reject a positive-NPV project under ROI-based evaluation and how residual income would change the decision.",
+      "stem_preview": "Return on investment is calculated as:"
+    },
+    {
+      "qid": "P1E-C-049",
+      "pack": "E",
+      "section": "C",
+      "topic": "Benchmarking methodology and comparison base",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Definition recall can be upgraded to analyzing which type of benchmarking (internal, competitive, functional, generic) is most appropriate for a given performance improvement objective.",
+      "stem_preview": "Benchmarking compares against:"
+    },
+    {
+      "qid": "P1-D-070",
+      "pack": "A",
+      "section": "D",
+      "topic": "JIT quality requirements and supplier relationships",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "JIT quality question can be expanded to a scenario evaluating the trade-offs between JIT implementation and traditional inventory buffering given specific supplier reliability and demand volatility data.",
+      "stem_preview": "Because JIT systems maintain minimal buffer inventory, what does a successful JIT implementation require regarding product quality?"
+    },
+    {
+      "qid": "P1E-D-029",
+      "pack": "E",
+      "section": "D",
+      "topic": "Make-or-buy decision analysis",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Pure definition can be replaced with a scenario requiring evaluation of qualitative factors (quality control, supplier dependency, strategic capability) alongside quantitative cost analysis to recommend make vs. buy.",
+      "stem_preview": "Make-or-buy decisions compare:"
+    },
+    {
+      "qid": "P1E-D-030",
+      "pack": "E",
+      "section": "D",
+      "topic": "Special order acceptance decision criteria",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Definition recall can be upgraded to a scenario requiring evaluation of a one-time order considering capacity constraints, opportunity costs, and long-term customer relationship implications.",
+      "stem_preview": "A special order should be accepted if:"
+    },
+    {
+      "qid": "P1-E-084",
+      "pack": "A",
+      "section": "E",
+      "topic": "Audit committee oversight independence and governance",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Already has a rich, detailed scenario (SignalPoint Technologies with multiple governance red flags). Mislabeled as Understand - the prompt already requires evaluating multiple deficiencies and determining which is most critical under COSO Principle 4.",
+      "stem_preview": "SignalPoint Technologies' audit committee consists of three members: the CEO's brother (a marketing executive), a retired operations manager who left the company two years ago, and an independent director who is a CPA. The committee meets quarterly, but the CEO attends every meeting and the committee has never held an executive session without management present. The external auditor has communicated a significant deficiency in revenue recognition controls for two consecutive years without remediation. Which governance deficiency is most apparent?"
+    },
+    {
+      "qid": "P1-E-027",
+      "pack": "A",
+      "section": "E",
+      "topic": "External audit reliance on internal controls",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Generic prompt can be replaced with a scenario analyzing the extent to which external auditors can rely on internal audit work under different conditions of objectivity and competence per PCAOB AS 2605.",
+      "stem_preview": "Vantage is reviewing internal controls related to external audit reliance on controls. Which response is most appropriate?"
+    },
+    {
+      "qid": "P1B-E-083",
+      "pack": "B",
+      "section": "E",
+      "topic": "Internal control inherent limitations",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Conceptual recall can be elevated to analyzing a specific control failure scenario and distinguishing whether the failure resulted from an inherent limitation or a design/operating deficiency under the COSO framework.",
+      "stem_preview": "Vanguard Technologies recognizes that even a well-designed internal control system cannot provide absolute assurance. Which of the following is an inherent limitation of internal control?"
+    },
+    {
+      "qid": "P1E-E-034",
+      "pack": "E",
+      "section": "E",
+      "topic": "COSO Principle 10 - control activities selection and development",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Pure recall can be replaced with a scenario analyzing which specific control activities should be selected for a given business process risk and why general IT controls vs. application controls are appropriate.",
+      "stem_preview": "COSO principle 10 requires selection and development of:"
+    },
+    {
+      "qid": "P1-F-005",
+      "pack": "A",
+      "section": "F",
+      "topic": "Data governance - data dictionary and metadata definitions",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "Medium",
+      "target_cognitive": "Analyze",
+      "rationale": "Apex scenario with named company can be expanded to analyze how data dictionary components (field definitions, validation rules, lineage) support different use cases: regulatory reporting vs. operational analytics vs. audit.",
+      "stem_preview": "Apex is building a finance data catalog for analytics users. The controller wants users to know how fields are defined, formatted, validated, and related across reports. Which tool best addresses this need?"
+    },
+    {
+      "qid": "P1B-F-091",
+      "pack": "B",
+      "section": "F",
+      "topic": "Cloud computing - SaaS migration risk assessment",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Blue Ridge Partners scenario with a concrete decision point (SaaS migration) naturally extends to evaluating the risk/benefit trade-offs of SaaS vs. on-premise for accounting systems considering data security, customization, and vendor lock-in.",
+      "stem_preview": "Blue Ridge Partners is moving its accounting systems to a software-as-a-service (SaaS) cloud platform. Which of the following is a key risk that management should consider?"
+    },
+    {
+      "qid": "P1B-F-116",
+      "pack": "B",
+      "section": "F",
+      "topic": "ERP systems - segregation of duties redesign",
+      "current_cognitive": "Understand",
+      "current_difficulty": "Easy",
+      "upgrade_potential": "High",
+      "target_cognitive": "Evaluate",
+      "rationale": "Nexus Manufacturing ERP scenario can be elevated to evaluating how to redesign the control environment when manual SoD is replaced by automated workflows, recommending compensating controls and access role design.",
+      "stem_preview": "Nexus Manufacturing recently implemented an integrated ERP system. The internal auditor notes that the previous manual segregation of duties between purchase order approval and goods receipt processing is now automated within the system. Which of the following is a key control implication of this change?"
+    }
+  ],
+  "domain_counts": {
+    "Section_A": 2,
+    "Section_B": 4,
+    "Section_C": 4,
+    "Section_D": 3,
+    "Section_E": 4,
+    "Section_F": 3
+  },
+  "cognitive_source_counts": {
+    "Understand": 20,
+    "Apply": 0,
+    "Analyze": 0
+  },
+  "pack_distribution": {
+    "Pack_A": 8,
+    "Pack_B": 6,
+    "Pack_E": 6
+  },
+  "excluded_recent_qids": "S899: P1-EC-019,026,029,034,039,044,048,054,058,067 (Pack C EC) | S899: P1-ED-021,026,031,038,043,049,054,060,067,070 (Pack D ED) | S899: 4 P1-FC + 6 P1-FD items incl FD-046 scratch (Packs C+D F) | S50: ~20 additional Pack C/D EC/ED items (Phase 2) | S51: ~20 additional Pack C/D EC/ED items (Phase 3) | S52: 10 EC + 10 ED items (Phase 4 comprehensive list) | S56: 5 EC + 10 ED items (Phase 5 parallel collision) | S58: 10 EC + 10 FD items (Phase 6 specific QIDs listed) | Note: ALL S899-S60 authoring is in Packs C+D only. Zero Pack A/B/E items affected. | DL-030 corrections (P1B-B-119,F-084,F-116,F-121, P1E-E-037) are content corrections, not new authoring."
+}

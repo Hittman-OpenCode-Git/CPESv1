@@ -1,0 +1,222 @@
+P1-A-002 | Pack A | Sec A | A.002 income statement discontinued operation pres | Riverview will sell a component that represents a strategic shift and has met held-for-sale criteria. Which response is most appropriate?
+P1-A-009 | Pack A | Sec A | A.009 LIFO liquidation effect | Zephyr reduced inventory quantities below older LIFO layers during a period of rising costs. Which response is most appropriate?
+P1-B-015 | Pack A | Sec B | B.015 pro forma financial statements | Granite wants projected income statement and balance sheet effects of the annual plan. Which response is most appropriate?
+P1-B-062 | Pack A | Sec B | B.062 learning curve vs experience curve distincti | Grayson's cost analyst distinguishes between a learning curve and an experience curve when discussing declining unit costs. What is the key difference
+P1-B-086 | Pack A | Sec B | B.086 forecast bias detection | Overland's sales forecasts have been consistently lower than actual results for six straight quarters. What does this pattern most likely indicate?
+P1-B-088 | Pack A | Sec B | B.088 budgeted balance sheet purpose | Which of the following best describes the purpose of the budgeted balance sheet in the master budget process?
+P1-C-072 | Pack A | Sec C | C.072 customer perspective metric example | Which of the following metrics would be classified under the customer perspective of a balanced scorecard?
+P1-D-070 | Pack A | Sec D | D.070 JIT quality requirement | Because JIT systems maintain minimal buffer inventory, what does a successful JIT implementation require regarding product quality?
+P1-E-009 | Pack A | Sec E | E.009 corrective controls after failed batch | Delta is reviewing internal controls related to corrective controls after failed batch. Which response is most appropriate?
+P1-E-010 | Pack A | Sec E | E.010 physical safeguards over inventory | Evergreen is reviewing internal controls related to physical safeguards over inventory. Which response is most appropriate?
+P1-E-011 | Pack A | Sec E | E.011 access controls for payroll master file | Frontier is reviewing internal controls related to access controls for payroll master file. Which response is most appropriate?
+P1-E-012 | Pack A | Sec E | E.012 change management approval evidence | Granite is reviewing internal controls related to change management approval evidence. Which response is most appropriate?
+P1-E-027 | Pack A | Sec E | E.027 external audit reliance on controls | Vantage is reviewing internal controls related to external audit reliance on controls. Which response is most appropriate?
+P1-E-028 | Pack A | Sec E | E.028 documentation of control performance | Willow is reviewing internal controls related to documentation of control performance. Which response is most appropriate?
+P1-E-056 | Pack A | Sec E | E.056 independent physical count control | A warehouse manager who has custody of inventory is also assigned to perform the annual physical inventory count without independent oversight. What c
+P1-E-077 | Pack A | Sec E | E.077 it general controls access | Morgan transferred from accounts payable to treasury last month, but her system profile still grants her full access to create and approve vendor paym
+P1-E-082 | Pack A | Sec E | E.082 it change management emergency bypass | During the month-end close, a senior developer at Harbor Analytics deployed a code change directly to the production general ledger system to correct 
+P1-E-084 | Pack A | Sec E | E.084 audit committee oversight independence | SignalPoint Technologies' audit committee consists of three members: the CEO's brother (a marketing executive), a retired operations manager who left 
+P1-F-001 | Pack A | Sec F | F.001 ERP transaction integration | Vantage is evaluating ERP transaction integration in a finance transformation project. Which response is most appropriate?
+P1-F-003 | Pack A | Sec F | F.003 AIS audit trail | Yukon is reviewing whether its accounting information system supports auditability from purchase order through journal entry and financial report. Whi
+P1-F-005 | Pack A | Sec F | F.005 data dictionary definitions | Apex is building a finance data catalog for analytics users. The controller wants users to know how fields are defined, formatted, validated, and rela
+P1-F-008 | Pack A | Sec F | F.008 data quality accuracy | Dakota is validating customer master data before using it in revenue analytics. A sample shows customer addresses and credit limits that differ from a
+P1-F-009 | Pack A | Sec F | F.009 data quality timeliness | Evergreen receives daily point-of-sale feeds for a margin dashboard, but the feed often arrives two days after managers make pricing decisions. Which 
+P1-F-010 | Pack A | Sec F | F.010 data cleansing duplicate customers | Frontier finds that the same customer appears under several spellings in the billing system, causing receivables aging and customer profitability repo
+P1-F-014 | Pack A | Sec F | F.014 ETL process controls | Juniper is loading sales and inventory data from operating systems into a finance data warehouse. Which control best supports completeness and accurac
+P1-F-022 | Pack A | Sec F | F.022 clustering customer segments | Riverview wants analytics to identify natural customer groups using purchasing behavior, profitability, and service usage without assigning labels in 
+P1-F-023 | Pack A | Sec F | F.023 regression analytics driver | Summit is analyzing whether machine hours and setup counts explain monthly maintenance cost. Which analytics method estimates the relationship between
+P1-F-024 | Pack A | Sec F | F.024 outlier detection | Titan uses analytics to flag vendor payments that are unusually large, unusually frequent, or outside normal timing patterns. What should finance do w
+P1-F-026 | Pack A | Sec F | F.026 correlation not causation | Vantage finds that advertising spend and revenue increased during the same months. Management wants to conclude that the advertising caused the revenu
+P1-F-029 | Pack A | Sec F | F.029 machine learning training data | Zephyr is evaluating machine learning training data in a finance transformation project. Which response is most appropriate?
+P1-F-031 | Pack A | Sec F | F.031 cloud computing scalability risk | Beacon is evaluating cloud computing scalability risk in a finance transformation project. Which response is most appropriate?
+P1-F-032 | Pack A | Sec F | F.032 cybersecurity phishing control | Crescent is evaluating cybersecurity phishing control in a finance transformation project. Which response is most appropriate?
+P1-F-035 | Pack A | Sec F | F.035 encryption at rest and transit | Frontier is evaluating encryption at rest and transit in a finance transformation project. Which response is most appropriate?
+P1-F-039 | Pack A | Sec F | F.039 SDLC testing before deployment | Juniper is evaluating SDLC testing before deployment in a finance transformation project. Which response is most appropriate?
+P1-F-041 | Pack A | Sec F | F.041 system interface reconciliation | Lumen is evaluating system interface reconciliation in a finance transformation project. Which response is most appropriate?
+P1-F-044 | Pack A | Sec F | F.044 version control analytics model | Orion is evaluating version control analytics model in a finance transformation project. Which response is most appropriate?
+P1-F-047 | Pack A | Sec F | F.047 continuous auditing exception | Riverview is evaluating continuous auditing exception in a finance transformation project. Which response is most appropriate?
+P1-F-049 | Pack A | Sec F | F.049 digital transformation finance role | Titan is evaluating digital transformation finance role in a finance transformation project. Which response is most appropriate?
+P1-F-050 | Pack A | Sec F | F.050 technology ROI benefits tracking | Umbra is evaluating technology ROI benefits tracking in a finance transformation project. Which response is most appropriate?
+P1-F-057 | Pack A | Sec F | F.057 model validation holdout data | Crescent is evaluating model validation holdout data in a finance transformation project. Which response is most appropriate?
+P1-F-059 | Pack A | Sec F | F.059 cybersecurity logging SIEM | Evergreen is evaluating cybersecurity logging SIEM in a finance transformation project. Which response is most appropriate?
+P1-F-060 | Pack A | Sec F | F.060 third-party vendor cyber risk | Frontier is evaluating third-party vendor cyber risk in a finance transformation project. Which response is most appropriate?
+P1-F-072 | Pack A | Sec F | F.072 natural language processing use | Riverview is evaluating natural language processing use in a finance transformation project. Which response is most appropriate?
+P1-F-073 | Pack A | Sec F | F.073 optical character recognition invoice | Summit is evaluating optical character recognition invoice in a finance transformation project. Which response is most appropriate?
+P1B-A-091 | Pack B | Sec A | B-A.091 single-step vs multi-step | What distinguishes a multi-step income statement from a single-step income statement?
+P1B-A-140 | Pack B | Sec A | B-A.140 lease - operating vs finance expense patte | Which statement correctly compares the expense pattern of an operating lease to a finance lease for the lessee?
+P1B-A-145 | Pack B | Sec A | B-A.145 income statement - restructuring charges | Brookfield Corp announces a restructuring plan involving employee severance and facility closure costs. Under GAAP, when are restructuring costs recog
+P1B-B-130 | Pack B | Sec B | B-B.130 activity-based budgeting | Activity-based budgeting (ABB) differs from traditional budgeting because ABB:
+P1B-B-138 | Pack B | Sec B | B-B.138 strategic planning vs budgeting | Which statement best describes the relationship between strategic planning and budgeting?
+P1B-B-169 | Pack B | Sec B | B-B.169 ABC vs ABB relationship | Activity-based budgeting (ABB) differs from activity-based costing (ABC) because ABB:
+P1B-C-126 | Pack B | Sec C | B-C.126 responsibility centers | The maintenance department of Harbor Manufacturing is evaluated solely on its ability to control costs while providing a specified level of service. T
+P1B-C-127 | Pack B | Sec C | B-C.127 responsibility centers | The sales department of Pinnacle Products is evaluated based on total sales revenue generated. The sales manager has authority over pricing and sales 
+P1B-C-128 | Pack B | Sec C | B-C.128 responsibility centers | Summit Industries has a consumer products division where the manager is responsible for both revenues and costs, including manufacturing, marketing, a
+P1B-C-129 | Pack B | Sec C | B-C.129 responsibility centers | The corporate ventures division of Horizon Manufacturing has authority over product development, pricing, production, marketing, and capital investmen
+P1B-C-130 | Pack B | Sec C | B-C.130 responsibility centers | The manager of the assembly department at Redwood Manufacturing is responsible for direct materials, direct labor, and departmental overhead. The corp
+P1B-C-153 | Pack B | Sec C | B-C.153 transfer pricing | When a manager of a profit center is evaluated based on divisional profit, which transfer pricing conflict is most likely to arise?
+P1B-C-156 | Pack B | Sec C | B-C.156 balanced scorecard | The balanced scorecard framework includes four perspectives. Which of the following is NOT one of the four balanced scorecard perspectives?
+P1B-C-157 | Pack B | Sec C | B-C.157 balanced scorecard | Aspen Corporation uses a balanced scorecard. Which of the following performance measures would most likely be included in the financial perspective?
+P1B-C-158 | Pack B | Sec C | B-C.158 balanced scorecard | Birchwood Inc. implements a balanced scorecard. Which measure would be appropriate for the customer perspective?
+P1B-C-159 | Pack B | Sec C | B-C.159 balanced scorecard | Cedar Creek Manufacturing uses a balanced scorecard. Which metric would best measure performance from the internal business processes perspective?
+P1B-C-160 | Pack B | Sec C | B-C.160 balanced scorecard | Dover Industries implements a balanced scorecard. Which of the following is a leading indicator for the learning and growth perspective?
+P1B-C-161 | Pack B | Sec C | B-C.161 balanced scorecard | In the balanced scorecard framework, which statement best describes the relationship between leading and lagging indicators?
+P1B-C-162 | Pack B | Sec C | B-C.162 balanced scorecard | Elmwood Corporation uses strategy mapping to link its balanced scorecard perspectives. Which of the following depicts the correct causal chain in a st
+P1B-C-164 | Pack B | Sec C | B-C.164 benchmarking | Forest Glen Manufacturing wants to improve its order fulfillment process by studying the practices of a leading logistics company in a different indus
+P1B-C-167 | Pack B | Sec C | B-C.167 benchmarking | What is the primary difference between benchmarking and best practices?
+P1B-C-192 | Pack B | Sec C | B-C.192 standard costing vs actual costing | Which of the following best describes the difference between normal costing and standard costing?
+P1B-D-150 | Pack B | Sec D | B-D.150 mfg vs non-mfg costs | Rho Corporation incurred the following cost: depreciation on factory equipment. This cost is best classified as:
+P1B-E-078 | Pack B | Sec E | B-E.078 internal control framework | Apex Systems is assessing risks that could affect its ability to achieve its financial reporting objectives. Management is identifying events that cou
+P1B-E-083 | Pack B | Sec E | B-E.083 internal control framework | Vanguard Technologies recognizes that even a well-designed internal control system cannot provide absolute assurance. Which of the following is an inh
+P1B-E-084 | Pack B | Sec E | B-E.084 internal control framework | Harbor Solutions is implementing an enterprise risk management (ERM) system. The company wants to align risk appetite with strategy, enhance risk resp
+P1B-E-090 | Pack B | Sec E | B-E.090 control activities | Horizon Communications maintains locked storage rooms for sensitive documents, uses security badges to control access to its data center, and requires
+P1B-E-092 | Pack B | Sec E | B-E.092 internal audit function | Cascade Industries has an internal audit department that reports functionally to the audit committee and administratively to the chief executive offic
+P1B-E-094 | Pack B | Sec E | B-E.094 internal audit function | Blue Ridge Partners is deciding how to coordinate the work of internal and external auditors. Which of the following statements best describes the dif
+P1B-E-097 | Pack B | Sec E | B-E.097 fraud prevention | Apex Global discovered that an employee has been submitting false expense reports for reimbursement of personal travel expenses. Under common fraud cl
+P1B-E-101 | Pack B | Sec E | B-E.101 data protection controls | Pinnacle Technologies stores sensitive customer data in its accounting systems. Management wants to ensure that data is protected from unauthorized ac
+P1B-E-106 | Pack B | Sec E | B-E.106 application controls | Orion Enterprises uses an accounts payable system that requires entry of a valid vendor number before an invoice can be processed, checks that invoice
+P1B-E-109 | Pack B | Sec E | B-E.109 business continuity planning | Summit Corporation is developing a plan to ensure that critical business functions can continue operating during and after a major disruption such as 
+P1B-E-110 | Pack B | Sec E | B-E.110 business continuity planning | Phoenix Data Services is developing its business continuity plan. Management has determined that the accounting system must be restored within four ho
+P1B-E-111 | Pack B | Sec E | B-E.111 disaster recovery | Cascade Healthcare is evaluating disaster recovery site options for its critical accounting systems. Management needs a solution where the recovery si
+P1B-E-118 | Pack B | Sec E | B-E.118 control activities | Blue Ridge Industries compares actual financial results to budgeted amounts on a monthly basis and investigates significant variances. This control ac
+P1B-E-120 | Pack B | Sec E | B-E.120 fraud prevention | Meridian Corp is conducting a fraud risk assessment as part of its internal control evaluation. Which of the following is the most important factor to
+P1B-E-121 | Pack B | Sec E | B-E.121 internal audit function | Cascade Enterprises is establishing an internal audit function. Which document should define the internal audit department's purpose, authority, and r
+P1B-E-126 | Pack B | Sec E | B-E.126 IT general controls | Atlas Data Center has implemented controls to ensure that scheduled batch jobs run on time, errors are logged and reviewed, and backup procedures are 
+P1B-E-131 | Pack B | Sec E | B-E.131 control environment | Apex Enterprises' CEO regularly bypasses procurement controls to approve purchases from a company owned by a family member. Despite having a written c
+P1B-E-135 | Pack B | Sec E | B-E.135 COSO ERM | Harbor Logistics has identified that its fleet vehicles are exposed to risk of accident and theft. Management decides to purchase comprehensive insura
+P1B-E-138 | Pack B | Sec E | B-E.138 data protection controls | Nexus Corp has implemented a data classification policy that labels information as public, internal, confidential, or restricted. This classification 
+P1B-E-142 | Pack B | Sec E | B-E.142 whistleblower programs | Silverline Corp has established an anonymous whistleblower hotline for reporting accounting and auditing concerns. Which of the following is a key ben
+P1B-E-143 | Pack B | Sec E | B-E.143 ICFR | During its SOX 404 assessment, management at Apex Financial identified a control deficiency that does not rise to the level of a material weakness but
+P1B-E-148 | Pack B | Sec E | B-E.148 control activities | Nexus Manufacturing uses sequentially pre-numbered purchase orders, sales invoices, and receiving reports. This control activity is designed to:
+P1B-F-076 | Pack B | Sec F | B-F.076 data governance | Nexus Corp is implementing a data governance program to ensure that data is managed as a strategic asset. Which of the following is a primary objectiv
+P1B-F-077 | Pack B | Sec F | B-F.077 data governance | Titan Industries has appointed a senior manager from the finance department to be responsible for defining and enforcing data policies related to fina
+P1B-F-078 | Pack B | Sec F | B-F.078 master data management | Apex Systems maintains a central repository of core business data including customer names and addresses, vendor information, product descriptions, an
+P1B-F-085 | Pack B | Sec F | B-F.085 data mining | Orion Retail uses software to analyze customer purchase data and automatically identify groups of products that are frequently purchased together, suc
+P1B-F-086 | Pack B | Sec F | B-F.086 AI and machine learning | Quantum Enterprises is implementing an AI system that can examine large volumes of supplier invoices, identify patterns indicative of potential fraud,
+P1B-F-087 | Pack B | Sec F | B-F.087 AI and machine learning | Redwood Corp wants to build a model that predicts whether a transaction is fraudulent. The company has a historical dataset where each transaction is 
+P1B-F-088 | Pack B | Sec F | B-F.088 RPA | Cascade Financials has implemented software robots that log into their accounts payable system, extract invoice data from emails, enter the data into 
+P1B-F-090 | Pack B | Sec F | B-F.090 blockchain | A blockchain-based triple-entry accounting system could transform auditing by:
+P1B-F-091 | Pack B | Sec F | B-F.091 cloud computing | Blue Ridge Partners is moving its accounting systems to a software-as-a-service (SaaS) cloud platform. Which of the following is a key risk that manag
+P1B-F-092 | Pack B | Sec F | B-F.092 cloud computing | Silverline Corp's IT department manages its own servers and network infrastructure but uses cloud-based platforms to develop and deploy custom account
+P1B-F-093 | Pack B | Sec F | B-F.093 cybersecurity | Summit Technologies experienced a ransomware attack that encrypted critical financial data, making it inaccessible for several days. Which element of 
+P1B-F-094 | Pack B | Sec F | B-F.094 cybersecurity | Citadel Financial is implementing a defense-in-depth cybersecurity strategy. Which approach best describes this concept?
+P1B-F-095 | Pack B | Sec F | B-F.095 information systems lifecycle | Phoenix Corp is developing a new general ledger system. The project team is gathering requirements from stakeholders, defining system specifications, 
+P1B-F-096 | Pack B | Sec F | B-F.096 ERP systems | Nexus Manufacturing is implementing an ERP system to replace its disconnected legacy applications for accounting, inventory, purchasing, and HR. A key
+P1B-F-098 | Pack B | Sec F | B-F.098 database management | Apex Corp uses a relational database for its accounting system. The database contains tables for customers, invoices, and payments. The relationship b
+P1B-F-100 | Pack B | Sec F | B-F.100 privacy regulations | Vanguard Corp collects personal information from California residents for its marketing activities. Under the California Consumer Privacy Act (CCPA), 
+P1B-F-103 | Pack B | Sec F | B-F.103 cybersecurity | An employee at Summit Corp received an email that appeared to be from the CEO requesting an urgent wire transfer to a new vendor. The email address wa
+P1B-F-104 | Pack B | Sec F | B-F.104 data governance | Cascade Corp is establishing a formal data governance program. Which of the following statements correctly distinguishes data governance from data man
+P1B-F-105 | Pack B | Sec F | B-F.105 data quality | During a data quality assessment, Redwood Corp discovered that customer addresses in its billing system do not follow a standard format, some records 
+P1B-F-106 | Pack B | Sec F | B-F.106 data visualization | The CFO at Quantum Corp wants a dashboard that allows her to quickly identify which divisions are performing above or below budget. Which type of visu
+P1B-F-107 | Pack B | Sec F | B-F.107 AI and machine learning | Emerald Corp uses an AI system that can read and interpret the text in supplier contracts to identify key terms such as payment due dates, automatic r
+P1B-F-110 | Pack B | Sec F | B-F.110 cybersecurity | After detecting a potential data breach, Apex Corp's incident response team follows a structured approach: identifying the scope, containing the breac
+P1B-F-112 | Pack B | Sec F | B-F.112 data analytics | Pinnacle Corp wants to understand how changes in advertising spending, price levels, and competitor activity affect its monthly sales revenue. Which s
+P1B-F-113 | Pack B | Sec F | B-F.113 RPA | A manager at Horizon Corp is evaluating whether to use RPA or AI for automating the reconciliation of bank statements. The process involves logging in
+P1B-F-116 | Pack B | Sec F | B-F.116 ERP systems | Nexus Manufacturing recently implemented an integrated ERP system. The internal auditor notes that the previous manual segregation of duties between p
+P1B-F-117 | Pack B | Sec F | B-F.117 data governance | Titan Industries is defining roles for its data governance program. Which role typically has ultimate accountability for data assets within a specific
+P1B-F-120 | Pack B | Sec F | B-F.120 AI and machine learning | Quantum Corp is deploying a machine learning model to automate the classification of expenses in the general ledger. Which of the following risks shou
+P1B-F-121 | Pack B | Sec F | B-F.121 blockchain | Orion Corp is exploring the use of smart contracts on a blockchain to automate purchase-to-pay processes. A smart contract could automatically release
+P1B-F-123 | Pack B | Sec F | B-F.123 data analytics | After noticing a spike in customer returns, Apex Retail's management drills down into the data by product category, region, time period, and customer 
+P1B-F-125 | Pack B | Sec F | B-F.125 privacy regulations | A customer of Silverline Corp has submitted a request under GDPR asking for a copy of all personal data the company holds about them. This is known as
+P1B-F-126 | Pack B | Sec F | B-F.126 data mining | Cascade Marketing wants to segment its customer database into groups with similar purchasing behaviors and demographic characteristics to target promo
+P1B-F-128 | Pack B | Sec F | B-F.128 data visualization | Summit Corp's finance team has created a presentation for the board that combines data visualizations with narrative explanations to communicate the k
+P1B-F-129 | Pack B | Sec F | B-F.129 cybersecurity | Redwood Inc's accounting files were encrypted by malware, and the attackers demanded payment in cryptocurrency to restore access. This type of attack 
+P1B-F-130 | Pack B | Sec F | B-F.130 master data management | Titan Industries has multiple business units that maintain separate customer databases with inconsistent naming conventions and duplicate records. Imp
+P1B-F-131 | Pack B | Sec F | B-F.131 RPA | Apex Corp has deployed dozens of RPA bots to automate various accounting processes. Which of the following governance practices is most important for 
+P1B-F-133 | Pack B | Sec F | B-F.133 database management | When designing a database for accounts payable, the database designer splits data into separate tables (Vendors, Invoices, Payments) linked by keys to
+P1B-F-135 | Pack B | Sec F | B-F.135 AI and machine learning | Orion Corp is evaluating the use of generative AI to draft management discussion and analysis (MD&A) sections for quarterly reports. Which of the foll
+P1B-F-136 | Pack B | Sec F | B-F.136 cloud computing | Under the cloud shared responsibility model, when using SaaS for an accounting system, which of the following is typically the customer's responsibili
+P1B-F-139 | Pack B | Sec F | B-F.139 cybersecurity | Vanguard Corp follows the principle of least privilege when assigning system access. This principle means that:
+P1B-F-141 | Pack B | Sec F | B-F.141 blockchain | While exploring blockchain for accounting applications, Summit Corp's team identifies several potential limitations. Which of the following is a recog
+P1B-F-143 | Pack B | Sec F | B-F.143 data analytics | Pinnacle Corp's CFO wants to understand how changes in sales volume, selling price, and variable costs would affect net income under different scenari
+P1B-F-148 | Pack B | Sec F | B-F.148 RPA | Orion Corp has deployed an RPA bot that processes supplier invoice payments. The bot has access to the accounts payable system and initiates wire tran
+P1E-A-010 | Pack E | Sec A | E-A.010 Prepaid insurance classification | Prepaid insurance is classified as:
+P1E-A-011 | Pack E | Sec A | E-A.011 R&D cost treatment | Under U.S. GAAP, research and development costs are:
+P1E-A-020 | Pack E | Sec A | E-A.020 Stock split effect | A 3-for-1 stock split increases shares outstanding by:
+P1E-A-029 | Pack E | Sec A | E-A.029 Land depreciation | Under U.S. GAAP, land is:
+P1E-A-031 | Pack E | Sec A | E-A.031 LIFO IFRS prohibition | Under U.S. GAAP, which inventory method is not permitted under IFRS?
+P1E-A-057 | Pack E | Sec A | E-A.057 Going concern | The going concern assumption underlies:
+P1E-A-066 | Pack E | Sec A | E-A.066 Consignment inventory | Consignment inventory appears on the balance sheet of:
+P1E-B-012 | Pack E | Sec B | E-B.012 Zero-based budgeting | Zero-based budgeting requires:
+P1E-B-019 | Pack E | Sec B | E-B.019 Moving average purpose | The moving average method is used to:
+P1E-B-020 | Pack E | Sec B | E-B.020 Exponential smoothing alpha | Exponential smoothing uses which parameter?
+P1E-B-030 | Pack E | Sec B | E-B.030 Profit center | A profit center manager controls:
+P1E-B-041 | Pack E | Sec B | E-B.041 Relevant range | The relevant range concept assumes:
+P1E-B-062 | Pack E | Sec B | E-B.062 Seasonal patterns | Seasonal patterns repeat:
+P1E-C-005 | Pack E | Sec C | E-C.005 Labor efficiency responsibility | The labor efficiency variance is the responsibility of:
+P1E-C-014 | Pack E | Sec C | E-C.014 ROI formula | Return on investment is calculated as:
+P1E-C-019 | Pack E | Sec C | E-C.019 Financial perspective BSC | The financial perspective of BSC asks:
+P1E-C-029 | Pack E | Sec C | E-C.029 Appraisal costs | Appraisal costs include:
+P1E-C-030 | Pack E | Sec C | E-C.030 Internal failure costs | Internal failure costs include:
+P1E-C-035 | Pack E | Sec C | E-C.035 Currently attainable standards | Currently attainable standards are:
+P1E-C-045 | Pack E | Sec C | E-C.045 Nonfinancial BSC measures | Nonfinancial measures in BSC include:
+P1E-D-029 | Pack E | Sec D | E-D.029 Make-or-buy analysis | Make-or-buy decisions compare:
+P1E-D-030 | Pack E | Sec D | E-D.030 Special order decision | A special order should be accepted if:
+P1E-E-003 | Pack E | Sec E | E-E.003 Risk assessment COSO | Risk assessment involves:
+P1E-E-004 | Pack E | Sec E | E-E.004 Control activities | Control activities include:
+P1E-E-007 | Pack E | Sec E | E-E.007 Monitoring COSO | Monitoring includes:
+P1E-E-010 | Pack E | Sec E | E-E.010 Inherent risk | Inherent risk is risk:
+P1E-E-012 | Pack E | Sec E | E-E.012 Fraud triangle | The fraud triangle consists of:
+P1E-E-013 | Pack E | Sec E | E-E.013 Preventive control | Which is a preventive control?
+P1E-F-003 | Pack E | Sec F | E-F.003 Prescriptive analytics | Prescriptive analytics recommends:
+P1E-F-006 | Pack E | Sec F | E-F.006 Big data velocity | Big data velocity refers to:
+P1E-F-008 | Pack E | Sec F | E-F.008 Structured data | Structured data is:
+P1E-F-010 | Pack E | Sec F | E-F.010 Data warehouse | A data warehouse stores:
+P1E-F-013 | Pack E | Sec F | E-F.013 RPA | Robotic process automation (RPA):
+P1E-F-014 | Pack E | Sec F | E-F.014 Blockchain | Blockchain provides:
+P1E-F-016 | Pack E | Sec F | E-F.016 Cybersecurity management | Cybersecurity risk management includes:
+P1E-F-020 | Pack E | Sec F | E-F.020 CAATs | CAATs stands for:
+P1E-F-021 | Pack E | Sec F | E-F.021 Data mining | Data mining identifies:
+P1E-F-022 | Pack E | Sec F | E-F.022 Data visualization | Data visualization is used to:
+P1E-F-025 | Pack E | Sec F | E-F.025 Data governance | Data governance defines:
+P1E-F-026 | Pack E | Sec F | E-F.026 IoT | IoT generates data from:
+P1E-F-028 | Pack E | Sec F | E-F.028 IT change management | IT change management ensures:
+P1E-F-030 | Pack E | Sec F | E-F.030 Business continuity | Business continuity planning includes:
+P1E-F-031 | Pack E | Sec F | E-F.031 AI in accounting | Artificial intelligence in accounting:
+P1E-F-032 | Pack E | Sec F | E-F.032 IoT accounting impact | The Internet of Things (IoT) primarily affects:
+P1E-F-034 | Pack E | Sec F | E-F.034 RPA accounting use | RPA in accounting is most suitable for:
+P1E-B-081 | Pack E | Sec B | E-B.081 Dependent variable regression | In regression analysis, the dependent variable is:
+P1E-B-084 | Pack E | Sec B | E-B.084 Cost center evaluation | A cost center manager is evaluated on:
+P1E-C-049 | Pack E | Sec C | E-C.049 Benchmarking definition | Benchmarking compares against:
+P1E-C-056 | Pack E | Sec C | E-C.056 Performance reports | Performance reports compare:
+P1E-C-060 | Pack E | Sec C | E-C.060 BSC strategy translation | The balanced scorecard translates mission and strategy into:
+P1E-D-042 | Pack E | Sec D | E-D.042 Lean manufacturing | Lean manufacturing focuses on:
+P1E-D-058 | Pack E | Sec D | E-D.058 ABC cost pool | Cost pool in ABC is:
+P1E-D-060 | Pack E | Sec D | E-D.060 ABC best use | ABC is most beneficial when:
+P1E-E-034 | Pack E | Sec E | E-E.034 COSO principle 10 | COSO principle 10 requires selection and development of:
+P1E-E-035 | Pack E | Sec E | E-E.035 COSO principle 11 | COSO principle 11 requires selection of:
+P1E-E-041 | Pack E | Sec E | E-E.041 Access controls | Access controls limit:
+P1E-E-043 | Pack E | Sec E | E-E.043 Verification controls | Verification controls include:
+P1E-E-053 | Pack E | Sec E | E-E.053 IT detective controls | Detective IT controls include:
+P1E-E-055 | Pack E | Sec E | E-E.055 COSO objectives | The COSO internal control framework objective categories are:
+P1E-E-059 | Pack E | Sec E | E-E.059 Internal control limitations | Limitations of internal control include:
+P1E-E-061 | Pack E | Sec E | E-E.061 Entity-level controls | Entity-level controls include:
+P1E-F-045 | Pack E | Sec F | E-F.045 Analytics maturity highest | The highest level of data analytics maturity is:
+P1E-F-055 | Pack E | Sec F | E-F.055 Database backup | Database backup strategy should consider:
+P1E-F-057 | Pack E | Sec F | E-F.057 Ransomware | Ransomware is a type of:
+P1E-F-059 | Pack E | Sec F | E-F.059 Social engineering | Social engineering attacks exploit:
+P1E-F-063 | Pack E | Sec F | E-F.063 Hot site | Hot site is a:
+P1E-F-071 | Pack E | Sec F | E-F.071 SaaS | Software as a Service (SaaS) provides:
+P1E-F-073 | Pack E | Sec F | E-F.073 PaaS | Platform as a Service (PaaS) provides:
+P1E-F-074 | Pack E | Sec F | E-F.074 Analytics management support | Top management support is critical for:
+P1E-C-065 | Pack E | Sec C | E-C.065 BSC goal alignment | Scorecards based on BSC perspectives help align:
+P1E-C-082 | Pack E | Sec C | E-C.082 Employee turnover BSC | Employee turnover rate is a:
+P1E-D-061 | Pack E | Sec D | E-D.061 Cost allocation base criteria | Cost allocation base should be:
+P1E-D-062 | Pack E | Sec D | E-D.062 Cost driver definition | A cost driver is:
+P1E-D-065 | Pack E | Sec D | E-D.065 Pull system JIT | In JIT, the pull system means:
+P1E-D-068 | Pack E | Sec D | E-D.068 Product lifecycle stages | Product lifecycle stages include:
+P1E-D-074 | Pack E | Sec D | E-D.074 Conversion costs | Conversion costs are:
+P1E-E-067 | Pack E | Sec E | E-E.067 COSO principle 3 | COSO principle 3 establishes:
+P1E-E-068 | Pack E | Sec E | E-E.068 COSO principle 4 | COSO principle 4 demonstrates commitment to:
+P1E-E-073 | Pack E | Sec E | E-E.073 Pre-numbered documents | Pre-numbered documents are a:
+P1E-C-090 | Pack E | Sec C | E-C.090 Profit center evaluation | Profit center evaluation is typically based on:
+P1E-C-093 | Pack E | Sec C | E-C.093 Performance report qualities | Performance reports should be:
+P1E-C-095 | Pack E | Sec C | E-C.095 Standard cost card | Standard cost card includes standard:
+P1E-C-096 | Pack E | Sec C | E-C.096 Ideal standards term | Ideal standards are also called:
+P1E-C-097 | Pack E | Sec C | E-C.097 Practical standards | Practical standards allow for:
+P1E-C-100 | Pack E | Sec C | E-C.100 Budgeting behavioral aspects | The behavioral aspect of budgeting includes:
+P1-E-R02 | Pack E | Sec E | E-R02 COSO framework — three categories of objecti | Under the COSO Internal Control — Integrated Framework (2013), internal control is designed to provide reasonable assurance regarding the achievement 
+P1-E-R34 | Pack E | Sec E | E-R34 internal control definition — COSO framework | According to the COSO Internal Control—Integrated Framework, the three categories of objectives that internal control is designed to provide reasonabl
+P1-E-R35 | Pack E | Sec E | E-R35 inherent limitations — reasonable assurance  | Internal control, no matter how well designed and operated, can provide only reasonable assurance — not absolute assurance — regarding achievement of 
+P1-E-R29 | Pack E | Sec E | E-R29 physical controls — custody and access restr | Which of the following combinations of safeguarding controls provides the strongest protection against misappropriation of physical inventory?
+P1-E-R18 | Pack E | Sec E | E-R18 monitoring activities — ongoing vs separate  | Under COSO Principle 16, management evaluates whether the components of internal control are present and functioning. These evaluations take two disti
+P1-E-R24 | Pack E | Sec E | E-R24 entity-level controls — scope and applicatio | Entity-level controls are a critical component of the COSO framework because they establish the foundation upon which all other controls operate. Whic
