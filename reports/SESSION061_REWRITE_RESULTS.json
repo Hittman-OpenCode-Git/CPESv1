@@ -2,28 +2,36 @@
   "session": "61",
   "title": "MCQ Rewrite Program — Quality Elevation Wave 1",
   "date": "2026-07-28",
-  "status": "PARTIAL — 10 of 20 completed",
-  "batches_completed": [1, 2],
-  "batches_remaining": [3, 4],
-  "total_rewrites": 10,
+  "status": "COMPLETE — 20 of 20 completed",
+  "batches_completed": [1, 2, 3, 4],
+  "total_rewrites": 20,
   "cognitive_upgrades": {
     "Understand_to_Evaluate": 10,
-    "Understand_to_Analyze": 0
+    "Understand_to_Analyze": 10
   },
   "difficulty_upgrades": {
-    "Easy_to_Difficult": 10
+    "Easy_to_Difficult": 20
   },
   "pack_distribution": {
-    "Pack_A": {"edited": 4, "qids": ["P1-E-084", "P1-B-086", "P1-A-002", "P1-D-070"]},
-    "Pack_B": {"edited": 3, "qids": ["P1B-F-116", "P1B-F-091", "P1B-C-153"]},
-    "Pack_E": {"edited": 3, "qids": ["P1E-D-029", "P1E-D-030", "P1E-B-012"]}
+    "Pack_A": {"edited": 8, "evaluate": 4, "analyze": 4},
+    "Pack_B": {"edited": 6, "evaluate": 3, "analyze": 3},
+    "Pack_E": {"edited": 6, "evaluate": 3, "analyze": 3}
   },
   "section_distribution": {
-    "A": 1, "B": 2, "C": 1, "D": 3, "E": 1, "F": 2
+    "A": 3, "B": 4, "C": 4, "D": 4, "E": 3, "F": 2
   },
+  "batch_results": [
+    {"batch": 1, "items": ["P1-E-084","P1B-F-116","P1B-F-091","P1-B-086","P1-A-002"], "target": "Evaluate", "cc_changes": 1},
+    {"batch": 2, "items": ["P1E-D-029","P1E-D-030","P1E-B-012","P1B-C-153","P1-D-070"], "target": "Evaluate", "cc_changes": 1},
+    {"batch": 3, "items": ["P1B-A-145","P1-B-015","P1B-B-138","P1-C-072","P1E-C-014"], "target": "Analyze", "cc_changes": 2},
+    {"batch": 4, "items": ["P1E-C-049","P1-E-027","P1B-E-083","P1E-E-034","P1-F-005"], "target": "Analyze", "cc_changes": 1}
+  ],
   "correctchoice_changes": [
-    {"qid": "P1-A-002", "old": "D", "new": "B", "reason": "New scenario — recommendation to report medical device division as discontinued operations"},
-    {"qid": "P1B-C-153", "old": "C", "new": "A", "reason": "New scenario — recommendation to set transfer price at external market benchmark of $105"}
+    {"qid": "P1-A-002", "old": "D", "new": "B", "reason": "New scenario — Recommendation to report medical device division as discontinued operations per ASC 205-20"},
+    {"qid": "P1B-C-153", "old": "C", "new": "A", "reason": "New scenario — Recommendation for $105 market-based transfer price within $70-$105 negotiable range"},
+    {"qid": "P1B-B-138", "old": "A", "new": "D", "reason": "New scenario — Budget fundamentally misaligned with strategic plan; under-resourcing strategic initiatives"},
+    {"qid": "P1E-C-014", "old": "C", "new": "D", "reason": "New scenario — ROI analysis: old asset at 8% below 11.5% cost of capital requires immediate replacement"},
+    {"qid": "P1-E-027", "old": "C", "new": "A", "reason": "New scenario — External auditor can rely on effective revenue controls while performing additional testing on deficient inventory controls"}
   ],
   "governance": {
     "guard_tests": "54/54 PASS",
@@ -32,31 +40,16 @@
     "syntax_pack_e": "PASS",
     "dl008": 0,
     "dl026": 0,
-    "dl037": 0
+    "dl037": 0,
+    "certified_pool_packs_abe": 1540,
+    "certified_pool_stable": true
   },
-  "quality_metrics": {
-    "avg_explanation_correct_chars_pre": 150,
-    "avg_explanation_correct_chars_post": 1200,
-    "avg_explanation_wrong_chars_pre": 80,
-    "avg_explanation_wrong_chars_post": 350,
-    "business_realism_pre": "2/10 named companies with scenarios",
-    "business_realism_post": "10/10 named companies with scenarios, data, and competing perspectives"
-  },
-  "remaining_candidates": [
-    {"qid": "P1B-A-145", "pack": "B", "section": "A", "target": "Analyze"},
-    {"qid": "P1-B-015", "pack": "A", "section": "B", "target": "Analyze"},
-    {"qid": "P1B-B-138", "pack": "B", "section": "B", "target": "Analyze"},
-    {"qid": "P1-C-072", "pack": "A", "section": "C", "target": "Analyze"},
-    {"qid": "P1E-C-014", "pack": "E", "section": "C", "target": "Analyze"},
-    {"qid": "P1E-C-049", "pack": "E", "section": "C", "target": "Analyze"},
-    {"qid": "P1-E-027", "pack": "A", "section": "E", "target": "Analyze"},
-    {"qid": "P1B-E-083", "pack": "B", "section": "E", "target": "Analyze"},
-    {"qid": "P1E-E-034", "pack": "E", "section": "E", "target": "Analyze"},
-    {"qid": "P1-F-005", "pack": "A", "section": "F", "target": "Analyze"}
-  ],
   "backups": [
-    "backups/pack_a_corrected.js.bak-S061-20260728155108",
-    "backups/pack_b_corrected.js.bak-S061-20260728155108",
-    "backups/pack_e_corrected.js.bak-S061B2-20260728162746"
+    "backups/pack_a_corrected.js.bak-S061-20260728155108 (Batch 1)",
+    "backups/pack_b_corrected.js.bak-S061-20260728155108 (Batch 1)",
+    "backups/pack_e_corrected.js.bak-S061B2-20260728162746 (Batch 2)",
+    "backups/pack_a_corrected.js.bak-S061B3-20260728164803 (Batches 3-4)",
+    "backups/pack_b_corrected.js.bak-S061B3-20260728164803 (Batches 3-4)",
+    "backups/pack_e_corrected.js.bak-S061B3-20260728164803 (Batches 3-4)"
   ]
 }

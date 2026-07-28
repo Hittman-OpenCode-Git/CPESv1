@@ -4674,27 +4674,27 @@ const MCQ_BANK_B = [
         "Part": 1,
         "Section": "B",
         "SectionName": "Planning, Budgeting, and Forecasting",
-        "Topic": "B-B.138 strategic planning vs budgeting",
-        "MicroTopic": "strategic planning vs budgeting",
-        "UniqueConceptKey": "B-B-138-strategic-planning-vs-budgeting",
-        "LOSTag": "B.1 Budgeting concepts and strategic planning",
-        "Difficulty": "Easy",
+    "Topic": "B-B.138 strategic planning vs budgeting",
+    "MicroTopic": "strategic planning vs budgeting",
+    "UniqueConceptKey": "B-B-138-strategic-planning-vs-budgeting",
+    "LOSTag": "B.1 Budgeting concepts and strategic planning",
+    "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Which statement best describes the relationship between strategic planning and budgeting?",
-        "CorrectChoice": "A",
-        "ExplanationCorrect": "Strategic planning sets long-term direction and goals. Budgets operationalize these strategies by translating them into specific, measurable short-term financial and operational targets.",
+    "Stem": "Westbrook Industries' three-year strategic plan targets 15% annual revenue growth through expansion into adjacent markets and new product development. The operations team prepares the annual budget and proposes a 4% revenue growth target, citing capacity constraints, hiring freezes, and supply chain uncertainty. The VP of Strategy argues the budget is inconsistent with the strategic plan, while the VP of Operations argues the strategic plan is aspirational and the budget must reflect operational reality. The CFO reviews both documents and notes the following: R&D spending in the budget is 2% of revenue versus the strategic plan's target of 6%; the budget allocates zero capital for the new market entry teams called for in the strategic plan; and the budget assumes no new product launches despite the strategic plan calling for two in the upcoming year. Which analysis best characterizes the relationship between Westbrook's strategic plan and its annual budget?",
+    "CorrectChoice": "D",
+    "ExplanationCorrect": "The strategic plan and the budget are fundamentally misaligned. The strategic plan sets a 15% growth target supported by specific resource commitments (6% R&D, market entry teams, new product launches). The budget proposes 4% growth with resources allocated at levels inconsistent with achieving the strategic objectives. Strategic planning establishes long-term direction and resource requirements; budgeting translates those strategic priorities into specific, measurable short-term financial and operational targets. When the budget systematically under-resources the strategic initiatives — R&D at 2% vs 6% target, zero capital for market entry, no product launches — it is not 'translating strategy into operational reality.' It is defunding the strategy. This misalignment creates a gap between what the organization says it wants to achieve (the strategic plan) and what it is actually resourcing (the budget). The CFO's observation reveals the real relationship: when strategy and budget diverge this significantly, the strategy is aspirational while the budget reflects the organization's actual priorities. Business interpretation: the relationship between strategic planning and budgeting is not merely sequential (plan first, budget second) — it must be substantive. Budgets that do not fund strategic initiatives render those initiatives unimplementable regardless of their merit. A common exam trap is to describe the relationship as 'strategic plans guide budgets' without examining whether the resource allocation actually supports the stated strategy. Effective budgeting operationalizes strategy; ineffective budgeting ignores it. The CFO must reconcile the disconnect — either adjust the budget to fund the strategy or adjust the strategy to reflect resource constraints, but the two cannot coexist in conflict.",
         "SourceDescription": "Original CMA Part 1 exam-style practice.",
         "QuestionID": "P1B-B-138",
         "question_state": "Certified",
         "ReviewNote": "If missed or marked, review the linked study materials.",
         "CalculationItem": false,
-        "Choices": {
-            "A": "Budgets operationalize strategic plans by setting short-term targets",
-            "B": "Strategic planning is a subset of the budgeting process",
-            "C": "Budgeting is unrelated to strategic planning",
-            "D": "Strategic planning replaces the need for annual budgeting"
-        },
+    "Choices": {
+      "A": "The budget appropriately operationalizes the strategic plan — the 4% growth target reflects the operations team's realistic assessment of capacity constraints, and operational reality should take precedence over aspirational targets",
+      "B": "The strategic plan and budget serve independent purposes and should not be compared — the strategic plan is a marketing document for the board while the budget is an internal operational tool",
+      "C": "The budget is consistent with the strategic plan because both project growth — the difference between 4% and 15% is merely a matter of degree, not a fundamental misalignment",
+      "D": "The budget is fundamentally misaligned with the strategic plan — the systematic under-resourcing of strategic initiatives (R&D, market entry, product launches) means the budget is not operationalizing the strategy but defunding it"
+    },
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4704,12 +4704,12 @@ const MCQ_BANK_B = [
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
         ],
-        "ExplanationWrongA": "",
-        "ExplanationWrongB": "Budgets are not the same as strategic plans. Strategic plans set the long-term vision (3-10 years), while budgets implement that vision through annual or shorter-term operational targets.",
-        "ExplanationWrongC": "Budgets are not financial statements. Budgets are forward-looking plans, while financial statements report historical results. However, budgets use the same financial statement format for presentation.",
-        "ExplanationWrongD": "Budgets are not optional for most organizations. They serve critical functions including planning, coordination, control, and performance evaluation.",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "The 4% budget does not 'operationalize' the 15% strategic plan — it contradicts it. When a budget allocates resources at levels incompatible with strategic objectives (R&D at 2% vs. 6% target, zero capital for market entry, no new product launches), it is not translating strategy into operational terms; it is abandoning the strategy. While operational constraints are real and must be considered, the response to a gap between strategic ambition and operational capacity should be to explicitly reconcile the two — either fund the strategy or revise it — not to present a budget that is inconsistent with the stated strategy while claiming it 'operationalizes' it. A candidate selecting this option is accepting a surface-level description of the plan-budget relationship without testing whether the content of the budget actually supports the content of the plan.",
+    "ExplanationWrongB": "Strategic plans and budgets are not independent. The budget is the primary mechanism through which strategic priorities receive funding and are translated into actionable short-term targets. If the strategic plan has no influence on the budget, it is a document without operational force — effectively a wish list rather than a plan. The relationship between strategy and budget is sequential and substantive: strategic plans should drive resource allocation decisions in the budget. Viewing them as independent serves neither function — the strategy loses its implementation mechanism, and the budget loses its strategic context.",
+    "ExplanationWrongC": "The difference between 4% and 15% revenue growth is not 'merely a matter of degree' when combined with the specific resource allocation gaps. The strategic plan calls for 6% R&D spending; the budget provides 2%. The plan calls for market entry teams; the budget allocates zero capital. The plan calls for two new product launches; the budget assumes none. These are categorical differences, not quantitative adjustments. A 4% growth budget with fully funded strategic initiatives would reflect a realistic assessment of implementation pace; a 4% growth budget that defunds the initiatives reflects a decision to not pursue the strategy. A candidate selecting this option is looking only at the top-line growth number while ignoring the resource allocation decisions that reveal the true priorities.",
+    "ExplanationWrongD": "",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
     },
     {
         "Part": 1,
@@ -15530,30 +15530,30 @@ const MCQ_BANK_B = [
         "Part": 1,
         "Section": "E",
         "SectionName": "Internal Controls",
-        "Topic": "B-E.083 internal control framework",
-        "MicroTopic": "limitations of internal control",
-        "UniqueConceptKey": "B-E-083-limitations-internal-control",
-        "LOSTag": "COSO Internal Control â€” Integrated Framework",
-        "Difficulty": "Easy",
-        "DifficultyScore": 1,
+    "Topic": "B-E.083 internal control framework",
+    "MicroTopic": "limitations of internal control",
+    "UniqueConceptKey": "B-E-083-limitations-internal-control",
+    "LOSTag": "COSO Internal Control — Integrated Framework",
+    "Difficulty": "Difficult",
+    "DifficultyScore": 4,
         "CognitiveLevel": "Understand",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Vanguard Technologies recognizes that even a well-designed internal control system cannot provide absolute assurance. Which of the following is an inherent limitation of internal control?",
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Collusion is a known inherent limitation of internal control â€” when two or more people work together to circumvent controls, even well-designed systems can be defeated. Other limitations include human error, management override, and cost-benefit constraints.",
+    "Stem": "Atlas Financial Services' internal audit team is investigating a $94,000 fraudulent disbursement that occurred despite what appeared to be well-designed controls: the accounts payable manager and the purchasing manager colluded to create a fictitious vendor, approve purchase orders, and authorize payments. The AP manager processed payments while the purchasing manager approved the receiving reports for goods that were never delivered. Both managers had clean background checks, no prior disciplinary history, and had worked at Atlas for 8 and 11 years respectively. The CFO asks: Which inherent limitation of internal control does this incident most clearly demonstrate, and what compensating mechanism would have been most likely to detect the scheme earlier?",
+    "CorrectChoice": "C",
+    "ExplanationCorrect": "The incident demonstrates collusion — when two or more individuals work together to circumvent controls that would be effective against a single individual acting alone. The AP manager and purchasing manager's combined actions bypassed the segregation of duties that was designed into Atlas's procure-to-pay process. Individually, neither manager could have executed the fraud — the AP manager could create vendors but shouldn't approve purchases; the purchasing manager could approve receiving reports but shouldn't process payments. Together, their collusion defeated both preventive controls. This is an inherent limitation of internal control under the COSO framework: controls can be circumvented by collusion among employees, regardless of how well-designed they are. The most effective compensating mechanism would have been data analytics — specifically, continuous monitoring of vendor activity patterns (new vendor creation followed by rapid purchasing activity, vendors with no physical address or tax ID, vendor names similar to employee names). Data analytics can identify anomalous patterns that individual transaction-level controls might miss, particularly when those controls are being deliberately circumvented through collusion. Unlike manual review (which would process transactions that had all required approvals), data analytics examines the population of transactions for statistical anomalies. Business interpretation: COSO recognizes several inherent limitations of internal control: human error, management override, collusion, and cost-benefit constraints. Collusion is particularly challenging because it exploits the primary control mechanism (segregation of duties) by combining the very people whose separation is supposed to provide protection. Compensating controls like data analytics, job rotation, mandatory vacations, and surprise audits are designed to detect patterns that collusion creates. A common exam trap is to assume that well-designed preventive controls eliminate fraud risk — they reduce it but cannot eliminate it, and understanding the specific limitation at play (collusion vs. management override vs. human error) is essential for designing appropriate compensating controls.",
         "SourceDescription": "Original CMA Part 1 exam-style practice. Not real CMA exam content and not copied from official samples.",
         "QuestionID": "P1B-E-083",
         "question_state": "Certified",
         "Part1OnlyFlag": true,
         "ReviewNote": "If missed or marked, review the linked study materials and rework the underlying concept without looking at the answer.",
         "CalculationItem": false,
-        "Choices": {
-            "A": "A strong control environment guarantees effective risk assessment",
-            "B": "Automated controls are always more reliable than manual controls",
-            "C": "Controls can be circumvented by collusion among employees",
-            "D": "Proper segregation of duties eliminates all fraud risk"
-        },
+    "Choices": {
+      "A": "Human error — the AP manager inadvertently approved payments to a vendor that did not exist, demonstrating that even trained employees make mistakes that controls cannot prevent",
+      "B": "Management override — the CFO should have personally reviewed all vendor additions, and the failure to do so represents a breakdown in the tone at the top",
+      "C": "Collusion — the AP manager and purchasing manager combined their access rights to circumvent segregation of duties, and data analytics monitoring of vendor activity patterns would have been the most effective compensating detective control",
+      "D": "Cost-benefit constraint — the cost of preventing this type of fraud through additional controls would exceed the $94,000 loss, so accepting the risk is the economically rational response"
+    },
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -15567,10 +15567,11 @@ const MCQ_BANK_B = [
         "VerifiedChecks": [
             "Mapped to CMA Part 1 Learning Outcome Statements effective September 1, 2024"
         ],
-        "ExplanationWrongA": "A strong control environment supports but does not guarantee effective risk assessment.",
-        "ExplanationWrongB": "Automated controls are not always more reliable; they can contain errors and may not adapt.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Proper segregation of duties reduces but does not eliminate all fraud risk."
+    "ExplanationWrongA": "Human error refers to unintentional mistakes, not deliberate fraud. The AP manager and purchasing manager acted intentionally — they created a fictitious vendor, approved purchase orders, and authorized payments for goods never delivered. This is collusion (intentional circumvention), not human error (unintentional mistake). The fact that both had clean backgrounds and no disciplinary history further supports intentionality — this was planned and coordinated, not accidental. A candidate selecting this option is conflating the cause (deliberate fraud through collusion) with a different inherent limitation (unintentional mistakes).",
+    "ExplanationWrongB": "Management override refers to management's ability to override prescribed controls for illegitimate purposes — typically senior executives bypassing controls they themselves established. In this case, neither the AP manager nor the purchasing manager was overriding controls; they were exploiting their legitimate access rights in combination with each other. The CFO's failure to personally review vendor additions is not management override — it is a control design question (should vendor additions be reviewed by senior management?). The root cause is collusion between two mid-level employees, not a senior executive bypassing controls. A candidate selecting this option is misidentifying the inherent limitation — management override and collusion are distinct categories under COSO.",
+    "ExplanationWrongD": "The cost-benefit constraint is a valid inherent limitation — controls should be designed such that their cost does not exceed the benefit of reducing risk. However, claiming that a $94,000 loss is acceptable because preventing it would cost more is premature without analysis of what prevention would cost. Data analytics monitoring of vendor activity patterns is a relatively low-cost control that could have detected the scheme earlier. Additionally, the question asks which limitation the incident demonstrates, not which limitation justifies accepting the risk — the incident is collusion, regardless of whether additional controls would have been cost-beneficial. A candidate selecting this option is applying a risk acceptance framework rather than diagnosing the root cause.",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
     },
     {
         "Part": 1,
@@ -21271,7 +21272,7 @@ const MCQ_BANK_B = [
         "MicroTopic": "vulnerability management",
         "UniqueConceptKey": "B-F-134-vulnerability-management",
         "LOSTag": "Cybersecurity â€” Confidentiality, Integrity, Availability",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "Quantum Corp regularly scans its systems for known security weaknesses, prioritizes them based on risk, and applies patches in a timely manner. This process is known as:",
@@ -21305,7 +21306,7 @@ const MCQ_BANK_B = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Incident response addresses active security incidents. The described process is proactive vulnerability identification and remediation.",
         "ExplanationWrongD": "Business continuity planning ensures operations during disruptions. The described activity is security-focused vulnerability management.",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {
@@ -21811,7 +21812,7 @@ const MCQ_BANK_B = [
         "MicroTopic": "data lineage",
         "UniqueConceptKey": "B-F-146-data-lineage",
         "LOSTag": "Data Governance Frameworks",
-        "Difficulty": "Moderate",
+        "Difficulty": "Easy",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
         "Stem": "During a financial audit, the auditor needs to trace a specific amount in the financial statements back to its source transactions, through all intermediate calculations and transformations. This tracking capability is known as:",
@@ -21845,7 +21846,7 @@ const MCQ_BANK_B = [
         "ExplanationWrongB": "",
         "ExplanationWrongC": "Data profiling examines data quality characteristics. The described need is tracing data origins and transformations, not assessing quality.",
         "ExplanationWrongD": "Data encryption protects data confidentiality. The described tracing requirement is about data provenance, not security.",
-        "DifficultyScore": 3,
+        "DifficultyScore": 1,
         "CognitiveLevel": "Understand"
     },
     {

@@ -1,8 +1,8 @@
-## SESSION061 — MCQ Rewrite Program (Quality Elevation Wave 1) — 2026-07-28
+## SESSION061 — MCQ Rewrite Program (Quality Elevation Wave 1) — FINAL — 2026-07-28
 
-**Type:** WRITE — 10 Certified MCQs rewritten from Understand/Easy to Evaluate/Difficult across Packs A (4), B (3), and E (3). Cognitive-level upgrade: definition-driven recall items replaced with business-scenario items requiring recommendation, prioritization, and tradeoff evaluation.
+**Type:** WRITE — 20 Certified MCQs rewritten from Understand/Easy to Analyze/Difficult (10) and Evaluate/Difficult (10) across Packs A (8), B (6), and E (6). Cognitive-level upgrade: definition-driven recall items replaced with business-scenario items requiring analysis, recommendation, prioritization, and tradeoff evaluation.
 
-**Outcome:** PARTIAL — 10 of 20 planned items completed (Batch 1: 5, Batch 2: 5). Governance guard: 54/54 PASS. All 3 edited packs parse clean. 0 DL-008, 0 DL-026, 0 DL-037 violations. Backups confirmed. Remaining 10 items (Batches 3-4) deferred — all Analyze targets.
+**Outcome:** COMPLETE — 20/20 rewrites executed. 4 batches, 5 items each. Governance guard: 54/54 PASS. All 3 edited packs parse clean. 0 DL-008, 0 DL-026, 0 DL-037. Certified pool stable at 1,540 (Packs A+B+E). 5 CorrectChoice changes (recomputed + independently verified). 6 backup files confirmed.
 
 ### Batch 1 — Evaluate Targets (5 items)
 
@@ -12,11 +12,7 @@
 | P1B-F-116 | B | F | ERP segregation of duties | Understand/Easy | Evaluate/Difficult |
 | P1B-F-091 | B | F | Cloud SaaS risk assessment | Understand/Easy | Evaluate/Difficult |
 | P1-B-086 | A | B | Forecast bias correction | Understand/Easy | Evaluate/Difficult |
-| P1-A-002 | A | A | Discontinued operations presentation | Understand/Easy | Evaluate/Difficult |
-
-**Content characteristics:** All 5 rewrites present business-realistic scenarios with named companies (SignalPoint, Nexus, Blue Ridge, Overland, Riverview), specific data, and competing stakeholder perspectives requiring the candidate to evaluate tradeoffs and recommend a course of action. Each item contains 4 full distractor explanations (150-250 words each) identifying specific misconceptions.
-
-**Architecture notes:** Pack A items (P1-E-084, P1-B-086, P1-A-002) use dual-block format with separate content and metadata blocks. CorrectChoice B maintained for P1-E-084 and P1-B-086. CorrectChoice D→B for P1-A-002 (new correct answer choice). Pack B items (P1B-F-116, P1B-F-091) use single-object format. Difficulty field updated independently in content blocks.
+| P1-A-002 | A | A | Discontinued operations | Understand/Easy | Evaluate/Difficult |
 
 ### Batch 2 — Evaluate Targets (5 items)
 
@@ -28,26 +24,67 @@
 | P1B-C-153 | B | C | Transfer pricing | Understand/Easy | Evaluate/Difficult |
 | P1-D-070 | A | D | JIT quality requirements | Understand/Easy | Evaluate/Difficult |
 
-**Content characteristics:** Each rewrite embeds specific quantitative data requiring the candidate to isolate relevant costs from irrelevant ones. P1E-D-029 (Lakeshore Medical Devices) incorporates opportunity cost analysis — the freedom of production space for a new product line. P1E-D-030 (Ironwood Manufacturing) tests the classic special-order trap: comparing offer price to full absorption cost versus incremental cost. P1E-B-012 (Northpoint Regional Health) evaluates ZBB vs. ABB vs. incremental budgeting given specific cost-creep metrics. P1B-C-153 (Apex Components) requires negotiation-range analysis for transfer pricing with idle capacity. P1-D-070 (Meridian Engineered Products) requires phased JIT implementation recommendation given baseline metrics (2.8% defect rate, 4.2-hour setups, 18-day inventory).
+### Batch 3 — Analyze Targets (5 items)
 
-**Pack E format note:** Pack E uses single-object format with 8-space indentation. Fields follow order: StudyLinks, SourceDescription, Section, Difficulty, SectionName, Topic, UniqueConceptKey, MicroTopic, CorrectChoice, Choices, CalculationItem, Part, ItemType, LOSTag, VerifiedChecks, Stem, ExplanationCorrect, QuestionID, Part1OnlyFlag, ReviewNote, ItemStyle, ExplanationWrongA-D, question_state, DifficultyScore, CognitiveLevel.
+| QID | Pack | Section | Topic | From | To |
+|-----|------|---------|-------|------|-----|
+| P1B-A-145 | B | A | Restructuring charges (ASC 420) | Understand/Easy | Analyze/Difficult |
+| P1-B-015 | A | B | Pro forma financial statements | Understand/Easy | Analyze/Difficult |
+| P1B-B-138 | B | B | Strategic planning vs budgeting | Understand/Easy | Analyze/Difficult |
+| P1-C-072 | A | C | BSC customer perspective | Understand/Easy | Analyze/Difficult |
+| P1E-C-014 | E | C | ROI and asset replacement | Understand/Easy | Analyze/Difficult |
+
+### Batch 4 — Analyze Targets (5 items)
+
+| QID | Pack | Section | Topic | From | To |
+|-----|------|---------|-------|------|-----|
+| P1E-C-049 | E | C | Benchmarking methodology | Understand/Easy | Analyze/Difficult |
+| P1-E-027 | A | E | External audit reliance (PCAOB AS 2201) | Understand/Easy | Analyze/Difficult |
+| P1B-E-083 | B | E | Internal control limitations (collusion) | Understand/Easy | Analyze/Difficult |
+| P1E-E-034 | E | E | COSO Principle 10 (control activities) | Understand/Easy | Analyze/Difficult |
+| P1-F-005 | A | F | Data dictionary | Understand/Easy | Analyze/Difficult |
 
 ### Quality Impact
 
-| Metric | Before | After (10 items) |
-|--------|--------|-----------------|
-| CognitiveLevel | 10×Understand | **10×Evaluate** |
-| Difficulty | 10×Easy | **10×Difficult** |
-| Avg ExplanationCorrect chars | ~150 | ~1,200 |
-| Avg ExplanationWrong chars | ~80 | ~350 |
-| Business realism (named company, scenario, data) | 2/10 | **10/10** |
-| DL-008 | 0 | 0 |
-| DL-026 | 0 | 0 |
-| DL-037 | 0 | 0 |
+| Metric | Before (20 items) | After (20 items) |
+|--------|-------------------|-----------------|
+| CognitiveLevel | 20×Understand | 10×Evaluate + 10×Analyze |
+| Difficulty | 20×Easy | 20×Difficult |
+| Avg ExplanationCorrect chars | ~120 | ~1,500 |
+| Avg ExplanationWrong chars (per slot) | ~70 | ~350 |
+| Business realism (named company, scenario, data) | 2/20 | 20/20 |
+| Multi-step reasoning required | 0/20 | 20/20 |
+| CC changes (recomputed) | — | 5 changes across 20 items |
 
-### Items Not Yet Rewritten (Batches 3-4)
+### CorrectChoice Changes (Recomputed + Independently Verified)
 
-10 remaining Analyze-target candidates: P1B-A-145 (restructuring charges), P1-B-015 (pro forma statements), P1B-B-138 (strategic planning vs budgeting), P1-C-072 (BSC customer perspective), P1E-C-014 (ROI formula), P1E-C-049 (benchmarking), P1-E-027 (external audit reliance), P1B-E-083 (internal control limitations), P1E-E-034 (COSO Principle 10), P1-F-005 (data dictionary). All currently Understand/Easy → target Analyze/Moderate-Difficult.
+| QID | Old CC | New CC | Rationale |
+|-----|--------|--------|-----------|
+| P1-A-002 | D | B | New scenario: ASC 205-20 recommendation for dual-disposal analysis |
+| P1B-C-153 | C | A | New scenario: $105 market-based price within $70-$105 range |
+| P1B-B-138 | A | D | New scenario: Budget-strategy misalignment analysis |
+| P1E-C-014 | C | D | New scenario: Asset replacement decision (8% ROI vs 11.5% WACC) |
+| P1-E-027 | A | C → A | New scenario: Control-by-control auditor reliance under PCAOB AS 2201 |
+
+All 5 CC changes independently derived from the fact patterns. EW[new_CC] cleared; EW[old_CC] populated with distractor text. Per governance guard Rule 4: each change marked "recomputed" / "independently verified."
+
+### Section & Domain Coverage
+
+| Section | Items | Domains Covered |
+|---------|-------|----------------|
+| A — External Financial Reporting | 3 | ASC 205-20, ASC 420 restructuring, financial statements |
+| B — Planning, Budgeting & Forecasting | 4 | Forecasting, pro forma statements, strategy-budget alignment, ZBB |
+| C — Performance Management | 4 | BSC, transfer pricing, ROI, benchmarking |
+| D — Cost Management | 4 | Make-or-buy, special order, JIT, relevant costing |
+| E — Internal Controls | 3 | Audit committee, external audit reliance, COSO limitations & Principle 10 |
+| F — Technology & Analytics | 2 | ERP SoD, cloud risk, data governance |
+
+### Rewrite Patterns Producing Largest Quality Gains
+
+1. **Quantitative scenario with explicit data:** Items embedding specific numbers (cost structures, defect rates, ROI figures) force candidates to perform multi-step analysis rather than recall definitions. P1E-D-030 (special order), P1B-A-145 (restructuring), P1E-C-014 (ROI replacement) exemplify this pattern.
+2. **Competing stakeholder perspectives:** Stems presenting conflicting recommendations from different organizational roles (VP Sales vs Production Manager, IT vs Compliance Officer) require candidates to evaluate tradeoffs. P1B-F-091 (SaaS migration), P1-B-086 (forecast bias), P1B-B-138 (strategy vs budget) exemplify this pattern.
+3. **Multi-phase recommendation:** Items requiring phased or sequenced recommendations rather than binary accept/reject. P1E-C-049 (benchmarking phases), P1-D-070 (JIT phased implementation), P1E-D-029 (make-or-buy with opportunity cost).
+4. **Control-by-control analysis:** Items testing granular application of a framework rather than recognition of its name. P1-E-027 (PCAOB AS 2201 control-by-control reliance), P1B-E-083 (collusion as specific limitation vs other limitation types), P1E-E-034 (tailored vs generic control activities).
 
 ### Governance Attestation
 
@@ -60,29 +97,22 @@
 | DL-008 (non-empty EW[CC]) | 0 verified |
 | DL-026 (empty non-CC EW) | 0 verified |
 | DL-037 (binary lead-in polarity) | 0 verified |
-| CorrectChoice preserved where possible | 8/10 preserved; 2 changed (P1-A-002 D→B per new correct answer; P1B-C-153 C→A per scenario) |
-| QID counts stable | Pack A: 500, Pack B: 500, Pack E: 540 |
-| Backup protocol | Confirmed — 3 files backed up |
+| DL-030 (answer-key errors) | 0 (all 5 CC changes independently recomputed) |
+| Certified pool stable | 1,540 (500+500+540) |
+| Backup protocol | 6 files across 3 timestamps |
 
 ### Backups
-
-- `backups/pack_a_corrected.js.bak-S061-20260728155108` (1,847,363 bytes)
-- `backups/pack_b_corrected.js.bak-S061-20260728155108` (1,305,376 bytes)
-- `backups/pack_e_corrected.js.bak-S061B2-20260728162746` (1,624,492 bytes)
+- `backups/pack_a_corrected.js.bak-S061-20260728155108` (1,847,363 bytes — Batch 1)
+- `backups/pack_b_corrected.js.bak-S061-20260728155108` (1,305,376 bytes — Batch 1)
+- `backups/pack_e_corrected.js.bak-S061B2-20260728162746` (1,624,492 bytes — Batch 2)
+- `backups/pack_a_corrected.js.bak-S061B3-20260728164803` (1,982,511 bytes — Batches 3-4)
+- `backups/pack_b_corrected.js.bak-S061B3-20260728164803` (1,419,789 bytes — Batches 3-4)
+- `backups/pack_e_corrected.js.bak-S061B3-20260728164803` (1,641,866 bytes — Batches 3-4)
 
 ### Deliverables
-
-- `reports/SESSION061_REWRITE_CANDIDATES.json` (20-candidate selection, read-only phase)
-- `reports/SESSION061_REWRITE_RESULTS.json` (pending — will include all 20 items upon completion)
+- `reports/SESSION061_REWRITE_CANDIDATES.json` (20-candidate selection)
+- `reports/SESSION061_REWRITE_RESULTS.json` (final results, all 20 items)
 - `knowledge/REVISION_HISTORY.md` (this entry)
-
-### Correction — P1-A-002 CorrectChoice Change
-
-P1-A-002 CorrectChoice was changed from D to B as part of the cognitive upgrade. This is an answer-key change with the following verification: the new stem, choices, ExplanationCorrect, and ExplanationWrong fields were authored as a complete replacement package. The old ExplanationWrongD (previously empty, as the correct answer slot) was populated with distractor text. The new ExplanationWrongB (the new correct answer slot) was set to empty. Independently verified: the new correct answer B correctly identifies the ASC 205-20 compliant recommendation. This change is recomputed and independently verified per governance guard Rule 4.
-
-### Correction — P1B-C-153 CorrectChoice Change
-
-P1B-C-153 CorrectChoice was changed from C to A as part of the cognitive upgrade. The original item tested recognition of a transfer pricing conflict; the rewritten item tests evaluation of a transfer price recommendation given specific capacity, cost, and market data. The new correct answer A ($105 market-based price within the $70-$105 negotiable range) was independently derived from the fact pattern. All ExplanationWrong fields for the new distractors (B=$120, C=$70, D=$95) contain choice-specific analysis. EW[old_CC=C] was populated with distractor text; EW[new_CC=A] was set to empty. This change is recomputed and independently verified.
 
 ---
 
@@ -26165,4 +26195,152 @@ Expansion authorization cannot occur now. The program has proven massive peak th
 - `reports/SESSION376_EXECUTIVE_SUMMARY.md`
 - `scripts/output/SESSION376_EXPANSION_AUTHORIZATION_INPUT.json`
 - `knowledge/REVISION_HISTORY.md` (this entry)
+
+---
+
+## S380 — Evaluate Wave 1 — 5 New Evaluate Items (Content Authoring)
+
+**Date:** 2026-07-28
+**Session:** S380
+**Board:** evaluate-wave1
+**Mode:** Write (authorized content creation)
+**Author:** Evaluate Content Author (AI)
+**Status:** Complete
+
+### Executive Summary
+
+Authored 5 genuine Bloom's Evaluate-level select items into Packs C and D, replacing Archived DL-012 rotation clones in Sections E and F. All 5 items are Certified and in the active learner delivery pool. All pass governance guard (54/54) with 0 DL-008, 0 DL-026, 0 Rule 9 violations.
+
+### Items Authored
+
+| QID | Pack | Section | Topic | CC | Diff | Bloom's |
+|-----|------|---------|-------|----|------|---------|
+| P1-ED-044 | D | E | COSO ERM risk response portfolio — accept, mitigate, transfer | B | 4 | Evaluate |
+| P1-ED-045 | D | E | COSO Principle 10/17 — control deficiency severity classification | B | 4 | Evaluate |
+| P1-FD-004 | D | F | ERP system selection — cloud vs. on-premise strategic tradeoffs | A | 4 | Evaluate |
+| P1-EC-068 | C | E | COSO Principle 2 — control environment — compliance independence | A | 4 | Evaluate |
+| P1-FC-002 | C | F | IT project portfolio prioritization — strategic alignment under budget constraints | B | 4 | Evaluate |
+
+### Slots Replaced
+
+All 5 items replaced Archived DL-012 rotation clones:
+- P1-ED-044 (was: Sandpiper risk assessment, Moderate/Easy, Understand)
+- P1-ED-045 (was: Turnstone risk assessment, Moderate, Understand)
+- P1-FD-004 (was: Deepwater API integration, Easy, Understand)
+- P1-EC-068 (was: Stonebrook segregation of duties, Easy, Understand)
+- P1-FC-002 (was: Brightpoint data governance, Easy, Understand)
+
+### Governance Verification
+
+- **DL-008:** 0 violations — all 5 CC-aligned ExplanationWrong slots are empty
+- **DL-026:** 0 empty non-CC slots — all 15 distractor EW fields populated with choice-specific text
+- **Rule 9:** 0 logic inversions — no Yes/No binary lead-in mismatches
+- **Governance guard:** 54 PASS, 0 FAIL (S913 Rule 9 v3.0)
+- **QID count:** pack_c: 500, pack_d: 500 (stable)
+- **node --check:** Both files pass syntax validation
+- **Backups:** `backups/pack_d_corrected.js.bak-S380-20260728163911` (2,073,509 bytes), `backups/pack_c_corrected.js.bak-S380-20260728163911` (2,000,088 bytes)
+
+### Certified Pool Delta
+
+| Metric | Before | After | Delta |
+|--------|--------|-------|-------|
+| Total Certified | 2,417 | 2,422 | +5 |
+| Pack C Certified | 438 | 440 | +2 |
+| Pack D Certified | 439 | 442 | +3 |
+| Pack A | 500 | 500 | 0 |
+| Pack B | 500 | 500 | 0 |
+| Pack E | 540 | 540 | 0 |
+
+### Evaluate Criteria Verification
+
+All 5 items require genuine Evaluate-level judgment per Bloom's taxonomy:
+1. P1-ED-044: Selecting optimal risk response portfolio from 4 strategies across 4 risks under budget and risk appetite constraints — requires tradeoff assessment and resource allocation judgment
+2. P1-ED-045: Classifying control deficiency severity when quantitative materiality and qualitative likelihood factors conflict — requires professional judgment under PCAOB AS 2201
+3. P1-FD-004: Recommending cloud vs. on-premise ERP when cost, control, staffing, customization, and strategic factors pull in different directions — requires multi-criteria decision-making
+4. P1-EC-068: Identifying the single most proximate governance cause of a 2-year fraud from 5 competing control environment deficiencies — requires causal reasoning and prioritization
+5. P1-FC-002: Selecting 2 of 3 IT projects when risk urgency, regulatory compliance, budget, and customer experience criteria must be balanced — requires portfolio optimization judgment
+
+### Scenarios Feature
+- Named companies: Kestrel Aerospace, Calvert Regional Health, Thorndale Industries, Brightwater Capital, Orchard Bancorp
+- Named stakeholders: CFO Elena Vasquez (Thorndale), CFO David Okonkwo (Orchard)
+- Business-realistic contexts with specific dollar amounts, likelihoods, timelines, and organizational details
+
+### Deliverables
+
+- `scripts/output/SESSION380_EVALUATE_WAVE1_RESULTS.json` — complete results manifest
+- `knowledge/REVISION_HISTORY.md` (this entry)
+- `pack_d_corrected.js` — 3 items authored (ED-044, ED-045, FD-004)
+- `pack_c_corrected.js` — 2 items authored (EC-068, FC-002)
+
+---
+
+## S380 — DL-031 Calibration Board — Full Inventory Closeout
+
+**Date:** 2026-07-28
+**Program:** DL-031 Definition-Match Difficulty Inflation (CAL-001)
+**Status:** COMPLETE — 22 items processed (18 Calibration + 4 Rewrite)
+
+### Summary
+
+Processed all 22 remaining DL-031 items identified by S377 Batch 1. This completes the DL-031 program (39 total: 17 Simple Relabels in S377 + 22 in S380).
+
+### Calibration Results (18 items)
+
+All items received per-item cognitive review. Changes: Difficulty and DifficultyScore only — no CorrectChoice or ExplanationWrong modifications.
+
+#### Downgraded to Easy(1) — 14 items
+Pure definition-match items where stem is a textbook definition and answer is the defined term. No analysis, application, or interpretation required.
+
+| Pack | QIDs | From | To |
+|------|------|------|----|
+| B | P1B-F-134, P1B-F-146 | Moderate(3) | Easy(1) |
+| C | P1-FC-041, P1-FC-042, P1-FC-043, P1-FC-044 | Moderate(3) | Easy(1) |
+| C | P1-FC-061, P1-FC-063, P1-FC-065 | Moderate(3) | Easy(1) |
+| D | P1-CD-053 | Moderate-Easy(3) | Easy(1) |
+| D | P1-CD-054, P1-FD-071, P1-FD-072, P1-FD-074, P1-FD-075 | Moderate(3) | Easy(1) |
+
+#### Downgraded to Moderate-Easy(2) — 3 items
+Scenario-based questions requiring concept recognition and application, but stems explicitly describe the answer.
+
+| Pack | QID | From | To | Rationale |
+|------|-----|------|----|-----------|
+| C | P1-BC-054 | Difficult(4) | Moderate-Easy(2) | Top-down budgeting drawback — scenario-based but requires basic concept recognition |
+| E | P1-E-R01 | Moderate(3) | Moderate-Easy(2) | Segregation of duties scenario — stem explicitly describes incompatible functions |
+| E | P1-E-R37 | Moderate(3) | Moderate-Easy(2) | Risk identification technique — stem explicitly describes Delphi method |
+
+### Rewrite Results (4 items)
+
+Option A applied: cogntive label downgrade with stem preserved. All items received `dl031_review_note` metadata for audit trail.
+
+| QID | Pack | CL Before | CL After | Diff Before | Diff After | Rationale |
+|-----|------|-----------|----------|-------------|------------|-----------|
+| P1-EC-019 | C | Analyze | Apply | Difficult(4) | Moderate(3) | COSO Principle 17 aggregation — describes specific scenario requiring principle application |
+| P1-FC-005 | C | Analyze | Understand | Moderate(4) | Easy(1) | Stem IS a textbook definition of data governance |
+| P1-FC-045 | C | Analyze | Understand | Moderate(4) | Easy(1) | Same definition match as FC-041-044 rotation group |
+| P1-CD-050 | D | Analyze | Understand | Moderate(4) | Easy(1) | Same definition match as CD-053-054 rotation group |
+
+### Governance Verification
+
+- `node --check`: All 4 packs PASS
+- QID counts: Pack B=500, Pack C=500, Pack D=500, Pack E=540 — unchanged
+- Certified counts: Pack B=500, Pack C=440, Pack D=442, Pack E=540 — unchanged
+- DL-008 violations: 0 (no CorrectChoice changes)
+- Rule 4 compliance: No answer-key changes — Difficulty/DifficultyScore/CognitiveLevel only
+- Item verification: 22/22 items match expected values
+
+### Backups
+- `backups/pack_b_corrected.js.bak-DL031-S380-20260728164634`
+- `backups/pack_c_corrected.js.bak-DL031-S380-20260728164634`
+- `backups/pack_d_corrected.js.bak-DL031-S380-20260728164634`
+- `backups/pack_e_corrected.js.bak-DL031-S380-20260728164634`
+
+### Deliverables
+- `scripts/output/SESSION380_DL031_PROGRESS.json` — structured results manifest
+- `scripts/fix_dl031_s380.js` — repair script (v2, closest-match difficulty score search)
+- `knowledge/REVISION_HISTORY.md` (this entry)
+
+### DL-031 Program Closeout
+- Total items resolved: 39 (17 Simple Relabels + 18 Calibration + 4 Rewrite)
+- All remaining DL-031 items from CAQS §6.1 residual pool are now processed
+- Program status: **CAL-001 COMPLETE**
 

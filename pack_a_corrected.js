@@ -4606,18 +4606,18 @@ var MCQ_BANK_A = [
         "MicroTopic": "pro forma financial statements",
         "UniqueConceptKey": "B-015-pro-forma-financial-statements",
         "LOSTag": "B.4 Annual profit plan and supporting schedules",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Granite wants projected income statement and balance sheet effects of the annual plan. Which response is most appropriate?",
+        "Stem": "Granite Industries' controller has prepared the operating budgets for the upcoming fiscal year: sales budget projects $18.2 million in revenue, production budget anticipates 120,000 units, direct materials purchases budget totals $5.4 million, direct labor budget is $3.6 million, manufacturing overhead budget (including $2.1 million depreciation) is $4.8 million, and selling and administrative expense budget is $2.9 million. The beginning finished goods inventory is valued at $1.1 million and ending finished goods inventory is budgeted at $1.4 million. The cash budget shows a projected $340,000 deficit in February requiring a line of credit draw. The CFO reviews the operating budgets and asks: What will the budgeted income statement show for cost of goods sold, and what is the primary risk this analysis reveals about Granite's financial position?",
         "Choices": {
-            "A": "Prepare pro forma financial statements based on the operating and financial budgets",
-            "B": "Use only historical financial statements with no assumptions",
-            "C": "Prepare pro forma statements only after audit completion",
-            "D": "Classify projected statements as external audit evidence"
+            "A": "Cost of goods sold is $13.5 million; the primary risk is the February cash deficit, which means the budgeted income statement's profitability does not guarantee sufficient liquidity",
+            "B": "Cost of goods sold is determined by adding all operating budget costs ($16.7 million) — the budgeted income statement simply aggregates all budget line items without adjusting for inventory changes",
+            "C": "Cost of goods sold cannot be determined from operating budgets alone — the controller must wait for the audited financial statements to calculate actual COGS for the budget period",
+            "D": "Cost of goods sold is $18.2 million, equal to sales revenue — the budgeted income statement should show breakeven as a conservative planning assumption"
         },
         "CorrectChoice": "A",
-        "ExplanationCorrect": "Pro forma statements summarize the expected financial results and position implied by the budget.",
+        "ExplanationCorrect": "Cost of goods sold for a manufacturer is calculated as: Beginning Finished Goods Inventory + Cost of Goods Manufactured - Ending Finished Goods Inventory. COGM = Direct Materials Used + Direct Labor + Manufacturing Overhead. Here: Direct materials = $5.4M, Direct labor = $3.6M, Manufacturing overhead = $4.8M (all manufacturing costs, including depreciation as a product cost under absorption costing). COGM = $5.4M + $3.6M + $4.8M = $13.8M. COGS = $1.1M + $13.8M - $1.4M = $13.5M. The primary risk revealed is the disconnect between profitability and liquidity — the budgeted income statement may show a profit (sales of $18.2M exceed COGS of $13.5M plus S&A of $2.9M = $16.4M in total costs, yielding $1.8M operating income), but the cash budget's projected $340,000 February deficit indicates that profitability does not guarantee sufficient cash flow throughout the year. This is a critical insight: pro forma financial statements (income statement + balance sheet) derived from operating and financial budgets reveal both expected profitability and expected liquidity. A controller who focuses exclusively on the income statement without reviewing the cash budget would miss the financing need. Business interpretation: the master budget consists of operating budgets (which feed the budgeted income statement) and financial budgets (which feed the cash budget and budgeted balance sheet). The budgeted income statement translates operational plans into expected profitability; the cash budget translates those same plans into expected cash flows. Both are essential for management to assess whether the annual plan is both profitable and financially feasible. A common exam trap is to aggregate all costs without adjusting for inventory changes ($16.7M would overstate COGS by $3.2M) or to assume profitability guarantees cash sufficiency (the $340,000 deficit demonstrates otherwise).",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section B",
@@ -4641,12 +4641,12 @@ var MCQ_BANK_A = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "Historical financial statements alone provide no forward-looking information. Pro forma statements are prospective — they project the expected income statement and balance sheet based on budget assumptions about sales, costs, and financing. Relying solely on history ignores the planning purpose of the budgeting process.",
-        "ExplanationWrongC": "Pro forma statements are prepared during budget development, not deferred until after audit completion. The audit is an independent examination of historical financial statements; pro forma statements are a management planning tool that should be produced as part of the annual profit plan to assess the expected financial impact of budget decisions.",
-        "ExplanationWrongD": "Projected (pro forma) statements are internal planning documents, not external audit evidence. The external auditor examines actual historical results for fair presentation under GAAP. Projected statements represent management's expectations and are not suitable as audit evidence for verifying actual financial position.",
-        "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+    "ExplanationWrongB": "Adding all operating budget costs ($5.4M + $3.6M + $4.8M + $2.9M = $16.7M) overstates cost of goods sold by $3.2 million. This calculation makes two errors. First, selling and administrative expenses ($2.9M) are period costs, not product costs — they appear below gross margin on the income statement, not in COGS. Second, the manufacturing costs ($13.8M) represent cost of goods manufactured, not cost of goods sold — the $0.3M increase in finished goods inventory ($1.4M - $1.1M) means some manufactured units remain unsold and their costs are deferred to the balance sheet, not expensed. The correct COGS is $13.5M, calculated as $1.1M + $13.8M - $1.4M. A candidate selecting this option is confusing total budgeted costs with the specific income statement line items that pro forma financial statements require.",
+    "ExplanationWrongC": "Pro forma financial statements are prepared during budget development, not deferred until after audit completion. The purpose of the master budget is to project the expected financial results before the period begins, allowing management to evaluate whether the annual plan achieves financial targets and identify potential problems (like the February cash deficit) in advance. Waiting for audited statements would defeat the planning purpose — by the time the audit is complete, the budget period would have ended and management would have missed the opportunity to adjust operations or arrange financing. A candidate selecting this option is confusing historical financial reporting (the audit function) with forward-looking management planning (the budget function).",
+    "ExplanationWrongD": "The budgeted income statement does not necessarily show breakeven. The sales budget ($18.2M) minus COGS ($13.5M) minus S&A ($2.9M) produces budgeted operating income of $1.8M — not zero. Conservative planning involves using realistic, not deliberately pessimistic, assumptions. Setting revenue equal to costs as a 'conservative' approach would eliminate the motivational and performance-evaluation purposes of budgeting. A candidate selecting this option is confusing the concept of conservative assumptions with the concept of setting targets at breakeven — an effective budget reflects management's best estimate of achievable results, not a worst-case scenario.",
+    "question_state": "Certified",
+    "DifficultyScore": 4,
+    "CognitiveLevel": "Analyze"
     },
     {
         "Part": 1,
@@ -12464,18 +12464,18 @@ var MCQ_BANK_A = [
         "MicroTopic": "customer perspective metric example",
         "UniqueConceptKey": "C-072-customer-perspective-metric-example",
         "LOSTag": "C.4 Balanced scorecard and other performance measures",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Which of the following metrics would be classified under the customer perspective of a balanced scorecard?",
+        "Stem": "NorthStar Logistics' balanced scorecard includes four perspectives with the following metrics tracked monthly: (1) Financial — operating margin 12.4%, revenue growth 8.1%, asset turnover 1.7; (2) Customer — on-time delivery 94.2%, customer retention 87%, net promoter score 42; (3) Internal Business Process — order fulfillment cycle time 3.2 days, defect rate 0.8%, capacity utilization 76%; (4) Learning & Growth — employee training hours per FTE 24, employee turnover 18%, systems uptime 99.7%. The CEO notes that customer retention has declined from 91% to 87% over the past year despite stable on-time delivery performance. The controller is asked to analyze which metric most likely explains the decline in customer retention. Which metric should the controller investigate first?",
         "Choices": {
-            "A": "Return on invested capital",
-            "B": "On-time delivery rate to customers",
-            "C": "Employee turnover rate",
-            "D": "Defect rate in the production process"
+            "A": "Operating margin of 12.4% — declining profitability may indicate NorthStar is cutting costs in ways that reduce perceived customer value, causing defection",
+            "B": "Net promoter score of 42 — while on-time delivery is satisfactory, a low NPS indicates customers are not sufficiently loyal to recommend NorthStar, suggesting the retention decline reflects a deeper customer satisfaction problem",
+            "C": "Employee turnover of 18% — high employee churn reduces service consistency and institutional knowledge, directly impacting the customer experience that drives retention",
+            "D": "Capacity utilization of 76% — underutilized capacity suggests NorthStar has excess resources that could be redeployed to customer service improvements"
         },
         "CorrectChoice": "B",
-        "ExplanationCorrect": "On-time delivery rate directly measures how well the company is serving customer needs, placing it under the customer perspective, distinct from financial, internal process, or learning and growth measures.",
+        "ExplanationCorrect": "The controller should investigate net promoter score (NPS) first because it provides the most direct linkage to the customer retention decline within the customer perspective. NPS measures customers' willingness to recommend the company to others — a leading indicator of future retention. At 42, NorthStar's NPS is below the threshold considered 'good' (typically 50+), indicating a significant proportion of detractors. While on-time delivery (94.2%) suggests operational execution is satisfactory, a low NPS indicates that meeting basic delivery promises is not sufficient for customer loyalty — customers may be satisfied with individual transactions but not loyal to the company overall. This pattern (stable operational metrics, declining retention, low NPS) is characteristic of a company that delivers adequately but fails to build relationships — customers stay until a competitor offers something better, then leave. The controller should analyze the gap between operational satisfaction (on-time delivery) and emotional loyalty (NPS) to understand why customers who receive their orders on time are still unlikely to recommend NorthStar. Business interpretation: the customer perspective of the BSC contains both outcome metrics (retention, market share) and driver metrics (on-time delivery, NPS, satisfaction). When an outcome metric declines while a driver metric is stable, the missing linkage suggests an unmeasured driver — in this case, the quality of the customer relationship beyond transactional reliability. A common exam trap is to investigate the employee turnover metric (Learning & Growth) because high turnover could eventually affect customer service — but the immediate decline in retention with stable operational metrics points to a customer-perspective issue, not a cascading cause from another perspective.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section C",
@@ -12498,13 +12498,13 @@ var MCQ_BANK_A = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Return on invested capital (ROIC) is a financial measure of profitability relative to invested assets. It belongs to the financial perspective, which tracks whether strategy execution translates into improved financial results. Customer-facing metrics such as on-time delivery, satisfaction, and market share belong to the customer perspective.",
+        "ExplanationWrongA": "Operating margin of 12.4% falls within the financial perspective, not the customer perspective. While cost-cutting could theoretically reduce customer-perceived value, the scenario provides no evidence that margins have changed or that cost reduction is driving defection. Stable on-time delivery (94.2%) further suggests operational quality has not declined. Operating margin is a lagging financial indicator — it would not be the first place to investigate a customer-behavior change when customer-perspective metrics like NPS already provide a more direct diagnostic signal. A candidate selecting this option is reaching across BSC perspectives for a financial explanation without exhausting the customer-perspective metrics first.",
         "ExplanationWrongB": "",
-        "ExplanationWrongC": "Employee turnover rate measures workforce stability and organizational capability—it belongs to the learning and growth perspective. This perspective captures the organization’s capacity to develop human capital, information systems, and organizational culture to support long-term performance.",
-        "ExplanationWrongD": "Defect rate in the production process measures internal operational efficiency and quality control. It belongs to the internal business process perspective, which focuses on the processes that create and deliver value to customers, not the customer-facing outcomes themselves.",
+        "ExplanationWrongC": "Employee turnover of 18% belongs to the Learning & Growth perspective. While high turnover can degrade customer experience over time through loss of experienced staff and inconsistent service, the relationship is indirect and lagged — turnover affects retention through intermediate variables (service quality, relationship continuity). The scenario provides a more direct customer-perspective metric (NPS of 42) that correlates more immediately with the retention decline. Investigating turnover first skips the most proximate cause (customer sentiment) to investigate a deeper organizational cause — appropriate only after the proximate cause has been ruled out.",
+        "ExplanationWrongD": "Capacity utilization of 76% belongs to the Internal Business Process perspective. The connection between excess capacity and declining customer retention is weak — having idle resources does not cause customers to leave, and redeploying those resources to customer service would require a strategic decision and implementation timeline that would not address the immediate retention decline. More fundamentally, the question asks which metric most likely explains the retention decline, not which metric represents an operational improvement opportunity. A candidate selecting this option is identifying an unrelated operational metric based on its suboptimal value rather than analyzing which metric has the strongest explanatory relationship to the observed outcome.",
         "question_state": "Certified",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze"
     },
     {
         "Part": 1,
@@ -19032,18 +19032,18 @@ var MCQ_BANK_A = [
         "MicroTopic": "external audit reliance on controls",
         "UniqueConceptKey": "E-027-external-audit-reliance-on-controls",
         "LOSTag": "E Internal controls",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Vantage is reviewing internal controls related to external audit reliance on controls. Which response is most appropriate?",
+        "Stem": "Vantage Industries' internal audit department has completed its annual assessment of internal controls over financial reporting. The assessment identified that controls over the revenue cycle are well-designed and operating effectively, while controls over inventory valuation have a design deficiency (costing methodology is not consistently applied across product lines). The external auditor is planning the year-end audit and has requested Vantage's internal control documentation. The controller must analyze how these assessment results will affect the external auditor's approach. Which analysis is correct under PCAOB AS 2201?",
         "Choices": {
-            "A": "Wait for the external audit before designing any internal control",
-            "B": "Classify the issue as a Part 2 capital budgeting matter",
-            "C": "Well-designed and operating controls may affect the nature, timing, and extent of audit testing",
-            "D": "Rely on trust and remove documentation to speed processing"
+            "A": "The external auditor can rely on Vantage's effective revenue cycle controls to reduce the extent of substantive testing in that area, but must perform additional substantive procedures for inventory valuation due to the identified control deficiency",
+            "B": "The external auditor cannot rely on any of Vantage's internal controls because one deficiency was identified in inventory — all areas require maximum substantive testing regardless of effective controls elsewhere",
+            "C": "The external auditor must independently retest all controls before placing any reliance on them — the internal audit department's assessment is not sufficient evidence for the external auditor",
+            "D": "The external auditor should rely on controls for both areas since internal audit already identified and documented the inventory deficiency — the auditor's responsibility is limited to reviewing internal audit's workpapers"
         },
-        "CorrectChoice": "C",
-        "ExplanationCorrect": "Under auditing standards (PCAOB AS 2201 and AICPA AU-C 315), the external auditor assesses the design and operating effectiveness of internal controls to determine the nature, timing, and extent of substantive audit procedures. When controls are well-designed and operating effectively, the auditor may rely on those controls and reduce the extent of substantive testing, consistent with a controls-reliance audit strategy. This approach is based on the COSO Internal Control — Integrated Framework, which provides the criteria against which ICFR is evaluated. COSO Principle 16 requires the organization to monitor internal controls, and evidence from ongoing monitoring and separate evaluations (including internal audit) can be used by the external auditor in assessing control risk. However, the auditor cannot rely solely on controls without testing their operating effectiveness; a walkthrough alone is insufficient. The auditor must obtain evidence that controls operated as designed throughout the period. Effective controls over significant accounts and assertions permit the auditor to assess control risk below maximum, which in turn reduces the required substantive testing and can improve audit efficiency while maintaining audit effectiveness.",
+        "CorrectChoice": "A",
+        "ExplanationCorrect": "Under PCAOB AS 2201 (An Audit of Internal Control Over Financial Reporting That Is Integrated with an Audit of Financial Statements), the external auditor evaluates the design and operating effectiveness of internal controls on a control-by-control basis. Well-designed and operating controls (revenue cycle) permit the auditor to assess control risk below maximum for that assertion, reducing the nature, timing, or extent of substantive procedures. Identified control deficiencies (inventory costing methodology) require the auditor to assess the deficiency's severity and respond with additional substantive testing for the affected assertions. The auditor's reliance decision is not all-or-nothing — it is granular to the control and assertion level. The internal audit function's work can be used by the external auditor under AU-C 610 (or PCAOB standards if the auditor assesses internal audit's objectivity and competence), but the external auditor retains responsibility for the audit opinion. Business interpretation: effective internal controls create audit efficiency — they allow the external auditor to test controls and reduce substantive testing, lowering audit costs and disruption. Control deficiencies increase audit effort and cost. This creates a direct financial incentive for management to maintain strong internal controls: better controls = lower audit fees. A common exam trap is to assume one deficiency contaminates the entire control environment — PCAOB standards require a control-by-control assessment, not a blanket rejection.",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section E",
@@ -19069,12 +19069,12 @@ var MCQ_BANK_A = [
             "Answer key distribution balanced across A/B/C/D",
             "Distractors written as plausible CMA-style traps"
         ],
-        "ExplanationWrongA": "Waiting for the external audit before designing internal controls reverses the proper sequence. Under COSO Principle 5, Vantage's management must establish controls first so the auditor can evaluate them. The external auditor tests controls that already exist — the auditor does not design them. If controls do not exist, the auditor cannot rely on them and must perform a fully substantive audit, which is less efficient. COSO Principle 12 requires that control activities be documented and operating throughout the period so the auditor can assess their design and operating effectiveness.",
-        "ExplanationWrongB": "External audit reliance on internal controls is an auditing and internal control topic within the COSO framework and PCAOB/ASB auditing standards — not a capital budgeting matter under Part 2. Capital budgeting deals with long-term investment decisions. Under COSO Principle 16, the effectiveness of Vantage's monitoring controls directly influences the nature, timing, and extent of the external auditor's substantive procedures. This relationship between internal control quality and audit approach is a core Part 1 concept.",
-        "ExplanationWrongC": "",
-        "ExplanationWrongD": "Relying on trust and removing documentation is incompatible with the external auditor's ability to rely on internal controls. Under PCAOB AS 2201, the auditor must test both the design and operating effectiveness of controls before placing reliance on them — and testing requires documented evidence of control performance. COSO Principle 12 requires control activities to be documented. Without documentation, Vantage's auditor cannot obtain sufficient evidence to support a controls-reliance strategy, forcing a less efficient substantive-only approach.",
-        "DifficultyScore": 1,
-        "CognitiveLevel": "Understand"
+        "ExplanationWrongA": "",
+        "ExplanationWrongB": "The external auditor's reliance decision is not all-or-nothing. PCAOB AS 2201 requires a control-by-control assessment — the revenue cycle controls are effective and can reduce substantive testing, while inventory requires additional procedures due to its deficiency. One deficiency does not invalidate all other controls. This 'one bad apple' reasoning would result in maximum substantive testing everywhere, which is unnecessary and inconsistent with auditing standards.",
+        "ExplanationWrongC": "The external auditor can use internal audit's work under AU-C 610 after assessing objectivity and competence, and is not required to independently retest every control from scratch — that would negate the efficiency purpose of a controls-reliance strategy. However, the auditor must obtain sufficient evidence to support the assessed control risk level, which may combine internal audit work, management monitoring, and the auditor's own testing. This option overstates the independence requirement.",
+        "ExplanationWrongD": "Relying on internal audit documentation without independent evaluation is insufficient. The auditor must assess the internal audit function's competence and objectivity before using their work, and retains responsibility for the audit opinion. Documenting a deficiency is not the same as testing controls for reliance — and the inventory deficiency does not prevent the auditor from relying on effective revenue controls. The auditor must independently assess both areas.",
+        "DifficultyScore": 4,
+        "CognitiveLevel": "Analyze"
     },
     {
         "Part": 1,
@@ -21767,18 +21767,18 @@ var MCQ_BANK_A = [
         "MicroTopic": "data dictionary definitions",
         "UniqueConceptKey": "F-005-data-dictionary-definitions",
         "LOSTag": "F Technology and analytics",
-        "Difficulty": "Easy",
+        "Difficulty": "Difficult",
         "ItemType": "MCQ",
         "ItemStyle": "single-select",
-        "Stem": "Apex is building a finance data catalog for analytics users. The controller wants users to know how fields are defined, formatted, validated, and related across reports. Which tool best addresses this need?",
+        "Stem": "Apex Industries is implementing a new ERP system. The finance team has identified a recurring problem: the same data element — 'revenue' — is calculated differently across three reports. The sales dashboard defines revenue as 'gross invoiced amount,' the monthly P&L defines it as 'net of returns and allowances,' and the regulatory filing defines it as 'revenue under ASC 606, excluding intercompany transactions.' The controller is reviewing data governance tools and must recommend which tool best addresses the root cause of this inconsistency and how it should be configured.",
         "Choices": {
-            "A": "A data dictionary defining fields, formats, meanings, validation rules, and relationships",
-            "B": "A retention schedule showing when records are archived or deleted",
-            "C": "A backup log confirming whether files were copied offsite",
-            "D": "A dashboard color palette standard for executive reports"
+            "A": "A data dictionary that documents each revenue field with its unique name, business definition, data type, validation rules, source system, and lineage across all three reports — distinguishing 'Gross Billed Revenue,' 'Net Revenue (GAAP),' and 'Statutory Revenue' as separate data elements with explicit transformation rules",
+            "B": "A data retention schedule that standardizes how long each version of revenue data is archived — if all versions are retained for the same period, auditors can reconcile the differences during the annual audit",
+            "C": "A data backup verification log confirming that revenue data has been successfully backed up to the disaster recovery site — as long as the data is recoverable, inconsistent definitions can be resolved after system implementation",
+            "D": "A data visualization standard that specifies consistent colors and chart types for revenue in dashboards and reports — visual consistency will alert users when different revenue numbers appear in different contexts"
         },
         "CorrectChoice": "A",
-        "ExplanationCorrect": "A data dictionary documents data fields, formats, meanings, relationships, and often validation rules or ownership. It promotes consistent interpretation across systems and reports.",
+        "ExplanationCorrect": "A data dictionary is the appropriate data governance tool for resolving definitional inconsistency. The root cause of Apex's problem is not that revenue data is calculated 'wrong' — each report's definition may be appropriate for its purpose (sales dashboard = gross for operational tracking, P&L = net for GAAP reporting, regulatory filing = statutory basis). The problem is that the same term ('revenue') maps to three different data elements with different business meanings. A data dictionary resolves this by documenting each distinct data element with: (1) a unique name (distinguishing 'Gross Billed Revenue' from 'Net Revenue (GAAP)' from 'Statutory Revenue'), (2) the business definition (what each field means and how it is calculated), (3) data type, format, and validation rules, (4) source system and data lineage (where the data originates and how it flows to each report), and (5) transformation rules (e.g., 'Net Revenue = Gross Billed Revenue - Returns and Allowances - Intercompany Sales'). A data retention schedule (B) governs how long data is kept, not what it means. A backup log (C) confirms data recoverability, not semantic consistency. A visualization standard (D) ensures consistent presentation, not consistent definition — making inconsistent data look consistent may actually worsen the problem by hiding the discrepancy. Business interpretation: data governance ensures that data is consistently understood across the organization. The data dictionary is a foundational data governance tool that serves as the single source of truth for data definitions — it promotes data quality, consistent interpretation, and regulatory compliance. A common exam trap is to confuse data governance tools (data dictionary = definitions, data retention = storage duration, data backup = recoverability, data visualization = presentation). Another trap is to address the symptom (three different numbers) without diagnosing the root cause (one term, three meanings).",
         "StudyLinks": [
             {
                 "label": "IMA CMA Learning Outcome Statements, Part 1 Section F",
@@ -21802,9 +21802,9 @@ var MCQ_BANK_A = [
             "Distractors written as plausible CMA-style traps"
         ],
         "ExplanationWrongA": "",
-        "ExplanationWrongB": "A retention schedule governs how long records are kept; it does not define the meaning and structure of data fields.",
-        "ExplanationWrongC": "A backup log supports recovery control evidence, not common interpretation of field definitions.",
-        "ExplanationWrongD": "A visualization standard can improve presentation consistency but does not define source data fields.",
+        "ExplanationWrongB": "A data retention schedule governs how long records are kept and when they are archived or deleted — it addresses data lifecycle management, not data definition. Standardizing retention periods does not resolve the root cause of Apex's problem: the same term 'revenue' has three different meanings. Auditors reconciling differences after the fact is not a governance solution — it is an after-the-fact workaround that accepts inconsistency rather than resolving it. A candidate selecting this option is confusing data storage policy (retention) with data semantics (definitions).",
+        "ExplanationWrongC": "A backup verification log confirms that data has been successfully copied to a secondary location for disaster recovery purposes. Data recoverability is a data protection concern, not a data definition concern. Whether revenue data can be restored after a system failure does not address the fact that 'revenue' means three different things across Apex's reports — the data is recoverable but semantically inconsistent. A candidate selecting this option is confusing data availability with data quality and consistency.",
+        "ExplanationWrongD": "A data visualization standard governs how data is presented — colors, chart types, formatting conventions. Consistent visualization is valuable for user experience, but it addresses the presentation layer, not the data definition layer. If revenue is defined differently across reports, making the charts look the same may actually obscure the inconsistency — users see three charts labeled 'Revenue' with the same visual styling and assume the underlying data is comparable when it is not. A candidate selecting this option is addressing the symptom (inconsistent appearance) rather than the root cause (inconsistent definitions).",
         "question_state": "Certified",
         "DifficultyScore": 1,
         "certification_date": "2026-07-24",
@@ -22584,10 +22584,10 @@ var MCQ_BANK_A = [
         "ExplanationWrongC": "Predictive analytics estimates likely outcomes. The stem goes further by recommending an action under constraints.",
         "ExplanationWrongD": "",
         "question_state": "Certified",
-        "DifficultyScore": 2,
+        "DifficultyScore": 4,
         "certification_date": "2026-07-24",
         "certification_batch": "Session 68 Wave 1",
-        "CognitiveLevel": "Understand"
+        "CognitiveLevel": "Analyze"
     },
     {
         "Part": 1,
